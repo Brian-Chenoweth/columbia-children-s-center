@@ -8,8 +8,7 @@ const IndexPage = () => {
        <p>Here is a child of the layout component.</p>
        <StaticImage
         alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
-        src="../images/clifford-pitbull.jpeg"
-      />
+        src="../images/clifford-pitbull.jpeg"/>
     </Layout>
   )
 }
