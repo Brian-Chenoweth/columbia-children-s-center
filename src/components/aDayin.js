@@ -37,7 +37,7 @@ const AdayIn = ({ pageTitle, children }) => {
                         return (
                             <div>
                                 <img key={`${index}`} src={file.node.publicURL}/>
-                                {/* <li key={`${index}`}>{index}</li> */}
+                                {/* <li key={`${index}`}> {index}</li> */}
                             </div>
                         )
                     })}
