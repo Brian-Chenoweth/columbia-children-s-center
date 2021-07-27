@@ -2,9 +2,9 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import {
-    employee_wrap,
-    employee_img,
-    employee_name,
+    employeeWrap,
+    employeeImg,
+    employeeName,
   } from './employee.module.scss'
 
 const Employee = ({ employeeName, employeeImg, children }) => {
@@ -28,16 +28,16 @@ const Employee = ({ employeeName, employeeImg, children }) => {
       
 
   return (
-    <div className={employee_wrap}>
+    <div className={employeeWrap}>
 
-        <div className={employee_img}>
+        <div className={employeeImg}>
             {data.allFile.edges.map(({node}) => (
                 <p>{employeeImg}</p>
             ) )}
             <h1>{employeeImg}</h1>
         </div>
 
-        <div className={employee_name}>
+        <div className={employeeName}>
             {employeeName}
         </div>
 
