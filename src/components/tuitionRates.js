@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {
-    tuitionRates,
+    tuitionRates
   } from './tuitionRates.module.scss'
 
 

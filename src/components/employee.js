@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import {
     employeeWrap,
     employeeImg,
-    employeeName,
+    employeeName
   } from './employee.module.scss'
 
 const Employee = ({ employeeName, employeeImg, children }) => {

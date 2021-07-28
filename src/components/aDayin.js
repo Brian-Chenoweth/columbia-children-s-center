@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import {
     aDayInWrap,
-    aDayIn,
-  } from './adayin.module.scss'
+    aDayIn
+  } from './aDayin.module.scss'
 
 
 
