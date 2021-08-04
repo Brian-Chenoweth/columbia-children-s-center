@@ -2,11 +2,11 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 
-const ProgramSlider = ({ pageTitle, children }) => {
+const ProgramSlider = ({ programImages, children }) => {
 
     const data = useStaticQuery(graphql`
     query  {
-        allFile(filter: {relativeDirectory: {eq: "programs/young-toddler"}}) {
+        allFile {
           edges {
             node {
               relativePath
@@ -28,10 +28,18 @@ const ProgramSlider = ({ pageTitle, children }) => {
                 {children}      
                     {data.allFile.edges.map((file, index) => {
                         return (
-                            <div>
-                                <img key={`${index}`} src={file.node.publicURL}/>
-                                {/* <li key={`${index}`}> {index}</li> */}
-                            </div>
+                        <div>
+                            {(() => {
+                              // console.log({programImages});
+                              // console.log(programImages);
+                              if (file.node.relativeDirectory.includes(programImages)) {
+                                return (
+                                  <img key={`${index}`} src={file.node.publicURL}/>
+                                )
+                              } 
+                            })()}
+                                  {/* <li key={`${index}`}> {index}</li> */}
+                          </div>
                         )
                     })}
             </div>
