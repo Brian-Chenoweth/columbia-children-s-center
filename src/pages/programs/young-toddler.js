@@ -5,14 +5,29 @@ import AdayIn from '../../components/aDayin'
 import TuitionRates from '../../components/tuitionRates'
 import ProgramSlider from '../../components/programSlider'
 import ClassroomGoals from '../../components/classroomGoals'
+import JSONData from "../../data/classroomgoals/young-toddler.json"
 
 const YTPage = () => {
   const pageTitle = "Young Toddler";
+  const arrGoal = JSONData.goals;
+  const item = [];
   return (
     <Layout pageTitle={pageTitle}>
         <p>About page child of layout component.</p>
         <ClassroomGoals pageTitle={pageTitle}>
-          <h1>****Put info below into a data file*****</h1>
+
+            
+          {JSONData.goals.map((data, index) => {
+            return <div>
+                    <h3>{data.heading}</h3>
+                    {data.item.map((k, i) => (
+                      <li key={i}>{data.item[i]}</li>
+                    ))}
+                  </div>   
+            })} 
+      
+          
+        
           <h3>Cognitive Goals:</h3>
           <ul>
             <li>Locate object or person that disappear</li>
