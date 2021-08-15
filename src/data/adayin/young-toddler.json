@@ -1,0 +1,44 @@
+{
+    "days": [
+        {
+            "time": "7:00 - 8:00",
+            "day": "Arrival, Free Choice Activities, Early Morning Snack"
+        },
+        {
+            "time": "8:00 - 9:30",
+            "day": "Free Choice, Songs, Puzzles, Clean Up, Snack, Diapering"
+        },
+        {
+            "time": "9:30 - 10:15",
+            "day": "Rotation of Story, Sensory Exploration, Art"
+        },
+        {
+            "time": "10:15 - 10:45",
+            "day": "Outside Play (Gross Motor Activites)"
+        },
+        {
+            "time": "10:45 - 12:15",
+            "day": "Free Choice, Diapering, Hand Washing, Lunch, Outside Play"
+        },
+        {
+            "time": "12:15 - 2:30",
+            "day": "Nap"
+        },
+        {
+            "time": "2:30 - 3:15",
+            "day": "Diapering, Shoes On, Hand Washing, Snack"
+        },
+        {
+            "time": "3:15 - 4:00",
+            "day": "Rotation of Music, Language Arts, Art"
+        },
+        {
+            "time": "4:00 - 4:30",
+            "day": "Outside Play (Gross Motor Activites)"
+        },
+        {
+            "time": "4:30 - 5:30",
+            "day": "Puzzles, Manipulatives, Diapering, Late Snack, Free Choice"
+        }
+    ]
+}

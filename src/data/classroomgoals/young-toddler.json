@@ -2,18 +2,84 @@
     "goals": [
         {
             "heading": "Cognitive Goals:",
-            "item": [
-                "one",
-                "two",
-                "three"
+            "goal": [
+                "Locate object or person that disappear",
+                "Use simple actions on toys (banging, shaking)",
+                "Activate cause and effect toys",
+                "Imitate actions",
+                "Imitate sounds or words",
+                "Use objects or toys in a pretend way",
+                "Group or sort objects in basis categories"
             ]
         },
         {
-            "heading": "head2",
-            "item": [
-                "hgsghs",
-                "two",
-                "three"
+            "heading": "Expressive Communication Goals:",
+            "goal": [
+                "Use gestures to communicate",
+                "Ask for help and gain and direct an adult’s attention",
+                "Use single words to communicate",
+                "Use two-word phrases or sentences"
+            ]
+        },
+        {
+            "heading": "Adaptive or Self-care Goals:",
+            "goal": [
+                "Drink from cup or glass",
+                "Eat with fork and spoon",
+                "Unfasten fasteners on clothes"
+            ]
+        },
+        {
+            "heading": "Small Motor Skills:",
+            "goal": [
+                "Roll from stomach to back and from back to stomach",
+                "Creep on hands and knees with tummy off the floor",
+                "Walk independently",
+                "Jump forward",
+                "Kick, throw and roll a ball",
+                "Move up and down steps on a slide or play structure"
+            ]
+        },
+        {
+            "heading": "Social Goals:",
+            "goal": [
+                "Initiate and maintain social play with adults",
+                "Initiate and maintain interactions with another child",
+                "Display affection toward familiar adult",
+                "Take turns during activities",
+                "Separate comfortably from parents for routine activities",
+                "Play with others as play partners",
+                "Play independently",
+                "Calm self when stressed or anxious",
+                "Transition smoothly between activities"
+            ]
+        },
+        {
+            "heading": "Fine Motor Goals:",
+            "goal": [
+                "Reach and grasp objects",
+                "Bring two objects together to bang",
+                "Transfer object from one hand to the other",
+                "Release objects into containers",
+                "Stack same size objects",
+                "Imitate drawing lines on paper",
+                "Assemble toys or objects that require putting pieces together",
+                "Fit shapes into a shape sorter or puzzle",
+                "Turn paper pages of books one at a time"
+            ]
+        },
+        {
+            "heading": "eceptive Communication Goals:",
+            "goal": [
+                "Turn and look towards person speaking",
+                "Respond to own name when called<",
+                "Follow a person’s pointing gesture",
+                "Identify familiar objects or people",
+                "Identify pictures in familiar books",
+                "Identify pictures in unfamiliar books",
+                "Follow one-step directions",
+                "Follow person’s gaze to establish joint attention",
+                "Listen to a simple story and pays attention"
             ]
         }
     ]
