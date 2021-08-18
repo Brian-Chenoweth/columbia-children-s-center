@@ -1,0 +1,37 @@
+{
+    "goals": [
+        {
+            "heading": "Physical Goals:",
+            "goal": [
+                "Sits safely in a chair",
+                "Marches in place",
+                "Kicks, rolls, and throws ball",
+                "Uses a crayon and paintbrush",
+                "Washes and dries hands",
+                "Uses a spoon",
+                "Drinks from a cup",
+                "Can stack blocks",
+                "Attempts to put socks, shoes and jacket"
+            ]
+        },
+        {
+            "heading": "Social Goals:",
+            "goal": [
+                "Helps clean up during clean up time",
+                "Tries to help others",
+                "Is communicating with others through verbal conversation",
+                "Enjoys and is engaged in learning and playing with others"
+            ]
+        },
+        {
+            "heading": "Emotional Goals:",
+            "goal": [
+                "To begin showing empathy for others",
+                "Feels safe and confident away from his/her parents",
+                "Shows likes or dislikes",
+                "Shows pride in his/her new accomplishments",
+                "Asserts self appropriately"
+            ]
+        }
+    ]
+}
