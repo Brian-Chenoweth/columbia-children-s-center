@@ -30,15 +30,12 @@ const ProgramSlider = ({ programImages, children }) => {
                         return (
                         <div>
                             {(() => {
-                              // console.log({programImages});
-                              // console.log(programImages);
                               if (file.node.relativeDirectory.includes(programImages)) {
                                 return (
                                   <img key={`${index}`} src={file.node.publicURL}/>
                                 )
                               } 
                             })()}
-                                  {/* <li key={`${index}`}> {index}</li> */}
                           </div>
                         )
                     })}
