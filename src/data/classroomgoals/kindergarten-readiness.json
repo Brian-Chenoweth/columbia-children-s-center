@@ -1,0 +1,43 @@
+{
+    "goals": [
+        {
+            "heading": "Cognitive Development:",
+            "goal": [
+                "Recognizes shapes",
+                "Able to copy shapes and symbols",
+                "Recognizes upper and lower case letters",
+                "Recognizes and names basic colors",
+                "Recognizes numbers 1-10",
+                "Counts continuously",
+                "Able to match small medium and large",
+                "Able to count objects",
+                "Recognizes printed first and last name",
+                "Recognizes sounds of letters",
+                "Speaks clearly",
+                "Speaks in complete sentences"
+            ]
+        },
+        {
+            "heading": "Social / Personal Development:",
+            "goal": [
+                "Displays a sense of self confidence",
+                "Expresses ideas and feelings",
+                "Seeks adult help when needed",
+                "Shares with classmates",
+                "Takes turns with classmates",
+                "Gets along well with other children",
+                "Shows respect for other properties",
+                "Cares for own belongings"
+            ]
+        },
+        {
+            "heading": "Small Motor Skills:",
+            "goal": [
+                "Controls pencil and crayon well",
+                "Draws and color beyond a simple scribble",
+                "Handles scissors correctly",
+                "Cuts basic shape and lines"
+            ]
+        }
+    ]
+}

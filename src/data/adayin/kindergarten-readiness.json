@@ -1,0 +1,40 @@
+{
+    "days": [
+        {
+            "time": "7:00 - 7:30",
+            "day": "Arrival, Free choice Activities"
+        },
+        {
+            "time": "7:30 - 8:30",
+            "day": "Outside Free Exploration"
+        },
+        {
+            "time": "8:30 - 11:45",
+            "day": "Snack, pre reading, pre-writing, beginning math, scissor work, group discussion, language development, calendar, phonics, number, shape & letter recognition, social studies, flag salute, story, art, science, gross motor activities, outdoor play"
+        },
+        {
+            "time": "11:45 - 12:30",
+            "day": "Lunch, prepare for nap or departure"
+        },
+        {
+            "time": "12:30 - 2:30",
+            "day": "Nap"
+        },
+        {
+            "time": "2:30 - 3:15",
+            "day": "Quiet time, wake from nap, snack"
+        },
+        {
+            "time": "3:15 - 4:15",
+            "day": "Teacher directed activities (story, music, process art)"
+        },
+        {
+            "time": "4:15 - 4:45",
+            "day": "Outside play"
+        },
+        {
+            "time": "4:45 - 5:30",
+            "day": "Developmental learning centers"
+        }
+    ]
+}

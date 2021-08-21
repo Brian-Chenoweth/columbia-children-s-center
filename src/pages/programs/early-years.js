@@ -8,7 +8,7 @@ import ClassroomGoals from '../../components/classroomGoals'
 import JSONData from "../../data/classroomgoals/early-years.json"
 import JSONDat from "../../data/adayin/early-years.json"
 
-const YTPage = () => {
+const EYPage = () => {
   const pageTitle = "Early Years";
   return (
     <Layout pageTitle={pageTitle}>
@@ -46,4 +46,4 @@ const YTPage = () => {
   )
 }
 
-export default YTPage
+export default EYPage
