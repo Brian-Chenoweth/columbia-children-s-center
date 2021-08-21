@@ -1,0 +1,44 @@
+{
+    "days": [
+        {
+            "time": "7:00 - 7:30",
+            "day": "Welcome, Free Choice Centers"
+        },
+        {
+            "time": "7:30 - 8:45",
+            "day": "Outdoor Play Activities"
+        },
+        {
+            "time": "8:45 - 9:15",
+            "day": "Clean Up, Snack"
+        },
+        {
+            "time": "9:15 - 10:30",
+            "day": "Art, Circle, Songs, Story, Manipulatives, Letter, Number & Shape Recognition, Calendar"
+        },
+        {
+            "time": "10:30 - 11:30",
+            "day": "Outside Play"
+        },
+        {
+            "time": "11:30 - 12:30",
+            "day": "Toileting, Hand Washing, Lunch, Prepare for Nap"
+        },
+        {
+            "time": "12:30 - 2:30",
+            "day": "Nap"
+        },
+        {
+            "time": "2:30 - 3:00",
+            "day": "Quiet Time, Wake from Nap, Toileting, Hand-Washing, Snack"
+        },
+        {
+            "time": "3:00 - 5:00",
+            "day": "Inside/Outside Play (Student’s Choice), Art, Free Choice"
+        },
+        {
+            "time": "5:00 - 5:30",
+            "day": "Toileting, Hand-Washing, Story Time, Music, Free Choice"
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "goals": [
+        {
+            "heading": "Social & Emotional Development:",
+            "goal": [
+                "Demonstrates ability to separate from parents",
+                "Adjusts to new situations",
+                "Begins to recognize and label own feelings in self and others",
+                "Connects with teachers as a trusted adult",
+                "Learns early social skills such as sharing, and taking turns",
+                "Engages in social interaction/play with others",
+                "Engages in imaginative play and inventive thinking",
+                "Participates in group time 5-10 minutes",
+                "Engages in social problem solving and learns to resolve conflict",
+                "Seeks adult assistance when needed"
+            ]
+        },
+        {
+            "heading": "Fine Motor Skills:",
+            "goal": [
+                "Manipulates objects with increasing control",
+                "Begins to attempt cutting with scissors",
+                "Makes several basic strokes with a marker",
+                "Holds pencil with ease",
+                "Begins to make recognizable shapes, letters and representation of images",
+                "Manipulates small items such as scissors and crayons",
+                "Exhibits eye hand coordination"
+            ]
+        },
+        {
+            "heading": "Gross Motor Skills:",
+            "goal": [
+                "Demonstrates basic large motor skills (running, jumping, hopping)",
+                "Walks up and down stairs",
+                "Begins to balance",
+                "Able to ride a tricycle",
+                "Begins to throw and catch balls"
+            ]
+        },
+        {
+            "heading": "Cognitive Development:",
+            "goal": [
+                "Observes and examines objects",
+                "Begins to show problem solving skills",
+                "Sorts objects by color, shape or size",
+                "Recognizes own name in print",
+                "Counts to 10 and begins to count objects",
+                "Demonstrates problem solving skills",
+                "Points to and names colors",
+                "Demonstrates knowledge of patterns",
+                "Recognizes and names shapes",
+                "Recognizes written numbers 1-10",
+                "Continues to work on a task even when experiencing difficulties",
+                "Sorts objects by color, size or shape",
+                "Begins to understand simple measurement"
+            ]
+        },
+        {
+            "heading": "Self-Care & Personal Responsibility:",
+            "goal": [
+                "Able to wash hands on his/her own",
+                "Indicates need to go to the bathroom and needs little to no assistance",
+                "Is able to drink from a cup and feed self with fork or spoon",
+                "Chooses from several activity options",
+                "Demonstrates respect and care for classroom materials",
+                "Participates in clean up with decreasing guidance",
+                "Takes care of own bathroom and hand washing needs",
+                "Keeps track of personal belongings at school",
+                "Demonstrates respect and care for classroom materials",
+                "Participates in group activities",
+                "Follows classroom routines/rules"
+            ]
+        },
+        {
+            "heading": "Language Skills:",
+            "goal": [
+                "Uses words to express needs",
+                "Speech is understandable to most",
+                "Communicates in full sentences",
+                "Answers questions with more than yes or no",
+                "Listens to stories",
+                "Participates in songs and movement activities",
+                "Understands and follows simple directions",
+                "Answers questions with a complete thought (more than yes or no)",
+                "Understands and follows verbal directions of 2 or more steps",
+                "Recognizes and attempts to write own name",
+                "Recognizes many alphabet letters and sounds",
+                "Retells general ideas of stories when asked",
+                "Recognizes and names opposites and rhyming words"
+            ]
+        }
+    ]
+}

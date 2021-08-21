@@ -9,15 +9,14 @@ const TuitionRates = ({ halfDayFive, halfDayFour, halfDayThree, halfDayTwo, full
 
   return (
     <div className={tuitionRates}>
-        <h2>{pageTitle} Tuition Rates</h2>
+        <h2>{pageTitle} Weekly Tuition Rates</h2>
         <div>
             <h3>Half Days (leave by 12:15)</h3>
-            <p><strong>5 days per week: </strong>{halfDayFive}</p>
 
             {(() => {
-              if (halfDayFour) {
+              if (halfDayTwo) {
                 return (
-                  <p><strong>4 days per week: </strong>{halfDayFour}</p>
+                  <p><strong>2 days per week: </strong>{halfDayTwo}</p>
                 )
               }
             })()}
@@ -30,21 +29,24 @@ const TuitionRates = ({ halfDayFive, halfDayFour, halfDayThree, halfDayTwo, full
               }
             })()}
 
-            {(() => {
-              if (halfDayTwo) {
+          {(() => {
+              if (halfDayFour) {
                 return (
-                  <p><strong>2 days per week: </strong>{halfDayTwo}</p>
+                  <p><strong>4 days per week: </strong>{halfDayFour}</p>
                 )
               }
             })()}
+            
+            <p><strong>5 days per week: </strong>{halfDayFive}</p>
+
         </div>
         <div>
             <h3>Full Days (attend after 12:15)</h3>
-            <p><strong>5 days per week: </strong>{fullDayFive}</p>
+            
             {(() => {
-              if (fullDayFour) {
+              if (fullDayTwo) {
                 return (
-                  <p><strong>4 days per week: </strong>{fullDayFour}</p>
+                  <p><strong>2 days per week: </strong>{fullDayTwo}</p>
                 )
               }
             })()}
@@ -58,12 +60,15 @@ const TuitionRates = ({ halfDayFive, halfDayFour, halfDayThree, halfDayTwo, full
             })()}
 
             {(() => {
-              if (fullDayTwo) {
+              if (fullDayFour) {
                 return (
-                  <p><strong>2 days per week: </strong>{fullDayTwo}</p>
+                  <p><strong>4 days per week: </strong>{fullDayFour}</p>
                 )
               }
             })()}
+
+            <p><strong>5 days per week: </strong>{fullDayFive}</p>
+
         </div>
         <div>
             <p>There is an annual registration fee of $100.00 per child. A 10% discount will be given for each additional child in a family.</p>
