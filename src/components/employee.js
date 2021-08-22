@@ -13,16 +13,19 @@ const Employee = ({ employeeName, employeeImg, children }) => {
     
     const data = useStaticQuery(graphql`
         query {
-            allFile(filter: {extension: {eq: "jpeg"}, relativeDirectory: {in: "employees"}}) {
-            edges {
-                node {
-                relativePath
-                relativeDirectory
-                name
-                extension
+            allFile(filter: {relativeDirectory: {in: "employees"}}, sort: {fields: name}) {
+                edges {
+                  node {
+                    id
+                    relativePath
+                    relativeDirectory
+                    publicURL
+                    extension
+                    name
+                    sourceInstanceName
+                  }
                 }
-            }
-            }
+              }
         }
     `)
       
@@ -31,10 +34,19 @@ const Employee = ({ employeeName, employeeImg, children }) => {
     <div className={employeeWrap}>
 
         <div className={employeeImg}>
-            {data.allFile.edges.map(({node}) => (
-                <p>{employeeImg}</p>
-            ) )}
-            <h1>{employeeImg}</h1>
+            {data.allFile.edges.map((file, index) => {
+                return (
+                    <div>
+                        {(() => {
+                        if (file.node.name == employeeImg) {
+                            return (
+                                <img key={`${index}`} src={file.node.publicURL}/>
+                            )
+                        }
+                        })()}                            
+                    </div>
+                )
+            })}
         </div>
 
         <div className={employeeName}>
