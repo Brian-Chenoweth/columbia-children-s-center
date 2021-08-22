@@ -1,14 +1,7 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet';
-import {
-  container,
-  heading,
-  navLinks,
-  navLinkItem,
-  navLinkText,
-  siteTitle
-} from './layout.module.scss'
+import { container, heading, navLinks, navLinkItem, navLinkText, siteTitle } from './layout.module.scss'
 
 const Layout = ({ pageTitle, children }) => {
 
@@ -50,6 +43,11 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
           <li className={navLinkItem}>
+            <Link to="/programs" className={navLinkText}>
+              Programs
+            </Link>
+          </li>
+          <li className={navLinkItem}>
             <Link to="/programs/young-toddler" className={navLinkText}>
               Young Toddler
             </Link>
@@ -67,6 +65,11 @@ const Layout = ({ pageTitle, children }) => {
           <li className={navLinkItem}>
             <Link to="/programs/kindergarten-readiness" className={navLinkText}>
               Kindergarten Readiness
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/enrollment" className={navLinkText}>
+              Enrollment
             </Link>
           </li>
         </ul>

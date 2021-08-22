@@ -1,9 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import {
-    classroomGoalsWrap,
-    classroomGoals
-  } from './aDayin.module.scss'
+import { classroomGoalsWrap, classroomGoals } from './aDayin.module.scss'
 
 
 
