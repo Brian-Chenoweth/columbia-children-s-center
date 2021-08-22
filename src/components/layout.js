@@ -24,6 +24,7 @@ const Layout = ({ pageTitle, children }) => {
     `)
 
   return (
+    <div>
     <main className={container}>
         <Helmet>
             <title>{pageTitle} | {data.site.siteMetadata.title}</title>
@@ -73,6 +74,19 @@ const Layout = ({ pageTitle, children }) => {
       <h1 className={heading}>{pageTitle}</h1>
       {children}
     </main>
+    <footer>
+      <div>
+        <p>Hours of operation</p>
+        <p>Monday-Friday: 7:00a.m. - 5:30p.m.</p>
+      </div>
+      <div>
+        <p>Social Icon 1</p>
+        <p>Social Icon 2</p>
+        <p>Social Icon 3</p>
+        <p>© 2021 Columbia Children's Center. All Rights Reserved. Columbia Childrens Center</p>
+      </div>
+    </footer>
+    </div>
   )
 }
 
