@@ -26,7 +26,7 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div>
     <main className={container}>
-        <Helmet>
+        <Helmet htmlAttributes={{ lang: 'en' }}>
             <title>{pageTitle} | {data.site.siteMetadata.title}</title>
         </Helmet>
         <p className={siteTitle}>{data.site.siteMetadata.title}</p>
