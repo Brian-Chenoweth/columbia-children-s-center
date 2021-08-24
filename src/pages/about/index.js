@@ -1,9 +1,5 @@
 import * as React from 'react'
-import Layout from '../components/layout'
-import Employee from '../components/employee'
-import AdayIn from '../components/aDayin'
-import TuitionRates from '../components/tuitionRates'
-import ProgramSlider from '../components/programSlider'
+import Layout from '../.././components/layout'
 
 const AboutPage = () => {
   const pageTitle = "About Me";

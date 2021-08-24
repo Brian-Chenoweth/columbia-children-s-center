@@ -38,8 +38,13 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>
-              Blog
+            <Link to="/about/history" className={navLinkText}>
+              History
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/about/our-team" className={navLinkText}>
+              Our Team
             </Link>
           </li>
           <li className={navLinkItem}>
@@ -70,6 +75,31 @@ const Layout = ({ pageTitle, children }) => {
           <li className={navLinkItem}>
             <Link to="/enrollment" className={navLinkText}>
               Enrollment
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/parents" className={navLinkText}>
+              Parents
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/parents/covid" className={navLinkText}>
+              Covid
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/careers" className={navLinkText}>
+              Careers
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/blog" className={navLinkText}>
+              Blog
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/contact" className={navLinkText}>
+              Contact
             </Link>
           </li>
         </ul>
