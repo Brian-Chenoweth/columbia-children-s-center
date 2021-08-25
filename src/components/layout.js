@@ -123,7 +123,7 @@ const Layout = ({ pageTitle, children }) => {
           <p>Social Icon 1</p>
           <p>Social Icon 2</p>
           <p>Social Icon 3</p>
-          <p>© 2021 Columbia Children's Center. All Rights Reserved. Columbia Childrens Center</p>
+          <p>&copy; {new Date().getFullYear()} Columbia Children's Center. All Rights Reserved. Columbia Childrens Center</p>
         </div>
       </div>
     </footer>
