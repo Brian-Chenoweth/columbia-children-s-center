@@ -14,6 +14,8 @@
     @media (min-width: 1800px) { @content; }
 }
 
+body {margin: 0;}
+
 .container {
     margin: auto;
     max-width: 100%; 
@@ -25,7 +27,7 @@
   }
   
 .heading {
-    color: rebeccapurple;
+    color: #395193;
 }
 .nav-links {
     display: flex;
@@ -47,4 +49,17 @@
 
 .blu {
     font-size:15px;
+}
+
+footer {
+    background-color: #395193;
+    color: #fff;
+}
+
+.footer-content {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; 
+    margin: 0 auto;
 }

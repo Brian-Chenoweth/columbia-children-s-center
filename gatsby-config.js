@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "Columbia Children's Center",
-    logo: "./images/clifford-pitbull.jpeg",
+    logo: "./images/logo.png",
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",

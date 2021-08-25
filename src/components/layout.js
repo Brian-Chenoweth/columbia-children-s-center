@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet';
-import { container, heading, navLinks, navLinkItem, navLinkText, siteTitle } from './layout.module.scss'
+import { container, heading, navLinks, navLinkItem, navLinkText, siteTitle, footerContent, socialIcons } from './layout.module.scss'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Layout = ({ pageTitle, children }) => {
 
@@ -22,9 +23,9 @@ const Layout = ({ pageTitle, children }) => {
         <Helmet htmlAttributes={{ lang: 'en' }}>
             <title>{pageTitle} | {data.site.siteMetadata.title}</title>
         </Helmet>
-        <p className={siteTitle}>{data.site.siteMetadata.title}</p>
-        <p className="logo">{data.site.siteMetadata.logo}</p>
-         
+        <StaticImage
+        alt="Columbia Children's Center logo"
+        src="../images/logo.png"/>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
@@ -45,6 +46,11 @@ const Layout = ({ pageTitle, children }) => {
           <li className={navLinkItem}>
             <Link to="/about/our-team" className={navLinkText}>
               Our Team
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/about/philosophy-goals" className={navLinkText}>
+              Philosophy &amp; Goals 
             </Link>
           </li>
           <li className={navLinkItem}>
@@ -108,15 +114,17 @@ const Layout = ({ pageTitle, children }) => {
       {children}
     </main>
     <footer>
-      <div>
-        <p>Hours of operation</p>
-        <p>Monday-Friday: 7:00a.m. - 5:30p.m.</p>
-      </div>
-      <div>
-        <p>Social Icon 1</p>
-        <p>Social Icon 2</p>
-        <p>Social Icon 3</p>
-        <p>© 2021 Columbia Children's Center. All Rights Reserved. Columbia Childrens Center</p>
+      <div className={footerContent}>
+        <div>
+          <p>Hours of operation</p>
+          <p>Monday-Friday: 7:00a.m. - 5:30p.m.</p>
+        </div>
+        <div className={socialIcons}>
+          <p>Social Icon 1</p>
+          <p>Social Icon 2</p>
+          <p>Social Icon 3</p>
+          <p>© 2021 Columbia Children's Center. All Rights Reserved. Columbia Childrens Center</p>
+        </div>
       </div>
     </footer>
     </div>
