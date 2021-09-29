@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-
 const ProgramSlider = ({ programImages, children }) => {
 
     const data = useStaticQuery(graphql`
