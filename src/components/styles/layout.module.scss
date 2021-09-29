@@ -29,37 +29,7 @@ body {margin: 0;}
 .heading {
     color: #395193;
 }
-.nav-links {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-}
-.nav-link-item {
-    padding-right: 2rem;
-}
-.nav-link-text {
-    color: black;
-}
-
-// .site-title {
-//     font-size: 3rem;
-//     color: gray;
-//     font-weight: 700;
-//   }
 
 .blu {
     font-size:15px;
-}
-
-footer {
-    background-color: #395193;
-    color: #fff;
-}
-
-.footer-content {
-    padding: 0 10px;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px; 
-    margin: 0 auto;
 }

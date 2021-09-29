@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { tuitionRates } from './tuitionRates.module.scss'
+import { tuitionRates } from './styles/tuitionRates.module.scss'
 
 
 

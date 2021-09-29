@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { aDayInWrap, aDayIn } from './aDayin.module.scss'
+import { aDayInWrap, aDayIn } from './styles/aDayin.module.scss'
 
 
 const AdayIn = ({ pageTitle, children }) => {
