@@ -7,22 +7,7 @@ const ClassroomGoals = ({ pageTitle, children }) => {
 
 
     const data = useStaticQuery(graphql`
-    query  {
-        allFile(filter: {relativeDirectory: {in: "icons"} name:{eq: "kid-yellow"}}) {
-          edges {
-            node {
-              relativePath
-              relativeDirectory
-              name
-              extension
-              publicURL
-              id
-            }
-          }
-        }
-      }
-      
-    `)
+    query { allFile(filter: {relativeDirectory: {in: "icons"} name:{eq: "kid-yellow"}}) { edges { node { relativePath relativeDirectory name extension publicURL id } } } } `)
 
   return (
         <div className={classroomGoalsWrap}>

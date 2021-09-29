@@ -1,8 +1,6 @@
 import * as React from 'react'
 import { tuitionRates } from './styles/tuitionRates.module.scss'
 
-
-
 const TuitionRates = ({ halfDayFive, halfDayFour, halfDayThree, halfDayTwo, fullDayFive, fullDayFour, fullDayThree, fullDayTwo, pageTitle, children }) => {
 
   return (

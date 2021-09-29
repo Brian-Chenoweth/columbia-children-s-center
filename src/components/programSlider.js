@@ -5,22 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 const ProgramSlider = ({ programImages, children }) => {
 
     const data = useStaticQuery(graphql`
-    query  {
-        allFile {
-          edges {
-            node {
-              relativePath
-              relativeDirectory
-              name
-              extension
-              publicURL
-              id
-            }
-          }
-        }
-      }
-      
-    `)
+    query  { allFile { edges { node { relativePath relativeDirectory name extension publicURL id } } } } `)
 
   return (
         <div>

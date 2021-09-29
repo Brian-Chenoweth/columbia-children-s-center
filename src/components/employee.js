@@ -5,24 +5,8 @@ import { employeeWrap, employeeImg, employeeName } from './styles/employee.modul
 const Employee = ({ employeeName, employeeImg, children }) => {
 
     const data = useStaticQuery(graphql`
-        query {
-            allFile(filter: {relativeDirectory: {in: "employees"}}, sort: {fields: name}) {
-                edges {
-                  node {
-                    id
-                    relativePath
-                    relativeDirectory
-                    publicURL
-                    extension
-                    name
-                    sourceInstanceName
-                  }
-                }
-              }
-        }
-    `)
+        query { allFile(filter: {relativeDirectory: {in: "employees"}}, sort: {fields: name}) { edges { node { id relativePath relativeDirectory publicURL extension name sourceInstanceName } } } } `)
       
-
   return (
     <div className={employeeWrap}>
 
