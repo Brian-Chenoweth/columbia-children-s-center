@@ -40,8 +40,9 @@ const EYPage = () => {
           </div> 
         </AdayIn>
         <TuitionRates pageTitle={pageTitle} halfDayFive="$229.00" fullDayFive="$297.00" halfDayFour="$204.00" fullDayFour="$255.00" halfDayThree="$178.00" fullDayThree="$216.00" halfDayTwo="$132.00" fullDayTwo="$175.00">Single extra days may be arranged with the director at a rate of half day: $74.00, full day: $89.00.</TuitionRates>
-        <Employee employeeName="vanessa Mendoza" employeeImg="vmendoza"/>
-        <Employee employeeName="Tatiana Quezada" employeeImg="tquezada"/>
+        <Employee employeeName="Vanessa Mendoza" employeeTitle="Early Year's Teacher" employeeImg="Vanessa"/>
+        <Employee employeeName="Cheyenne Perry" employeeTitle="Assistant" employeeImg="Cheyenne"/>
+        <Employee employeeName="Jackie Rubalcava" employeeTitle="Assistant" employeeImg="Jackie"/>
     </Layout>
   )
 }

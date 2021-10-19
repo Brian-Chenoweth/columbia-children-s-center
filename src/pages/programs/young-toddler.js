@@ -38,9 +38,9 @@ const YTPage = () => {
           </div> 
         </AdayIn>
         <TuitionRates pageTitle={pageTitle} halfDayFive="$229.00" fullDayFive="$297.00"/>
-        <Employee employeeName="Cynthia Hernandez" employeeImg="chernandez"/>
-        <Employee employeeName="Shirley Adelhelm" employeeImg="sadelhelm"/>
-        <Employee employeeName="Maria Martinez" employeeImg="mmartinez"/>
+        <Employee employeeName="Cynthia Hernandez" employeeTitle="Young Toddler Teacher " employeeImg="Cynthia"/>
+        <Employee employeeName="Danielle Gauna" employeeTitle="Assistant" employeeImg="Danielle"/>
+        <Employee employeeName="Shirley Adelhelm" employeeTitle="Young Toddler Teacher / Breaker" employeeImg="Shirley"/>
     </Layout>
   )
 }

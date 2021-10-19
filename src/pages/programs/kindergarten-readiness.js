@@ -39,8 +39,10 @@ const KRPage = () => {
           </div> 
         </AdayIn>
         <TuitionRates pageTitle={pageTitle} halfDayFive="$182.00" fullDayFive="$237.00" halfDayFour="$156.00" fullDayFour="$200.00" halfDayThree="$126.00" fullDayThree="$163.00" halfDayTwo="$97.00" fullDayTwo="$126.00">Single extra days may be arranged with the director at a rate of half day: $63.00, full day: $79.00.</TuitionRates>
-        <Employee employeeName="Cayla Pesavento" employeeImg="cpesavento"/>
-        <Employee employeeName="Nicolle Rogers" employeeImg="nrogers"/>
+        <Employee employeeName="Nicolle Rogers" employeeTitle="Blue Group Teacher" employeeImg="Nicolle"/>
+        <Employee employeeName="Samantha Wise" employeeTitle="Green Group Teacher" employeeImg="Samantha"/>
+        <Employee employeeName="Litzey Dominguez" employeeTitle="Assistant" employeeImg="Litzey"/>
+        <Employee employeeName="Brigette Ortiz-Tello" employeeTitle="Assistant" employeeImg="Brigette"/>
       </Layout>
     )
   }

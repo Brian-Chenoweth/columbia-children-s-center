@@ -52,9 +52,11 @@ const PPage = () => {
           </div> 
         </AdayIn>
         <TuitionRates pageTitle={pageTitle} halfDayFive="$182.00" fullDayFive="$237.00" halfDayFour="$156.00" fullDayFour="$200.00" halfDayThree="$126.00" fullDayThree="$163.00" halfDayTwo="$97.00" fullDayTwo="$126.00">Single extra days may be arranged with the director at a rate of half day: $63.00, full day: $79.00.</TuitionRates>
-        <Employee employeeName="Layni Bornuda" employeeImg="lbornuda"/>
-        <Employee employeeName="Samantha Wise" employeeImg="swise"/>
-        <Employee employeeName="Brittney Willoughby" employeeImg="bwilloughby"/>
+        <Employee employeeName="Emily Cavin" employeeTitle="Red Group Teacher" employeeImg="Emily"/>
+        <Employee employeeName="Kayla Matthews" employeeTitle="Yellow Group Teacher" employeeImg="Kayla"/>
+        <Employee employeeName="Brittney Willoughby" employeeTitle="Assistant" employeeImg="Brittney"/>
+        <Employee employeeName="Jessica Uribe" employeeTitle="Assistant" employeeImg="Jessica"/>
+        <Employee employeeName="Luisa Guillen" employeeTitle="Assistant" employeeImg="Luisa"/>
       </Layout>
     )
   }
