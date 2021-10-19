@@ -8,27 +8,21 @@ const Employee = ({ employeeName, employeeImg, employeeTitle }) => {
         query { allFile(filter: {relativeDirectory: {in: "employees"}}, sort: {fields: name}) { edges { node { id relativePath relativeDirectory publicURL extension name sourceInstanceName } } } } `)
       
   return (
-    <div className={employeeWrap}>
+    <div className={`${employeeImg.toLowerCase()} employee-wrap`}>
 
-        <div className={employeeImg}>
+        <div className={'employee-img-wrap'}>
             {data.allFile.edges.map((file, index) => {
-                return (
-                    <div>
-                        {(() => {
-                        if (file.node.name == employeeImg) {
-                            return (
-                                <img key={`${index}`} src={file.node.publicURL}/>
-                            )
-                        }
-                        })()}                            
-                    </div>
-                )
+                if (file.node.name == employeeImg) {
+                    return (
+                        <img key={`${index}`} src={file.node.publicURL} className={'employee-img'}/>
+                    )
+                }
             })}
         </div>
 
-        <div className={employeeName}>
-            <h3>{employeeName}</h3>
-            <h4>{employeeTitle}</h4>
+        <div className={`${employeeImg.toLowerCase()} employee-name-title-wrap`}>
+            <h3 className={`employee-name`}>{employeeName}</h3>
+            <h4 className={`employee-title`}>{employeeTitle}</h4>
         </div>
 
 
