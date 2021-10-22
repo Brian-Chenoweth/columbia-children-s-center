@@ -14,7 +14,15 @@
     @media (min-width: 1800px) { @content; }
 }
 
-body {margin: 0;}
+@font-face {
+    font-family: "Ubuntu-Regular";
+    src: url("../../fonts/Ubuntu-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    font-family: "Ubuntu-Regular", sans-serif;
+}
 
 .container {
     margin: auto;
@@ -24,7 +32,7 @@ body {margin: 0;}
         max-width: 1200px; 
      }
 
-    font-family: sans-serif;
+    // font-family: sans-serif;
   }
   
 .heading {

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { navLinks, subMenu, navLinkItem, navLinkText } from './styles/navigation.module.scss'
+import { navLinks, subMenu, navLinkItem, navLinkText, hasSubMenu } from './styles/navigation.module.scss'
 
 const Navigation = () => {
 
@@ -12,7 +12,7 @@ const Navigation = () => {
           Home
         </Link>
       </li>
-      <li className={navLinkItem}>
+      <li className={navLinkItem, hasSubMenu}>
         <Link to="/about" className={navLinkText}>
           About
         </Link>
@@ -34,7 +34,7 @@ const Navigation = () => {
           </li>
         </ul>
       </li>
-      <li className={navLinkItem}>
+      <li className={navLinkItem, hasSubMenu}>
         <Link to="/programs" className={navLinkText}>
           Programs
         </Link>
@@ -66,7 +66,7 @@ const Navigation = () => {
           Enrollment
         </Link>
       </li>
-      <li className={navLinkItem}>
+      <li className={navLinkItem, hasSubMenu}>
         <Link to="/parents" className={navLinkText}>
           Parents
         </Link>

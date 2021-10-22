@@ -1,9 +1,13 @@
 header {
     display: flex;
     justify-content: space-between;
+    padding: 15px 0;
 
-    .logo {
-        max-width: 50%;
+    // .logo {
+    //     max-width: 50%;
+    // }
+    a {
+        max-width: 25%;
     }
 
 }
