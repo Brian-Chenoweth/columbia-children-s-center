@@ -3,6 +3,11 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Columbia Children's Center",
     logo: "./images/logo.png",
+    socialMedia: {
+      facebook: "https://www.facebook.com/Columbia-Childrens-Center-149240848454100/",
+      instagram: "https://www.instagram.com/columbia.childrens.center/",
+      youtube: "https://www.youtube.com/channel/UCuiYJs5_KCclYcsqL10WHYA"
+    },
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",

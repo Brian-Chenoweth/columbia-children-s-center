@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layout from '../.././components/layout'
 
 const AboutPage = () => {
-  const pageTitle = "About Me";
+  const pageTitle = "About";
   return (
     <Layout pageTitle={pageTitle}>
         <p>We are a state licensed early childhood program. Offering childcare and preschool for children 18 months thru 6 years. We are conveniently located on Stowell Road close to the 101 freeway and Allan Hancock College. Our state of the art building was designed to be a childcare program offering many unique features including: fire sprinklers throughout, open and bright classrooms, child sized toilets, secure entry and plenty of parking for parents to drop off and pick up.</p>
