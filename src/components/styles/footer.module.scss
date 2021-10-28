@@ -4,35 +4,58 @@ footer {
 }
 
 .footer-content {
-    padding: 0 10px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     max-width: 1200px; 
     margin: 0 auto;
+
+    .social-icons-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .social-icons {
+            // a:first-of-type {padding-left: 0;}
+        }
+
+        p {
+            margin: 15px 0 0;
+        }
+
+    }
+
 }
 
 footer {
     a {
         color: transparent;
-        width: 25px !important;
-        height: 25px;
+        // width: 25px !important;
+        height: 35px !important;
+        width: auto;
+        max-width: 50px;
         display: inline-block;
         padding: 0 10px;
+        &:first-of-type {padding-left: 0;}
+        &:last-of-type {padding-left: 0;}
     }
     .instagram {
         background-image: url("../../images/social/instagram.svg");
         background-repeat: no-repeat;
         background-position: center;
+        background-size: auto 100%;
     }
     .facebook {
         background-image: url("../../images/social/facebook.svg");
         background-repeat: no-repeat;
         background-position: center;
+        background-size: auto 100%;
     }
     .youtube {
         background-image: url("../../images/social/youtube.svg");
         background-repeat: no-repeat;
         background-position: center;
+        background-size: auto 100%;
     }
 }
 

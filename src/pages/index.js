@@ -1,13 +1,23 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import { StaticImage } from 'gatsby-plugin-image'
+import HomepageSlider from '../components/homepageSlider'
+// import { StaticImage } from 'gatsby-plugin-image'
+import './styles/index.module.scss'
+var kidsRaisingHands = require ('../images/home/kids-raising-hands.png');
+var kidsSmiling = require ('../images/home/kids-smiling.png');
+var cccFront = require ('../images/home/columbia-childrens-center-front.png');
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Home">
-       {/* <StaticImage
-        alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
-        src="../images/clifford-pitbull.jpeg"/> */}
+    <Layout pageTitle="">
+      <HomepageSlider>
+        <div style={{ backgroundImage: `url(${kidsRaisingHands.default})`}}></div>
+        <div style={{ backgroundImage: `url(${cccFront.default})`}}></div>
+        <div style={{ backgroundImage: `url(${kidsSmiling.default})`}}></div>
+        <div style={{ backgroundImage: `url(${kidsRaisingHands.default})`}}></div>
+        <div style={{ backgroundImage: `url(${cccFront.default})`}}></div>
+        <div style={{ backgroundImage: `url(${kidsSmiling.default})`}}></div>
+      </HomepageSlider>
     </Layout>
   )
 }

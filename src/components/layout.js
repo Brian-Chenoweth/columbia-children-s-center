@@ -18,7 +18,11 @@ const Layout = ({ pageTitle, children }) => {
         </Helmet>
         <Header />
         <Navigation />
-        <h1 className={heading}>{pageTitle}</h1>
+          {(() => {
+              if (pageTitle) {
+                return ( <h1 className={heading}>{pageTitle}</h1> )
+              }
+            })()}
         {children}
       </main>
       <Footer />
