@@ -3,9 +3,6 @@ header {
     justify-content: space-between;
     padding: 15px 0;
 
-    // .logo {
-    //     max-width: 50%;
-    // }
     a {
         max-width: 25%;
     }
@@ -14,5 +11,24 @@ header {
 
 
 .city-phone {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    p {
+        font-size: 20px;
+        margin: 0;
+        margin-bottom: 5px;
+        color: darken(#395193, 25%);
+    }
+    a {
+        max-width: 100%;
+        text-decoration: none;
+        color: lighten(#395193, 25%);
+        // transition: all .3s;
+        font-size: 20px;
+        &:hover {
+            color: darken(#395193, 25%);
+        }
+    }
 }

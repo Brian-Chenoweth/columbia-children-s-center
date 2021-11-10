@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import { button, primary } from '../components/styles/layout.module.scss'
+// import { enrollmentWrap, enrollment } from './styles/enrollment.module.scss'
 
 const EnrollmentPage = () => {
   const pageTitle = "Enrollment";
@@ -10,14 +12,16 @@ const EnrollmentPage = () => {
 
   return (
     <Layout pageTitle={pageTitle}>
-      {data.allFile.edges.map((file, index) => {
-          return (
-            <div>
-              <h3 key={`${index}`}>{file.node.name.split('_').join(' ')}</h3>
-              <a class="button primary" href={file.node.publicURL} target="_blank">Open</a>
-            </div>
-          )
-      })}
+      <div>
+        {data.allFile.edges.map((file, index) => {
+            return (
+              <div>
+                <h3 key={`${index}`}>{file.node.name.split('_').join(' ')}</h3>
+                <a className={button} href={file.node.publicURL} target="_blank">Open</a>
+              </div>
+            )
+        })}
+      </div>
     </Layout>
   )
 }

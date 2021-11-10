@@ -28,6 +28,7 @@ body {
     margin: auto;
     max-width: 100%;
     padding: 0 10px;
+    margin-bottom: 50px;
      @include for-desktop-up {    
         max-width: 1200px; 
      }
@@ -37,8 +38,27 @@ body {
   
 .heading {
     color: #395193;
+    margin: 50px 0 35px;
 }
 
 .blu {
     font-size:15px;
+}
+
+a {
+    transition: all .3s;
+}
+
+.button {
+    display: inline-block;
+    background-color: lighten(#395193, 25%);
+    padding: .75em 3em;
+    margin: .5em 0;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    &:hover {
+        background-color: #395193;
+    }
 }
