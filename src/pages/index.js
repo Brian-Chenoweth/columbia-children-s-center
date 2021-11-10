@@ -9,7 +9,7 @@ var cccFront = require ('../images/home/columbia-childrens-center-front.png');
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="">
+    <Layout pageTitle="Columbia Children's Center">
       <HomepageSlider>
         <div style={{ backgroundImage: `url(${kidsRaisingHands.default})`}}></div>
         <div style={{ backgroundImage: `url(${cccFront.default})`}}></div>

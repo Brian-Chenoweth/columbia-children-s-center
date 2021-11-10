@@ -14,12 +14,20 @@ const Layout = ({ pageTitle, children }) => {
     <div>
       <main className={container}>
         <Helmet htmlAttributes={{ lang: 'en' }}>
-          <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+          {(() => {
+              if (pageTitle == "Columbia Children's Center") {
+                return (  <title>{data.site.siteMetadata.title}</title> ) 
+              } else {
+                return (  <title>{pageTitle} | {data.site.siteMetadata.title} </title> ) 
+              }
+            })()}
         </Helmet>
         <Header />
         <Navigation />
           {(() => {
-              if (pageTitle) {
+              if (pageTitle == "Columbia Children's Center") {
+                return ( <h1 className={heading} style={{display: "none"}}>{pageTitle}</h1> )
+              } else {
                 return ( <h1 className={heading}>{pageTitle}</h1> )
               }
             })()}
