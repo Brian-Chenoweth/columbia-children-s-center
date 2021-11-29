@@ -1,10 +1,29 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const ProgramSlider = ({ programImages, children }) => {
 
     const data = useStaticQuery(graphql`
-    query  { allFile { edges { node { relativePath relativeDirectory name extension publicURL id } } } } `)
+    query {
+      allFile {
+        edges {
+          node {
+            relativePath
+            relativeDirectory
+            name
+            publicURL
+            extension
+            id
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+    }
+    
+     `)
 
   return (
         <div>
@@ -15,8 +34,11 @@ const ProgramSlider = ({ programImages, children }) => {
                         <div>
                             {(() => {
                               if (file.node.relativeDirectory.includes(programImages)) {
+                                const image = getImage(file.node)
                                 return (
-                                  <img key={`${index}`} src={file.node.publicURL}/>
+                                  <div>
+                                    <GatsbyImage image={image} />
+                                  </div>
                                 )
                               } 
                             })()}
@@ -29,3 +51,11 @@ const ProgramSlider = ({ programImages, children }) => {
 }
 
 export default ProgramSlider
+
+// {data.allImageSharp.nodes.map((file, index) => {
+//   return (
+//   <div>
+//       <img key={`${index}`} src={file.fluid.srcWebp} alt=""/>
+//     </div>
+//   )
+// })}

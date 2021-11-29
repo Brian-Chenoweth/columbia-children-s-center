@@ -1,13 +1,15 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { classroomGoalsWrap, classroomGoals } from './styles/classroomGoals.module.scss'
-
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const ClassroomGoals = ({ pageTitle, children }) => {
 
 
     const data = useStaticQuery(graphql`
-    query { allFile(filter: {relativeDirectory: {in: "icons"} name:{eq: "kid-yellow"}}) { edges { node { relativePath relativeDirectory name extension publicURL id } } } } `)
+    query { allFile(filter: {relativeDirectory: {in: "icons"} name:{eq: "kid-yellow"}}) { edges { node { relativePath relativeDirectory name extension publicURL id childImageSharp {
+        gatsbyImageData
+      } } } } } `)
 
   return (
         <div className={classroomGoalsWrap}>
@@ -15,9 +17,10 @@ const ClassroomGoals = ({ pageTitle, children }) => {
             <div className={classroomGoals}>
                 {children}   
                     {data.allFile.edges.map((file, index) => {
+                        const image = getImage(file.node)
                         return (
                             <div>
-                                <img key={`${index}`} src={file.node.publicURL}/>
+                                <GatsbyImage image={image} />
                                 {/* <li key={`${index}`}> {index}</li> */}
                             </div>
                         )
