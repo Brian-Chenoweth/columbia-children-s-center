@@ -24,11 +24,11 @@ header {
     a {
         max-width: 100%;
         text-decoration: none;
-        color: lighten(#395193, 25%);
+        color: #3C559A;
         // transition: all .3s;
         font-size: 20px;
         &:hover {
-            color: darken(#395193, 25%);
+            color: darken(#3C559A, 15%);
         }
     }
 }

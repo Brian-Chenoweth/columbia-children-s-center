@@ -6,7 +6,7 @@ import Navigation from '../components/navigation'
 import Footer from '../components/footer'
 import Header from '../components/header'
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ pageTitle, metaDesc, children }) => {
 
   const data = useStaticQuery(graphql`query { site { siteMetadata { title logo } } }`)
 
@@ -21,6 +21,7 @@ const Layout = ({ pageTitle, children }) => {
                 return (  <title>{pageTitle} | {data.site.siteMetadata.title} </title> ) 
               }
             })()}
+            <meta name="description" content={metaDesc} />
         </Helmet>
         <Header />
         <Navigation />
