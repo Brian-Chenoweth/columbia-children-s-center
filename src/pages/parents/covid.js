@@ -4,7 +4,7 @@ import Layout from '../../components/layout'
 const CovidPage = () => {
   const pageTitle = "Covid";
   return (
-    <Layout pageTitle={pageTitle}>
+    <Layout pageTitle={pageTitle} metaDesc="Covid protocols at Columbia Children's Center.">
     </Layout>
   )
 }

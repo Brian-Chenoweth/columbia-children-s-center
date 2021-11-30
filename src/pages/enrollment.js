@@ -11,7 +11,7 @@ const EnrollmentPage = () => {
   query { allFile(filter: {relativeDirectory: {in: "enrollment"}}, sort: {fields: name}) { edges { node { id relativePath relativeDirectory publicURL extension name sourceInstanceName } } } } `)
 
   return (
-    <Layout pageTitle={pageTitle}>
+    <Layout pageTitle={pageTitle} metaDesc="Enrollment paperwork for parents.">
       <div>
         {data.allFile.edges.map((file, index) => {
             return (

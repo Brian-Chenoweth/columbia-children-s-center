@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 const ContactPage = () => {
   return (
-    <Layout pageTitle="Contact">
+    <Layout pageTitle="Contact" metaDesc="Contact Columbia Children's Center">
     </Layout>
   )
 }

@@ -2,9 +2,8 @@ import * as React from 'react'
 import Layout from '../.././components/layout'
 
 const PhilosophyGoalsPage = () => {
-  const pageTitle = "Philosophy & Goals";
   return (
-    <Layout pageTitle={pageTitle}>
+    <Layout pageTitle="Philosophy &amp; Goals" metaDesc="We believe that children have the right to a nurturing, safe environment where they can feel comfortable and secure.">
         <p>We believe that children have the right to a nurturing, safe environment where they can feel comfortable and secure. We believe that children have a right to develop to their maximum abilities and that teachers have the responsibility to provide opportunities for this development to occur.</p>
         <h1>*** SINGLE IMAGE HERE ***</h1>
         <p>We recognize that each child is an individual and that each child must be allowed to develop at his or her own pace. We accept and respect differences between children including developmental and physical differences and differences in racial and ethnic heritages. Every child regardless of sex, race, religion or ethnic origin must have the same opportunities and advantages as every other child.</p>

@@ -52,7 +52,7 @@ a {
 
 .button {
     display: inline-block;
-    background-color: lighten(#395193, 25%);
+    background-color: #3C559A;
     padding: .75em 3em;
     margin: .5em 0;
     color: white;
@@ -60,6 +60,6 @@ a {
     font-size: 20px;
     border-radius: 5px;
     &:hover {
-        background-color: #395193;
+        background-color:  darken(#3C559A, 15%);
     }
 }

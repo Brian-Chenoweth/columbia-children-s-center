@@ -3,9 +3,8 @@ import Layout from '../.././components/layout'
 import Employee from '../../components/employee'
 
 const OurTeamPage = () => {
-  const pageTitle = "Our Team";
   return (
-    <Layout pageTitle={pageTitle}>
+    <Layout pageTitle="Our Team" metaDesc="Meet the team of Columbia Children's Center.">
       <Employee employeeName="Cortney Dasmann" employeeTitle="Program Director" employeeImg="Cortney"/>
       <Employee employeeName="Cynthia Hernandez" employeeTitle="Young Toddler Teacher" employeeImg="Cynthia"/>
       <Employee employeeName="Danielle Gauna" employeeTitle="Young Toddler Assistant" employeeImg="Danielle"/>

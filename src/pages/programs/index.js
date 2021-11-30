@@ -2,9 +2,8 @@ import * as React from 'react'
 import Layout from '../../components/layout'
 
 const ProgramsPage = () => {
-  const pageTitle = "Programs";
   return (
-    <Layout pageTitle={pageTitle}>
+    <Layout pageTitle="Programs" metaDesc="Read about the programs offered at Columbia Children's Center.">
     </Layout>
   )
 }

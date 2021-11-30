@@ -25,8 +25,8 @@ const Employee = ({ employeeName, employeeImg, employeeTitle }) => {
         </div>
 
         <div className={`${employeeImg.toLowerCase()} employee-name-title-wrap`}>
-            <h3 className={`employee-name`}>{employeeName}</h3>
-            <h4 className={`employee-title`}>{employeeTitle}</h4>
+            <h2 className={`employee-name`}>{employeeName}</h2>
+            <h3 className={`employee-title`}>{employeeTitle}</h3>
         </div>
 
 

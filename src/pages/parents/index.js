@@ -4,7 +4,7 @@ import Layout from '../../components/layout'
 const ParentsPage = () => {
   const pageTitle = "Parents";
   return (
-    <Layout pageTitle={pageTitle}>
+    <Layout pageTitle={pageTitle} metaDesc="Parents">
     </Layout>
   )
 }

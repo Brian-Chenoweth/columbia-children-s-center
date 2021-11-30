@@ -11,7 +11,7 @@ import JSONDat from "../../data/adayin/early-years.json"
 const EYPage = () => {
   const pageTitle = "Early Years";
   return (
-    <Layout pageTitle={pageTitle}>
+    <Layout pageTitle={pageTitle} metaDesc="Our classroom promotes independence through play, art expression and teacher directed activities for kids 2 years to 3 years.">
         <h2>2 years to 3 years</h2>
         <p>Our classroom promotes independence through play, art expression and teacher directed activities, self-help skills such as eating skills, potty training, hand washing, and independently cleaning up. Each child is sent a daily note through our communication software that explains your child’s daily activity, toilet times, eating, and rest time.</p>
         <p>We introduce students to circle time activities including, alphabets, colors, counting, songs, and story time. The age appropriate activities in this classroom promote socialization, taking turns, sharing, and expressing feelings in appropriate manner.</p>
