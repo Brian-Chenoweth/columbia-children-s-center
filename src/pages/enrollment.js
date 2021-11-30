@@ -16,7 +16,7 @@ const EnrollmentPage = () => {
         {data.allFile.edges.map((file, index) => {
             return (
               <div>
-                <h3 key={`${index}`}>{file.node.name.split('_').join(' ')}</h3>
+                <h2 key={`${index}`}>{file.node.name.split('_').join(' ')}</h2>
                 <a className={button} href={file.node.publicURL} target="_blank">Open</a>
               </div>
             )
