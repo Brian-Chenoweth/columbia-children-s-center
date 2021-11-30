@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 const CareersPage = () => {
   return (
-    <Layout pageTitle="Careers">
+    <Layout pageTitle="Careers" metaDesc="Careers available at Columbia Children's Center.">
     </Layout>
   )
 }
