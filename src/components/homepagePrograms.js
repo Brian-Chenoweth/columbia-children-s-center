@@ -1,5 +1,6 @@
 import * as React from 'react'
-import {hero, heroProfileImg, heroDescriptionBk, heroLogo, heroDescription, heroDate, heroBtn } from './styles/homepagePrograms.module.scss'
+import {hero, heroProfileImg, imgWrap, heroDescriptionBk, heroDescription, heroDate, heroBtn } from './styles/homepagePrograms.module.scss'
+import { button } from '../components/styles/layout.module.scss'
 var youngToddler = require ('../images/home/young-toddler.jpg');
 
 const homepagePrograms = ({ children }) => {
@@ -8,24 +9,26 @@ const homepagePrograms = ({ children }) => {
   return (
 <div className={hero}>
 
-  <img className={heroProfileImg} src={youngToddler.default} alt="" />
+  <div className={imgWrap}>
 
-  <div className={heroDescriptionBk}></div>
+    <img className={heroProfileImg} src={youngToddler.default} alt="" />
 
-  {/* <div className={heroLogo}>
-    <img src="https://miscmedia-9gag-fun.9cache.com/images/thumbnail-facebook/1557291375.3948_Dy2yZu_n.jpg" alt="" />
-  </div> */}
+  </div>
+
+
+  <div className={heroDescriptionBk}>
 
   <div className={heroDescription}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h2>Young Toddler</h2>
   </div>
 
   <div className={heroDate}>
-    <p>20.02.2019</p>
+    <p>18 months to 2½ years</p>
   </div>
 
-  <div className={heroBtn}>
-    <a href="#">Learn More</a>
+    <a href="#" className={button}>Learn More</a>
+
+
   </div>
 
 </div>

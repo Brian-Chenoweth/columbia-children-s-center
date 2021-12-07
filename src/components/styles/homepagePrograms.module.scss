@@ -1,91 +1,59 @@
-/* BEGIN CARD DESIGN */
 .hero {
-    display: inline-block;
-    position: relative;
+  display: flex;
+  flex-direction: column;
     width: 400px;
     min-width: 400px;
     height: 475px;
     border-radius: 30px;
     overflow:hidden;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
-    // margin: 30px;
+    .img-wrap {
+      overflow: hidden;
+    }
+    img {
+      height: 100%;
+      transition: all .4s;
+    }
+    &:hover {
+      img {
+        transform: scale(120%);
+        // transition: all .3s;
+        // overflow: hidden;
+      }
+      cursor: pointer;
+    }
   }
-  
-  .hero-profile-img {
-    height: 65%;
-  }
+
   
   .hero-description-bk {
     background-image: linear-gradient(0deg , #2f60a8, #2f60a8);
     border-radius: 0px;
-    position: absolute;
-    top: 55%;
-    left: 5px;
-    height: 75%;
-    width: 115%;
-    transform: skew(19deg, -10deg);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-description-bk h2 {
+    margin: 0;
   }
   
-  
-  .hero-logo {
-    height: 80px;
-    width: 80px;
-    border-radius: 20px;
-    background-color: #fff;
-    position: absolute;
-    bottom: 30%;
-    left: 30px;
-    overflow:hidden;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
-  }
-  
+
   .hero-logo img {
     height: 100%;
   }
   
   .hero-description {
-    position: absolute;
     color: #fff;
     font-weight: 900;
-    left: 150px;
-    bottom: 26%;
+    left: 30px;
+    bottom: 20%;
   }
-  
-  .hero-btn {
-    position: absolute;
-    color: #fff;
-    right: 30px;
-    bottom: 10%;
-    padding: 10px 20px;
-    border: 1px solid #fff;
-  }
-  
-  .hero-btn a {
-    color: #fff;
-  }
+
   
   .hero-date {
-    position: absolute;
     color: #fff;
     left: 30px;
     bottom: 10%;
-  }
-  /* END CARD DESIGN */
-  
-  body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    background-color: #eee;
-    min-height: 100vh;
-  }
-  .btn i:before {
-    width: 14px;
-    height: 14px;
-    position: fixed;
-    color: #fff;
-    background: #0077B5;
-    padding: 10px;
-    border-radius: 50%;
-    top:5px;
-    right:5px;
   }
