@@ -7,31 +7,27 @@ const homepagePrograms = ({ children }) => {
     
 
   return (
-<div className={hero}>
+    <div className={hero}>
 
-  <div className={imgWrap}>
+      <div className={imgWrap}>
+        <img className={heroProfileImg} src={youngToddler.default} alt="" />
+      </div>
 
-    <img className={heroProfileImg} src={youngToddler.default} alt="" />
+      <div className={heroDescriptionBk}>
 
-  </div>
+        <div className={heroDescription}>
+          <h2>Young Toddler</h2>
+        </div>
 
+        <div className={heroDate}>
+          <p>18 months to 2½ years</p>
+        </div>
 
-  <div className={heroDescriptionBk}>
+        <a href="#" className={button}>Learn More</a>
 
-  <div className={heroDescription}>
-    <h2>Young Toddler</h2>
-  </div>
+      </div>
 
-  <div className={heroDate}>
-    <p>18 months to 2½ years</p>
-  </div>
-
-    <a href="#" className={button}>Learn More</a>
-
-
-  </div>
-
-</div>
+    </div>
   )
 }
 

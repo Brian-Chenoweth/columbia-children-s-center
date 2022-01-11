@@ -17,10 +17,11 @@
     &:hover {
       img {
         transform: scale(120%);
-        // transition: all .3s;
-        // overflow: hidden;
       }
       cursor: pointer;
+      a {
+        background-color: #273763;
+      }
     }
   }
 
