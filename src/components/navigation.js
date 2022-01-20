@@ -13,78 +13,78 @@ const Navigation = () => {
         </Link>
       </li>
       <li className={navLinkItem, hasSubMenu}>
-        <Link to="/about" className={navLinkText}>
+        <Link to="/about/" className={navLinkText}>
           About
         </Link>
         <ul className={subMenu}>
           <li className={navLinkItem}>
-            <Link to="/about/history" className={navLinkText}>
+            <Link to="/about/history/" className={navLinkText}>
               History
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/about/our-team" className={navLinkText}>
+            <Link to="/about/our-team/" className={navLinkText}>
               Our Team
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/about/philosophy-goals" className={navLinkText}>
+            <Link to="/about/philosophy-goals/" className={navLinkText}>
               Philosophy &amp; Goals 
             </Link>
           </li>
         </ul>
       </li>
       <li className={navLinkItem, hasSubMenu}>
-        <Link to="/programs" className={navLinkText}>
+        <Link to="/programs/" className={navLinkText}>
           Programs
         </Link>
         <ul className={subMenu}>
           <li className={navLinkItem}>
-            <Link to="/programs/young-toddler" className={navLinkText}>
+            <Link to="/programs/young-toddler/" className={navLinkText}>
               Young Toddler
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/programs/early-years" className={navLinkText}>
+            <Link to="/programs/early-years/" className={navLinkText}>
               Early Years
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/programs/preschool" className={navLinkText}>
+            <Link to="/programs/preschool/" className={navLinkText}>
               Preschool
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/programs/kindergarten-readiness" className={navLinkText}>
+            <Link to="/programs/kindergarten-readiness/" className={navLinkText}>
               Kindergarten Readiness
             </Link>
           </li>
         </ul>
       </li>
       <li className={navLinkItem}>
-        <Link to="/enrollment" className={navLinkText}>
+        <Link to="/enrollment/" className={navLinkText}>
           Enrollment
         </Link>
       </li>
       <li className={navLinkItem, hasSubMenu}>
-        <Link to="/parents" className={navLinkText}>
+        <Link to="/parents/" className={navLinkText}>
           Parents
         </Link>
         <ul className={subMenu}>
           <li className={navLinkItem}>
-            <Link to="/parents/covid" className={navLinkText}>
+            <Link to="/parents/covid/" className={navLinkText}>
               Covid
             </Link>
           </li>
         </ul>
       </li>
       <li className={navLinkItem}>
-        <Link to="/careers" className={navLinkText}>
+        <Link to="/careers/" className={navLinkText}>
           Careers
         </Link>
       </li>
       <li className={navLinkItem}>
-        <Link to="/contact" className={navLinkText}>
+        <Link to="/contact/" className={navLinkText}>
           Contact
         </Link>
       </li>

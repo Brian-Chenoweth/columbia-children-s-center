@@ -10,49 +10,104 @@ const homepagePrograms = ({ children }) => {
   return (
     <div>
 
-    <div className={hero}>
 
-      <div className={imgWrap}>
-        <img className={heroProfileImg} src={youngToddler.default} alt="" />
-      </div>
+      <div className={hero}>
 
-      <div className={heroDescriptionBk}>
-
-        <div className={heroDescription}>
-          <h2>Young Toddler</h2>
+        <div className={imgWrap}>
+          <img className={heroProfileImg} src={youngToddler.default} alt="" />
         </div>
 
-        <div className={heroDate}>
-          <p>18 months - 2½ years</p>
+        <div className={heroDescriptionBk}>
+
+          <div className={heroDescription}>
+            <h2>Young Toddler</h2>
+          </div>
+
+          <div className={heroDate}>
+            <p>18 months - 2½ years</p>
+          </div>
+
+          <a href="/programs/young-toddler/" className={button}>Learn More</a>
+
         </div>
 
-        <a href="#" className={button}>Learn More</a>
+      </div>
+
+
+
+      <div className={hero}>
+
+        <div className={imgWrap}>
+          <img className={heroProfileImg} src={earlyYears.default} alt="" />
+        </div>
+
+        <div className={heroDescriptionBk}>
+
+          <div className={heroDescription}>
+            <h2>Early Years</h2>
+          </div>
+
+          <div className={heroDate}>
+            <p>2 years - 3 years</p>
+          </div>
+
+          <a href="/programs/early-years/" className={button}>Learn More</a>
+
+        </div>
 
       </div>
 
-    </div>
 
-    <div className={hero}>
 
-    <div className={imgWrap}>
-      <img className={heroProfileImg} src={earlyYears.default} alt="" />
-    </div>
+      <div className={hero}>
 
-    <div className={heroDescriptionBk}>
+        <div className={imgWrap}>
+          <img className={heroProfileImg} src={earlyYears.default} alt="" />
+        </div>
 
-      <div className={heroDescription}>
-        <h2>Early Years</h2>
+        <div className={heroDescriptionBk}>
+
+          <div className={heroDescription}>
+            <h2>Preschool</h2>
+          </div>
+
+          <div className={heroDate}>
+            <p>3 years - 4 years</p>
+          </div>
+
+          <a href="/programs/preschool/" className={button}>Learn More</a>
+
+        </div>
+
       </div>
 
-      <div className={heroDate}>
-        <p>2 years - 3 years</p>
+
+
+
+
+      <div className={hero}>
+
+        <div className={imgWrap}>
+          <img className={heroProfileImg} src={earlyYears.default} alt="" />
+        </div>
+
+        <div className={heroDescriptionBk}>
+
+          <div className={heroDescription}>
+            <h2>Kindergarten Readiness</h2>
+          </div>
+
+          <div className={heroDate}>
+            <p>4 years - 5 years</p>
+          </div>
+
+          <a href="/programs/kindergarten-readiness/" className={button}>Learn More</a>
+
+        </div>
+
       </div>
 
-      <a href="#" className={button}>Learn More</a>
 
-    </div>
-
-</div>
 
 </div>
 
