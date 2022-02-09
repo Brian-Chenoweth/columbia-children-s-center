@@ -1,15 +1,16 @@
 import * as React from 'react'
-import {hero, heroProfileImg, imgWrap, heroDescriptionBk, heroDescription, heroDate, heroBtn } from './styles/homepagePrograms.module.scss'
+import {hero, heroProfileImg, imgWrap, heroDescriptionBk, heroDescription, heroDate, heroBtn, homepageProgramWrap } from './styles/homepagePrograms.module.scss'
 import { button } from '../components/styles/layout.module.scss'
 var youngToddler = require ('../images/home/young-toddler.jpg');
 var earlyYears = require ('../images/home/early-years.jpg');
+var preschool = require ('../images/home/preschool.jpg');
+var kindergartenReadiness = require ('../images/home/kindergartenReadiness.jpg');
 
 const homepagePrograms = ({ children }) => {
     
 
   return (
-    <div>
-
+    <div className={homepageProgramWrap}>
 
       <div className={hero}>
 
@@ -32,7 +33,6 @@ const homepagePrograms = ({ children }) => {
         </div>
 
       </div>
-
 
 
       <div className={hero}>
@@ -58,11 +58,10 @@ const homepagePrograms = ({ children }) => {
       </div>
 
 
-
       <div className={hero}>
 
         <div className={imgWrap}>
-          <img className={heroProfileImg} src={earlyYears.default} alt="" />
+          <img className={heroProfileImg} src={preschool.default} alt="" />
         </div>
 
         <div className={heroDescriptionBk}>
@@ -82,13 +81,10 @@ const homepagePrograms = ({ children }) => {
       </div>
 
 
-
-
-
       <div className={hero}>
 
         <div className={imgWrap}>
-          <img className={heroProfileImg} src={earlyYears.default} alt="" />
+          <img className={heroProfileImg} src={kindergartenReadiness.default} alt="" />
         </div>
 
         <div className={heroDescriptionBk}>
@@ -106,8 +102,6 @@ const homepagePrograms = ({ children }) => {
         </div>
 
       </div>
-
-
 
 </div>
 
