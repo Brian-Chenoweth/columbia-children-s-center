@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { programSliderWrap, imageWrap } from './styles/programSlider.module.scss'
 
 const ProgramSlider = ({ programImages, children }) => {
 
@@ -16,7 +17,7 @@ const ProgramSlider = ({ programImages, children }) => {
             extension
             id
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(width: 400)
             }
           }
         }
@@ -26,26 +27,18 @@ const ProgramSlider = ({ programImages, children }) => {
      `)
 
   return (
-        <div>
-            <div>
-                {children}      
-                    {data.allFile.edges.map((file, index) => {
+        <div className={programSliderWrap}>
+            {children}      
+                {data.allFile.edges.map((file, index) => {
+                      if (file.node.relativeDirectory.includes(programImages)) {
+                        const image = getImage(file.node)
                         return (
-                        <div>
-                            {(() => {
-                              if (file.node.relativeDirectory.includes(programImages)) {
-                                const image = getImage(file.node)
-                                return (
-                                  <div>
-                                    <GatsbyImage image={image} />
-                                  </div>
-                                )
-                              } 
-                            })()}
+                          <div className={imageWrap}>
+                            <GatsbyImage image={image} width={300}/>
                           </div>
                         )
-                    })}
-            </div>
+                      }
+                })}
         </div>
   )
 }
