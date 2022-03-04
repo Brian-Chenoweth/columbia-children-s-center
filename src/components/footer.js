@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import { footerContent, socialIconsWrap, socialIcons, facebook, instagram, youtube} from './styles/footer.module.scss'
 
 const Footer = () => {
@@ -24,9 +24,9 @@ const Footer = () => {
         </div>
         <div className={socialIconsWrap}>
           <div className={socialIcons}>
-            <a href={data.site.siteMetadata.socialMedia.facebook} className={facebook}>facebook</a>
-            <a href={data.site.siteMetadata.socialMedia.instagram} className={instagram}>instagram</a>
-            <a href={data.site.siteMetadata.socialMedia.youtube} className={youtube}>youtube</a>
+            <Link to={data.site.siteMetadata.socialMedia.facebook} className={facebook} target="_blank">facebook</Link>
+            <Link to={data.site.siteMetadata.socialMedia.instagram} className={instagram} target="_blank">instagram</Link>
+            <Link to={data.site.siteMetadata.socialMedia.youtube} className={youtube} target="_blank">youtube</Link>
           </div>
           <p>&copy; {new Date().getFullYear()} Columbia Children's Center. All Rights Reserved.</p>
         </div>

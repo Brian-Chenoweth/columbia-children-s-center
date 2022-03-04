@@ -51,11 +51,3 @@ const ProgramSlider = ({ programImages, children }) => {
 }
 
 export default ProgramSlider
-
-// {data.allImageSharp.nodes.map((file, index) => {
-//   return (
-//   <div>
-//       <img key={`${index}`} src={file.fluid.srcWebp} alt=""/>
-//     </div>
-//   )
-// })}
