@@ -34,6 +34,7 @@ const ProgramSlider = ({ programImages, children }) => {
                         const image = getImage(file.node)
                         return (
                           <div className={imageWrap}>
+                            <h3>Make ticker</h3>
                             <GatsbyImage image={image} width={300}/>
                           </div>
                         )

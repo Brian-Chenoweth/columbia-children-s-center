@@ -1,3 +1,19 @@
+@use 'layout.module.scss';
+
 .employee_wrap {}
 .employee_img {}
 .employee_name {}
+
+.employees-wrap {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    text-align: center;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+    h3 {
+        margin-top: 10px;
+    }
+}

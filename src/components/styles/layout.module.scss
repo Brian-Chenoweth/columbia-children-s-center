@@ -28,7 +28,7 @@ body {
 }
 
 p {
-    line-height: 1.45;
+    line-height: 1.5;
 }
 
 .container {
@@ -54,6 +54,10 @@ a {
     transition: all .3s;
 }
 
+ul {
+    line-height: 1.5;
+}
+
 .button {
     display: inline-block;
     background-color: #3C559A;
@@ -68,3 +72,9 @@ a {
         background-color:  darken(#3C559A, 15%);
     }
 }
+
+// .employeesWrap {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-gap: 25px;
+// }

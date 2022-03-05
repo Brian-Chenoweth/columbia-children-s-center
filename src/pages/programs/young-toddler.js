@@ -9,6 +9,7 @@ import JSONData from "../../data/classroomgoals/young-toddler.json"
 import JSONDat from "../../data/adayin/young-toddler.json"
 import { StaticImage } from 'gatsby-plugin-image'
 import { introImage } from '../../components/styles/page.module.scss'
+import { employeesWrap } from '../../components/styles/employee.module.scss'
 
 
 const YTPage = () => {
@@ -41,9 +42,11 @@ const YTPage = () => {
           </div> 
         </AdayIn>
         <TuitionRates pageTitle={pageTitle} halfDayFive="$229.00" fullDayFive="$297.00"/>
-        <Employee employeeName="Cynthia Hernandez" employeeTitle="Young Toddler Teacher " employeeImg="Cynthia"/>
-        <Employee employeeName="Danielle Gauna" employeeTitle="Assistant" employeeImg="Danielle"/>
-        <Employee employeeName="Shirley Adelhelm" employeeTitle="Young Toddler Teacher / Breaker" employeeImg="Shirley"/>
+        <div className={employeesWrap}>
+          <Employee employeeName="Cynthia Hernandez" employeeTitle="Young Toddler Teacher " employeeImg="Cynthia"/>
+          <Employee employeeName="Danielle Gauna" employeeTitle="Assistant" employeeImg="Danielle"/>
+          <Employee employeeName="Shirley Adelhelm" employeeTitle="Young Toddler Teacher / Breaker" employeeImg="Shirley"/>
+        </div>
     </Layout>
   )
 }

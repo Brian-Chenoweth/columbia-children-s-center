@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { employeeWrap, employeeImg, employeeName } from './styles/employee.module.scss'
+import { employeeWrap, employeeImg, employeeName, employeesWrap } from './styles/employee.module.scss'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Employee = ({ employeeName, employeeImg, employeeTitle }) => {

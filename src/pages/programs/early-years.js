@@ -7,6 +7,7 @@ import ProgramSlider from '../../components/programSlider'
 import ClassroomGoals from '../../components/classroomGoals'
 import JSONData from "../../data/classroomgoals/early-years.json"
 import JSONDat from "../../data/adayin/early-years.json"
+import { employeesWrap } from '../../components/styles/employee.module.scss'
 
 const EYPage = () => {
   const pageTitle = "Early Years";
@@ -40,9 +41,11 @@ const EYPage = () => {
           </div> 
         </AdayIn>
         <TuitionRates pageTitle={pageTitle} halfDayFive="$229.00" fullDayFive="$297.00" halfDayFour="$204.00" fullDayFour="$255.00" halfDayThree="$178.00" fullDayThree="$216.00" halfDayTwo="$132.00" fullDayTwo="$175.00">Single extra days may be arranged with the director at a rate of half day: $74.00, full day: $89.00.</TuitionRates>
-        <Employee employeeName="Vanessa Mendoza" employeeTitle="Early Year's Teacher" employeeImg="Vanessa"/>
-        <Employee employeeName="Cheyenne Perry" employeeTitle="Assistant" employeeImg="Cheyenne"/>
-        <Employee employeeName="Jackie Rubalcava" employeeTitle="Assistant" employeeImg="Jackie"/>
+        <div className={employeesWrap}>
+          <Employee employeeName="Vanessa Mendoza" employeeTitle="Early Year's Teacher" employeeImg="Vanessa"/>
+          <Employee employeeName="Cheyenne Perry" employeeTitle="Assistant" employeeImg="Cheyenne"/>
+          <Employee employeeName="Jackie Rubalcava" employeeTitle="Assistant" employeeImg="Jackie"/>
+        </div>
     </Layout>
   )
 }
