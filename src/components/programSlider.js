@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { programSliderWrap, imageWrap } from './styles/programSlider.module.scss'
+import { GatsbyImage, getImage, imgClassName } from "gatsby-plugin-image"
+import { programSliderWrap, imageWrap, image } from './styles/programSlider.module.scss'
 
 const ProgramSlider = ({ programImages, children }) => {
 
@@ -33,10 +33,7 @@ const ProgramSlider = ({ programImages, children }) => {
                       if (file.node.relativeDirectory.includes(programImages)) {
                         const image = getImage(file.node)
                         return (
-                          <div className={imageWrap}>
-                            <h3>Make ticker</h3>
-                            <GatsbyImage image={image} width={300}/>
-                          </div>
+                            <GatsbyImage image={image} width={300}  className={imageWrap} imgClassName={image}/>
                         )
                       }
                 })}
