@@ -8,7 +8,7 @@ const ClassroomGoals = ({ pageTitle, children }) => {
 
     const data = useStaticQuery(graphql`
     query { allFile(filter: {relativeDirectory: {in: "icons"} name:{eq: "kid-yellow"}}) { edges { node { relativePath relativeDirectory name extension publicURL id childImageSharp {
-        gatsbyImageData
+        gatsbyImageData (width: 300)
       } } } } } `)
 
   return (
@@ -16,15 +16,6 @@ const ClassroomGoals = ({ pageTitle, children }) => {
             <h2>{pageTitle} Classroom Goals</h2>
             <div className={classroomGoals}>
                 {children}   
-                    {data.allFile.edges.map((file, index) => {
-                        const image = getImage(file.node)
-                        return (
-                            <div>
-                                <GatsbyImage image={image} />
-                                {/* <li key={`${index}`}> {index}</li> */}
-                            </div>
-                        )
-                    })}
             </div>
         </div>
   )
