@@ -1,12 +1,14 @@
 import * as React from 'react'
-import { tuitionRates } from './styles/tuitionRates.module.scss'
+import { tuitionRatesWrap, tuitionRates } from './styles/tuitionRates.module.scss'
 
 const TuitionRates = ({ halfDayFive, halfDayFour, halfDayThree, halfDayTwo, fullDayFive, fullDayFour, fullDayThree, fullDayTwo, pageTitle, children }) => {
 
   return (
-    <div className={tuitionRates}>
+    <div className={tuitionRatesWrap}>
         <h2>{pageTitle} Weekly Tuition Rates</h2>
-        <div>
+        <div className={tuitionRates}>
+
+          <div>
             <h3>Half Days (leave by 12:15)</h3>
 
             {(() => {
@@ -32,11 +34,13 @@ const TuitionRates = ({ halfDayFive, halfDayFour, halfDayThree, halfDayTwo, full
                 )
               }
             })()}
-            
-            <p><strong>5 days per week: </strong>{halfDayFive}</p>
+
+          <p><strong>5 days per week: </strong>{halfDayFive}</p>
 
         </div>
+
         <div>
+
             <h3>Full Days (attend after 12:15)</h3>
             
             {(() => {
@@ -64,6 +68,8 @@ const TuitionRates = ({ halfDayFive, halfDayFour, halfDayThree, halfDayTwo, full
             })()}
 
             <p><strong>5 days per week: </strong>{fullDayFive}</p>
+
+            </div>
 
         </div>
         <div>
