@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet';
-import { container, heading } from './styles/layout.module.scss'
+import { container, heading, content } from './styles/layout.module.scss'
 import Navigation from '../components/navigation'
 import Footer from '../components/footer'
 import Header from '../components/header'
@@ -32,7 +32,7 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
                 return ( <h1 className={heading}>{pageTitle}</h1> )
               }
             })()}
-        {children}
+            <div className={content}>{children}</div>
       </main>
       <Footer />
     </div>

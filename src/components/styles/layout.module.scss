@@ -28,7 +28,16 @@ body {
 }
 
 p {
-    line-height: 1.5;
+    line-height: 1.75;
+    color: #080708;
+    font-size: 19px;
+}
+
+.content {
+    ul, li {
+        font-size: 19px;
+        line-height: 1.75;
+    }   
 }
 
 .container {
@@ -43,7 +52,16 @@ p {
   
 .heading {
     color: #395193;
-    margin: 50px 0 35px;
+    margin: 50px 0 0px;
+}
+
+h2 {
+    color: #2D4739;
+    // margin-top: 5px;
+}
+
+h3 {
+    margin-top: 0;
 }
 
 .blu {
@@ -52,10 +70,6 @@ p {
 
 a {
     transition: all .3s;
-}
-
-ul {
-    line-height: 1.5;
 }
 
 .button {
@@ -67,7 +81,6 @@ ul {
     text-decoration: none;
     font-size: 20px;
     border-radius: 5px;
-    // z-index: 99;
     &:hover {
         background-color:  darken(#3C559A, 15%);
     }

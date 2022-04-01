@@ -18,6 +18,8 @@ nav {
     max-width: 1300px;
     margin: 0 auto;
     justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
     li {
         &:first-of-type {
            a {padding-left: 0;}

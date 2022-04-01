@@ -17,7 +17,7 @@ const AdayIn = ({ pageTitle, children }) => {
                         edges { 
                             node { 
                                 relativePath relativeDirectory name extension publicURL id childImageSharp {
-                                    gatsbyImageData
+                                    gatsbyImageData (width: 300)
                                   }
                             } 
                         } 
