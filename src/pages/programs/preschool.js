@@ -8,17 +8,19 @@ import ClassroomGoals from '../../components/classroomGoals'
 import JSONData from "../../data/classroomgoals/preschool.json"
 import JSONDat from "../../data/adayin/preschool-yellow.json"
 import JSONDa from "../../data/adayin/preschool-red.json"
+import { StaticImage } from 'gatsby-plugin-image'
+import { introImage } from '../../components/styles/page.module.scss'
 import { employeesWrap } from '../../components/styles/employee.module.scss'
 
 const PPage = () => {
     const pageTitle = "Preschool";
     return (
       <Layout pageTitle={pageTitle} metaDesc="Our goal is to provide a fun, safe, positive environment; emphasizing on confidence building and self-esteem for children 3 years to 4 years.">
+        <StaticImage src="../../images/programs/preschool/preschool.jpg" width={500} className={introImage}/>
         <h2>3 years to 4 years</h2>
         <p>Our goal is to provide a fun, safe, positive environment; emphasizing on confidence building and self-esteem. The Preschool Program concentrates on listening and basic cognitive skills such as colors, shapes and alphabet and number recognition.</p>
         <p>Our daily schedule includes circle time, which promotes social development, sharing, cooperation and participation as a group. Math and Science activities reinforce practice counting, recognizing numbers, colors, sizes and shapes, as well as scissor practice. Story time and a language arts activity promote language development, alphabet and name recognition, individual expression and creativity. We have music and movement to develop skills of expression, rhythm, listening, coordination, as well as large motor skills.</p>
         <p>Our classroom has centers such as Science, Reading, Dramatic Play, Manipulative, and Art. These centers encourage your child’s learning experience. Our maximum teacher to child ratio is 1:12.</p>
-        <h1>*** ADD SINGLE IMAGE HERE ***</h1>
         <ClassroomGoals pageTitle={pageTitle}> 
           {JSONData.goals.map((data, index) => {
             return <div>
