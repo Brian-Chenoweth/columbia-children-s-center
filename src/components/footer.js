@@ -19,8 +19,10 @@ const Footer = () => {
     <footer>
       <div className={footerContent}>
         <div>
-          <p>Hours of operation</p>
-          <p>Monday-Friday: 7:00 a.m. - 5:30 p.m.</p>
+        <p>840 E. Stowell Road<br/>
+        Santa Maria, CA 93454<br/>
+        <a href="tel:1-805-922-5437" className="phone">805-922-KIDS (5437)</a><br/>
+        Monday - Friday: 7:00 a.m. - 5:30 p.m.</p>
         </div>
         <div className={socialIconsWrap}>
           <div className={socialIcons}>
