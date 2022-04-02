@@ -12,6 +12,7 @@ const homepagePrograms = ({ children }) => {
       <h1>Columbia Children's Center</h1><span>Programs</span>
       <div className={homepageProgramWrap}>
 
+      <Link to="/programs/young-toddler/">
         <div className={hero}>
           <div className={imgWrap}>
             <StaticImage src="../images/home/young-toddler.jpg" className={heroProfileImg} alt="Young Toddler" />
@@ -26,7 +27,9 @@ const homepagePrograms = ({ children }) => {
             <Link to="/programs/young-toddler/" className={button}>Learn More</Link>
           </div>
         </div>
+        </Link>
 
+        <Link to="/programs/early-years/">
         <div className={hero}>
           <div className={imgWrap}>
             <StaticImage src="../images/home/early-years.jpg" className={heroProfileImg} alt="Early Years" />
@@ -41,7 +44,10 @@ const homepagePrograms = ({ children }) => {
             <Link to="/programs/early-years/" className={button}>Learn More</Link>
           </div>
         </div>
-
+        </Link>
+      
+        
+        <Link to="/programs/preschool/">
         <div className={hero}>
           <div className={imgWrap}>
             <StaticImage src="../images/home/preschool.jpg" className={heroProfileImg} alt="Preschool" />
@@ -56,8 +62,10 @@ const homepagePrograms = ({ children }) => {
             <Link to="/programs/preschool/" className={button}>Learn More</Link>
           </div>
         </div>
+        </Link>
 
 
+        <Link to="/programs/kindergarten-readiness/">
         <div className={hero}>
           <div className={imgWrap}>
             <StaticImage src="../images/home/kindergartenReadiness.jpg" className={heroProfileImg} alt="Kindergarten Readiness<" />
@@ -72,6 +80,7 @@ const homepagePrograms = ({ children }) => {
             <Link to="/programs/kindergarten-readiness/" className={button}>Learn More</Link>
           </div>
         </div>
+        </Link>
 
   </div>
 </div>
