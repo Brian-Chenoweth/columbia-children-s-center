@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
-import { button, primary } from '../components/styles/layout.module.scss'
-// import { enrollmentWrap, enrollment } from './styles/enrollment.module.scss'
+import { button } from '../components/styles/layout.module.scss'
 
 const EnrollmentPage = () => {
   const pageTitle = "Enrollment";
@@ -17,7 +16,7 @@ const EnrollmentPage = () => {
             return (
               <div>
                 <h2 key={`${index}`}>{file.node.name.split('_').join(' ')}</h2>
-                <a className={button} href={file.node.publicURL} target="_blank">Open</a>
+                <a className={button} href={file.node.publicURL} target="_blank" rel="noreferrer">Open</a>
               </div>
             )
         })}

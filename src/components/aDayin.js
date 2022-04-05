@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { aDayInWrap, aDayIn } from './styles/aDayin.module.scss'
+import { aDayIn } from './styles/aDayin.module.scss'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 
@@ -25,7 +25,7 @@ const AdayIn = ({ pageTitle, children }) => {
                 } `)
 
   return (
-        <div className={aDayInWrap}>
+        <div>
             <h2>A Day in Our {pageTitle} Program</h2>
             <div className={aDayIn}>
                 {children}      
@@ -34,7 +34,6 @@ const AdayIn = ({ pageTitle, children }) => {
                         return (
                             <div>
                                 <GatsbyImage image={image} />
-                                {/* <li key={`${index}`}> {index}</li> */}
                             </div>
                         )
                     })}

@@ -1,16 +1,7 @@
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import { classroomGoalsWrap, classroomGoals } from './styles/classroomGoals.module.scss'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const ClassroomGoals = ({ pageTitle, children }) => {
-
-
-    const data = useStaticQuery(graphql`
-    query { allFile(filter: {relativeDirectory: {in: "icons"} name:{eq: "kid-yellow"}}) { edges { node { relativePath relativeDirectory name extension publicURL id childImageSharp {
-        gatsbyImageData (width: 300)
-      } } } } } `)
-
   return (
         <div className={classroomGoalsWrap}>
             <h2>{pageTitle} Classroom Goals</h2>

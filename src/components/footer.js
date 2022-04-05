@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import { footerContent, socialIconsWrap, socialIcons, facebook, instagram, youtube} from './styles/footer.module.scss'
+import { footerContent, socialIconsWrap, facebook, instagram, youtube} from './styles/footer.module.scss'
 
 const Footer = () => {
 
@@ -25,7 +25,7 @@ const Footer = () => {
         Monday - Friday: 7:00 a.m. - 5:30 p.m.</p>
         </div>
         <div className={socialIconsWrap}>
-          <div className={socialIcons}>
+          <div>
             <Link to={data.site.siteMetadata.socialMedia.facebook} className={facebook} target="_blank">facebook</Link>
             <Link to={data.site.siteMetadata.socialMedia.instagram} className={instagram} target="_blank">instagram</Link>
             <Link to={data.site.siteMetadata.socialMedia.youtube} className={youtube} target="_blank">youtube</Link>

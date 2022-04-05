@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from "gatsby"
-import {hero, heroProfileImg, imgWrap, heroDescriptionBk, heroDescription, heroDate, heroBtn, homepageProgramWrap, homepageProgramWrapWrap } from './styles/homepagePrograms.module.scss'
+import {hero, imgWrap, heroDescriptionBk, heroDescription, heroDate, homepageProgramWrap, homepageProgramWrapWrap } from './styles/homepagePrograms.module.scss'
 import { button } from '../components/styles/layout.module.scss'
 
 const homepagePrograms = ({ children }) => {
@@ -15,7 +15,7 @@ const homepagePrograms = ({ children }) => {
       <Link to="/programs/young-toddler/">
         <div className={hero}>
           <div className={imgWrap}>
-            <StaticImage src="../images/home/young-toddler.jpg" className={heroProfileImg} alt="Young Toddler" />
+            <StaticImage src="../images/home/young-toddler.jpg" alt="Young Toddler" />
           </div>
           <div className={heroDescriptionBk}>
             <div className={heroDescription}>
@@ -32,7 +32,7 @@ const homepagePrograms = ({ children }) => {
         <Link to="/programs/early-years/">
         <div className={hero}>
           <div className={imgWrap}>
-            <StaticImage src="../images/home/early-years.jpg" className={heroProfileImg} alt="Early Years" />
+            <StaticImage src="../images/home/early-years.jpg" alt="Early Years" />
           </div>
           <div className={heroDescriptionBk}>
             <div className={heroDescription}>
@@ -50,7 +50,7 @@ const homepagePrograms = ({ children }) => {
         <Link to="/programs/preschool/">
         <div className={hero}>
           <div className={imgWrap}>
-            <StaticImage src="../images/home/preschool.jpg" className={heroProfileImg} alt="Preschool" />
+            <StaticImage src="../images/home/preschool.jpg" alt="Preschool" />
           </div>
           <div className={heroDescriptionBk}>
             <div className={heroDescription}>
@@ -68,7 +68,7 @@ const homepagePrograms = ({ children }) => {
         <Link to="/programs/kindergarten-readiness/">
         <div className={hero}>
           <div className={imgWrap}>
-            <StaticImage src="../images/home/kindergartenReadiness.jpg" className={heroProfileImg} alt="Kindergarten Readiness<" />
+            <StaticImage src="../images/home/kindergartenReadiness.jpg" alt="Kindergarten Readiness<" />
           </div>
           <div className={heroDescriptionBk}>
             <div className={heroDescription}>

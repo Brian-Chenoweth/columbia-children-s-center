@@ -7,7 +7,6 @@ import ProgramSlider from '../../components/programSlider'
 import ClassroomGoals from '../../components/classroomGoals'
 import JSONData from "../../data/classroomgoals/preschool.json"
 import JSONDat from "../../data/adayin/preschool-yellow.json"
-import JSONDa from "../../data/adayin/preschool-red.json"
 import { StaticImage } from 'gatsby-plugin-image'
 import { introImage } from '../../components/styles/page.module.scss'
 import { employeesWrap } from '../../components/styles/employee.module.scss'

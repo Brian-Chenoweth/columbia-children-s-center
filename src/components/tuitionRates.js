@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { tuitionRatesWrap, tuitionRates } from './styles/tuitionRates.module.scss'
+import { tuitionRates } from './styles/tuitionRates.module.scss'
 
 const TuitionRates = ({ halfDayFive, halfDayFour, halfDayThree, halfDayTwo, fullDayFive, fullDayFour, fullDayThree, fullDayTwo, pageTitle, children }) => {
 
   return (
-    <div className={tuitionRatesWrap}>
+    <div>
         <h2>{pageTitle} Weekly Tuition Rates</h2>
         <div className={tuitionRates}>
 

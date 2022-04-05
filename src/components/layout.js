@@ -15,7 +15,7 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
       <main className={container}>
         <Helmet htmlAttributes={{ lang: 'en' }}>
           {(() => {
-              if (pageTitle == "Columbia Children's Center") {
+              if (pageTitle === "Columbia Children's Center") {
                 return (  <title>{data.site.siteMetadata.title}</title> ) 
               } else {
                 return (  <title>{pageTitle} | {data.site.siteMetadata.title} </title> ) 
@@ -26,7 +26,7 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
         <Header />
         <Navigation />
           {(() => {
-              if (pageTitle == "Columbia Children's Center") {
+              if (pageTitle === "Columbia Children's Center") {
                 return ( <h1 className={heading} style={{display: "none"}}>{pageTitle}</h1> )
               } else {
                 return ( <h1 className={heading}>{pageTitle}</h1> )
