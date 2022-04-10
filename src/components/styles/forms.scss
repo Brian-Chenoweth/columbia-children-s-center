@@ -1,0 +1,10 @@
+form.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    label {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

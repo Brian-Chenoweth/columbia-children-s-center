@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout'
+import { contact } from '../components/styles/forms.scss'
 
 const ContactPage = () => {
   return (
@@ -12,9 +13,9 @@ const ContactPage = () => {
         Monday - Friday: 7:00 a.m. - 5:30 p.m.</p>
 
           <p><em>Fields marked * are required</em></p>
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" className="contact" method="POST" data-netlify="true">
 
-            <p>
+            {/* <p>
               <label for="parentName">Parent or Gurdian Name*<input type="text" name="parentName"  placeholder="First Name Last Name" required/></label> 
             </p>
 
@@ -141,10 +142,15 @@ const ContactPage = () => {
 
             <p>
               <label>Message: <textarea name="message"></textarea></label>
-            </p>
+            </p>*/}
+
+              <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
             <p>
               <button type="submit">Send</button>
-            </p>
+            </p> 
+            
           </form>
 
         
