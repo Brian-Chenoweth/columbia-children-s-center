@@ -82,12 +82,13 @@ form.contact, .footer-form {
 }
 
 .footer-form-wrap {
-    // background-color: lighten(#395193, 25%);
-    // background-color: lighten(#04743C, 10%);
-    background-color: rgba(#04743C, 50%) ;
+    background:linear-gradient( rgba(0, 0, 0, 0.75) 100%, rgba(0, 0, 0, 0.5)100%),url("../../images/kids-laying-down.jpg");
+    // background:linear-gradient( rgba(#395193, 0.65) 100%, rgba(#395193, 0.5)100%),url("../../images/stock1.jpg");
+    background-size: cover;
+    background-position: 50% 25%;
+    // background-color: rgba(#04743C, 50%) ;
     padding: 2rem 0;
-    // display: flex;
-    // justify-content: space-between;
+
     h2 {
         max-width: 1300px; 
         margin: 0 auto 1rem auto;
@@ -104,7 +105,6 @@ form.contact, .footer-form {
     }
 
     input, select, textarea {
-        // width: 100%;
         padding: 8px 20px;
         margin: 2px 0;
         display: inline-block;
@@ -113,8 +113,8 @@ form.contact, .footer-form {
         box-sizing: border-box;
         resize: none;
         font-size: 16px;
+        background-color: rgba(255,255,255,.65);
         &::placeholder {
-            // color: pink;
         }
     }
 }
