@@ -13,7 +13,7 @@ const ContactPage = () => {
         Monday - Friday: 7:00 a.m. - 5:30 p.m.</p>
 
           <p><em>Fields marked * are required</em></p>
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" method="POST" netlify>
   <p>
     <label>Your Name: <input type="text" name="name" /></label>
   </p>
