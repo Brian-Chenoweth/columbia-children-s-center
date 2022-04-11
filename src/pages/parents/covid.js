@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
+import { grid2 } from '../../components/styles/layout.module.scss'
 
 const CovidPage = () => {
   const pageTitle = "Covid";
@@ -8,7 +9,7 @@ const CovidPage = () => {
       <p>If your child tests positive or is exposed to someone who has tested positive, please keep them home and contact <a href="mailto:sean@columbiachildrenscenter.com">sean@columbiachildrenscenter.com</a> so he can determine when they can safely return to Columbia.</p>
       <p>If your child has any of the following symptoms; please keep them home and contact Lisa via text <a href="sms:+18054480375">(805) 448-0375</a> or <a href="mailto:lisa@columbiachildrenscenter.com">lisa@columbiachildrenscenter.com</a> so we can determine when they can attend.</p>
       <p>Symptoms include:</p>
-      <ul>
+      <ul className={grid2}>
         <li>fever</li>
         <li>chills</li>
         <li>cough</li>

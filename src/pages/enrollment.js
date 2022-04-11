@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
-import { button } from '../components/styles/layout.module.scss'
+import { button, enrollmentWrap } from '../components/styles/layout.module.scss'
 
 const EnrollmentPage = () => {
   const pageTitle = "Enrollment";
@@ -11,7 +11,7 @@ const EnrollmentPage = () => {
 
   return (
     <Layout pageTitle={pageTitle} metaDesc="Enrollment paperwork for parents.">
-      <div>
+      <div className={enrollmentWrap}>
         {data.allFile.edges.map((file, index) => {
             return (
               <div>

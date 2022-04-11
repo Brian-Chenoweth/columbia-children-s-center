@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from "gatsby"
-import {hero, imgWrap, heroDescriptionBk, heroDescription, heroDate, homepageProgramWrap, homepageProgramWrapWrap } from './styles/homepagePrograms.module.scss'
-import { button } from '../components/styles/layout.module.scss'
+import {hero, imgWrap, heroDescriptionBk, heroDescription, heroDate, homepageProgramWrap, homepageProgramWrapWrap, button } from './styles/homepagePrograms.module.scss'
+// import { button } from '../components/styles/layout.module.scss'
 
 const homepagePrograms = ({ children }) => {
     

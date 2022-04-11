@@ -10,12 +10,12 @@ const CareersPage = () => {
       {JSONData.careers.map((data, index) => {
         return (
           <div>
-            <p><strong><a href={`mailto:${data.email}`}>{data.email}</a></strong></p>
-            <p><strong>{data.title}</strong></p>
-            <p><strong>{data.group}</strong></p>
-            <p><strong>{data.description}</strong></p>
-            <p><strong>{data.time}</strong></p>
-            <p><strong>{data.email}</strong></p>
+            <h2>Available Positions</h2> 
+            <h3><strong>{data.title}</strong></h3>
+            <p><strong>{data.group}</strong><br/>
+            <strong>{data.description}</strong><br/>
+            <strong>{data.time}</strong><br/>
+            <strong><a href={`mailto:${data.email}`}>{data.email}</a></strong></p>
           </div>
         )
       })}  

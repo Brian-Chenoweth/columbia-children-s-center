@@ -50,15 +50,6 @@ p {
      }
   }
   
-.heading {
-    color: #395193;
-    margin: 50px 0 0px;
-}
-
-h2 {
-    color: #2D4739;
-    // margin-top: 5px;
-}
 
 h3 {
     margin-top: 0;
@@ -75,7 +66,7 @@ a {
 
 .button {
     display: inline-block;
-    background-color: #3C559A;
+    background-color: #04743c;
     padding: .75em 3em;
     margin: .5em 0;
     color: white;
@@ -83,13 +74,28 @@ a {
     font-size: 20px;
     border-radius: 5px;
     &:hover {
-        background-color:  darken(#3C559A, 15%);
+        background-color:  darken(#04743c, 10%);
     }
 }
 
-// .employeesWrap {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     grid-gap: 25px;
-// }
+.enrollment-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 
+    h2 {
+        margin-top: 25px;
+    }
+
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // gap: 25px;
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -2,6 +2,7 @@ import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../.././components/layout'
 import { introImage } from '../../components/styles/page.module.scss'
+import { grid2 } from '../../components/styles/layout.module.scss'
 
 const PhilosophyGoalsPage = () => {
   return (
@@ -13,7 +14,7 @@ const PhilosophyGoalsPage = () => {
         <p>We believe that children learn best through active participation with their environment and that the teacher's job is to provide a variety of opportunities and experiences to promote growth in all areas. We strive to thoughtfully plan activities that meet the developmental needs of differing children and which follow sound early childhood developmental principles.</p>
         <p>We strive to provide an enriched environment, which fosters the development of the emotional, social, cognitive and physical growth of the young child. The philosophy of the program is to develop a positive self-concept and attitude toward learning, self-control and a sense of belonging. We strive to provide exploration of music and movement, creative art, science and nature, objects and events, dramatic play, literature and language and health and nutrition. It is the goal of CCC to provide experiences for children to know the community and social roles and to understand and respect social and cultural diversity.</p>
         <h2>Our Goals</h2>
-        <ul>
+        <ul className={grid2}>
             <li>To develop child centered learning</li>
             <li>To encourage growth</li>
             <li>To help children learn through play</li>
