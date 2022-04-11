@@ -11,7 +11,7 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
   const data = useStaticQuery(graphql`query { site { siteMetadata { title logo } } }`)
 
   return (
-    <div>
+    <div className={pageTitle.toLowerCase()}>
       <main className={container}>
         <Helmet htmlAttributes={{ lang: 'en' }}>
           {(() => {

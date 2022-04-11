@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import { contact } from '../components/styles/forms.scss'
+import { contact, dayDesired } from '../components/styles/forms.scss'
 
 const ContactPage = () => {
   return (
@@ -44,47 +44,45 @@ const ContactPage = () => {
             <p>
               <label for="pottyTrained">Potty Trained?
                   <select name="pottyTrained[]">
-                  <option disabled>Select</option>
-                  <option value="yes" name="pottyTrained">Yes</option>
-                  <option value="no" name="pottyTrained">No</option>
+                    <option disabled selected="true">Select</option>
+                    <option value="yes" name="pottyTrained">Yes</option>
+                    <option value="no" name="pottyTrained">No</option>
                   </select>
                 </label>
             </p>
 
             <p>
               <span style={{ display: `block`}}>Days Desired</span>
-              
-              <label for="dayDesired1">Monday
-                <input type="checkbox" id="dayDesired1" name="dayDesired1" value="Monday" />
-              </label>
-              <br/>
-              
-              <label for="dayDesired2">Tuesday
-                <input type="checkbox" id="dayDesired2" name="dayDesired2" value="Tuesday" />
-              </label>
-              <br/>
-              
-              <label for="dayDesired3">Wednesday
-                <input type="checkbox" id="dayDesired3" name="dayDesired3" value="Wednesday" />
-              </label>
-              <br/>
-              
-              <label for="dayDesired4">Thursday
-                <input type="checkbox" id="dayDesired4" name="dayDesired4" value="Thursday" />
-              </label>
-              <br/>
-              
-              <label for="dayDesired5">Friday
-                <input type="checkbox" id="dayDesired5" name="dayDesired5" value="Friday" />
-              </label>
-              <br/>
+
+              <div className="daysDesired">
+                
+                <label for="dayDesired1">Monday
+                  <input type="checkbox" id="dayDesired1" name="dayDesired1" value="Monday" />
+                </label>
+                
+                <label for="dayDesired2">Tuesday
+                  <input type="checkbox" id="dayDesired2" name="dayDesired2" value="Tuesday" />
+                </label>
+                
+                <label for="dayDesired3">Wednesday
+                  <input type="checkbox" id="dayDesired3" name="dayDesired3" value="Wednesday" />
+                </label>
+                
+                <label for="dayDesired4">Thursday
+                  <input type="checkbox" id="dayDesired4" name="dayDesired4" value="Thursday" />
+                </label>
+                
+                <label for="dayDesired5">Friday
+                  <input type="checkbox" id="dayDesired5" name="dayDesired5" value="Friday" />
+                </label>
+              </div>
 
             </p>
 
             <p>
               <label for="desiredStartHour">Desired Start Hour
                 <select name="desiredStartHour[]">
-                  <option disabled>Select</option>
+                  <option disabled selected="true">Select</option>
                   <option value="7:00" name="desiredStartHour">7:00</option>
                   <option value="7:30" name="desiredStartHour">7:30</option>
                   <option value="8:00" name="desiredStartHour">8:00</option>
@@ -111,7 +109,7 @@ const ContactPage = () => {
             <p>
               <label for="desiredEndHour">Desired End Hour
               <select name="desiredEndHour[]">
-                <option disabled>Select</option>
+                <option disabled selected="true">Select</option>
                 <option value="8:00" name="desiredEndHour">8:00</option>
                 <option value="8:30" name="desiredEndHour">8:30</option>
                 <option value="9:00" name="desiredEndHour">9:00</option>
@@ -145,6 +143,7 @@ const ContactPage = () => {
             <p>
               <label>Message: <textarea name="message"></textarea></label>
             </p>
+            
             <p>
               <button type="submit">Send</button>
             </p>
