@@ -15,8 +15,7 @@ const ContactPage = () => {
           <p><em>Fields marked * are required</em></p>
           <form name="contact" className="contact"  method="post"
               action="/thank-you/"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field">
+              data-netlify="true">
             <p>
               <label for="parentName">Parent or Gurdian Name*<input type="text" name="parentName"  placeholder="First Name Last Name" required/></label> 
             </p>
