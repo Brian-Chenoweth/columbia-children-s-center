@@ -1,11 +1,21 @@
 import * as React from 'react'
+import { useState, useEffect } from "react"
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
-import { cityPhone } from './styles/header.module.scss'
+import { cityPhone, sticky } from './styles/header.module.scss'
 
 const Header = () => {
+
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 150);
+    });
+  }, []);
+  
+
   return (
-    <header>
+    <header className={`${scroll ? "sticky" : "normal"}`}>
       <Link to="/">
         <StaticImage alt="Columbia Children's Center logo" src="../images/logo.png"/>
       </Link>

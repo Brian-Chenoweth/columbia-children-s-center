@@ -13,3 +13,77 @@ h3 {
     margin: 50px 0 25px;
     font-size: 22px;
 }
+
+.history h2.history {
+    font-family: "SeaweedScript-Regular", sans-serif;
+    // font-family: "SeaweedScript-Regular";
+    src: url("../../fonts/SeaweedScript-Regular.ttf");
+    font-display: swap;
+    font-size: 125px;
+    line-height: 100px;
+    color: #395193;
+    text-align: center;
+    margin: 120px 0 20px 0;
+}
+
+.history .content p {
+    margin: 0;
+    text-align: center;
+}
+
+// .history {
+//     text-align: center;
+// }
+
+header.sticky {
+    position: sticky;
+    top: 0;
+    transition: all .4s;
+    width: 100%;
+    background-color: white;
+    height: 50px;
+    padding: 10px 0;
+    z-index: 999;
+
+    a {
+        max-width: 200px;
+    }
+
+    p, a {
+        font-size: 14px;
+    }
+    .sub-menu {
+        top: 31px;
+    }
+}
+
+nav.sticky {
+    position: sticky;
+    top: 70px;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+
+    ul {
+        padding: 0;
+        width: 100%;
+        &.sub-menu {
+            top: 31px !important;
+        }
+    }
+
+    a {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .sub-menu {
+        top: 31px;
+    }
+
+}

@@ -8,6 +8,8 @@ form.contact, .footer-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+    padding: 25px 10px;
+
     @media screen and (max-width: 800px) {
         grid-template-columns: 1fr;
     }
@@ -66,6 +68,12 @@ form.contact, .footer-form {
         }
     }
 
+    .flexEnd {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
 }
 
 .footer-form-wrap {
@@ -78,7 +86,8 @@ form.contact, .footer-form {
         max-width: 1300px; 
         margin: 0 auto 1rem auto;
         color: white;
-        font-size: 28px;
+        font-size: 36px;
+        padding: 5px 10px;
     }
     .footer-form {
         max-width: 1300px; 
@@ -100,6 +109,7 @@ form.contact, .footer-form {
         font-size: 16px;
         background-color: rgba(255,255,255,.65);
         &::placeholder {
+            color: rgba(0,0,0,1);
         }
     }
 }

@@ -146,7 +146,7 @@ const Footer = () => {
             </p>
           
             
-            <p>
+            <p className="flexEnd">
               <button type="submit">Send</button>
             </p>
         </form>

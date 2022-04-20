@@ -2,11 +2,17 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 15px 0;
+    transition: all .4s;
 
     a {
         max-width: 25%;
     }
 
+}
+
+header.sticky {
+    position: sticky;
+    top: 0;
 }
 
 .city-phone {

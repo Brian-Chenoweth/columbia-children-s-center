@@ -1,11 +1,19 @@
 import * as React from 'react'
+import { useState, useEffect } from "react"
 import { Link } from 'gatsby'
-import { navLinks, subMenu, navLinkText, hasSubMenu } from './styles/navigation.module.scss'
+import { navLinks, subMenu, navLinkText, hasSubMenu, sticky, normal, nav } from './styles/navigation.module.scss'
 
 const Navigation = () => {
 
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 150);
+    });
+  }, []);
+
   return (
-    <nav>
+    <nav className={`${scroll ? "sticky" : "normal"} nav`}>
     <ul className={navLinks}>
       <li>
         <Link to="/" className={navLinkText}>

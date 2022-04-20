@@ -79,3 +79,13 @@ nav {
         }
     }
 }
+
+.nav.sticky {
+    .sub-menu {
+        // display: block;
+        // background-color: lighten(#395193, 10%);
+        // position: absolute;
+        top: 31px;
+    }
+}
+

@@ -16,15 +16,23 @@
     @media (min-width: 1800px) { @content; }
 }
 
+
 @font-face {
     font-family: "Ubuntu-Regular";
     src: url("../../fonts/Ubuntu-Regular.ttf");
     font-display: swap;
 }
 
+
 body {
     margin: 0;
     font-family: "Ubuntu-Regular", sans-serif;
+}
+
+@font-face {
+    font-family: "SeaweedScript-Regular";
+    src: url("../../fonts/SeaweedScript-Regular.ttf");
+    font-display: swap;
 }
 
 p {
