@@ -1,0 +1,28 @@
+.homepage-about-wrap {
+
+    p {
+        color: white;
+    }
+
+    h2 {
+        font-size: 48px;
+        margin-top: 0;
+        color: white;
+        margin-bottom: 45px;
+    }
+
+    background-color: #395193;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+
+
+    .homepage-about-content {
+        padding: 50px 10px;
+        max-width: 1300px;
+        margin: auto;
+        text-align: center;
+    }
+
+}

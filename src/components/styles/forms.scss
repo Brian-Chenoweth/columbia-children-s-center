@@ -8,7 +8,7 @@ form.contact, .footer-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    padding: 25px 10px;
+    padding: 0 10px;
 
     @media screen and (max-width: 800px) {
         grid-template-columns: 1fr;
@@ -77,17 +77,18 @@ form.contact, .footer-form {
 }
 
 .footer-form-wrap {
-    background:linear-gradient( rgba(0, 0, 0, 0.75) 100%, rgba(0, 0, 0, 0.5)100%),url("../../images/kids-laying-down.jpg");
+    background:linear-gradient( rgba(0, 0, 0, 0.75) 100%, rgba(0, 0, 0, 0.5) 100%), url("../../images/kids-laying-down.jpg");
     background-size: cover;
     background-position: 50% 25%;
-    padding: 2rem 0;
+    padding: 75px 0;
 
     h2 {
-        max-width: 1300px; 
-        margin: 0 auto 1rem auto;
+        text-align: center;
+        font-size: 48px;
+        margin-top: 0;
         color: white;
-        font-size: 36px;
-        padding: 5px 10px;
+        margin-bottom: 45px;
+
     }
     .footer-form {
         max-width: 1300px; 

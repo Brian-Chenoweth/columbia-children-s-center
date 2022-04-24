@@ -5,15 +5,15 @@ import { navLinks, subMenu, navLinkText, hasSubMenu, sticky, normal, nav } from 
 
 const Navigation = () => {
 
-  const [scroll, setScroll] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 150);
-    });
-  }, []);
+  // const [scroll, setScroll] = useState(false);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     setScroll(window.scrollY > 150);
+  //   });
+  // }, []);
 
   return (
-    <nav className={`${scroll ? "sticky" : "normal"} nav`}>
+    <nav>
     <ul className={navLinks}>
       <li>
         <Link to="/" className={navLinkText}>

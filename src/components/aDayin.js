@@ -26,7 +26,7 @@ const AdayIn = ({ pageTitle, children }) => {
 
   return (
         <div>
-            <h2>A Day in Our {pageTitle} Program</h2>
+            <h2>A day in our {pageTitle} program</h2>
             <div className={aDayIn}>
                 {children}      
                     {data.allFile.edges.map((file, index) => {

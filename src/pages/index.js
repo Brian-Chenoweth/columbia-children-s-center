@@ -2,6 +2,7 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import HomepageSlider from '../components/homepageSlider'
 import HomepagePrograms from '../components/homepagePrograms'
+import HomepageAbout from '../components/HomepageAbout'
 
 import './styles/index.module.scss'
 var kidsRaisingHands = require ('../images/home/kids-raising-hands.webp');
@@ -19,6 +20,8 @@ const IndexPage = () => {
         <div style={{ backgroundImage: `url(${cccFront.default})`}}></div>
         <div style={{ backgroundImage: `url(${kidsSmiling.default})`}}></div>
       </HomepageSlider>
+      
+      <HomepageAbout />
       
       <HomepagePrograms />
 

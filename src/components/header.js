@@ -6,16 +6,16 @@ import { cityPhone, sticky } from './styles/header.module.scss'
 
 const Header = () => {
 
-  const [scroll, setScroll] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 150);
-    });
-  }, []);
+  // const [scroll, setScroll] = useState(false);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     setScroll(window.scrollY > 150);
+  //   });
+  // }, []);
   
 
   return (
-    <header className={`${scroll ? "sticky" : "normal"}`}>
+    <header>
       <Link to="/">
         <StaticImage alt="Columbia Children's Center logo" src="../images/logo.png"/>
       </Link>

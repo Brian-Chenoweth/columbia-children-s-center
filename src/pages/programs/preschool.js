@@ -11,6 +11,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { introImage } from '../../components/styles/page.module.scss'
 import { employeesWrap } from '../../components/styles/employee.module.scss'
 
+
 const PPage = () => {
     const pageTitle = "Preschool";
     return (
@@ -33,8 +34,8 @@ const PPage = () => {
             })} 
         </ClassroomGoals>
         <ProgramSlider programImages="preschool"/>
-        <AdayIn pageTitle="preschool-yellow" >
-        <div>
+        <AdayIn pageTitle="Preschool">
+          <div>
             <h3>Yellow Group</h3>
             <ul>
             {JSONDat.days.map((data, index) => {
@@ -43,7 +44,7 @@ const PPage = () => {
             </ul>
         </div> 
         </AdayIn>
-        <AdayIn pageTitle="preschool-red" >
+        <AdayIn pageTitle="Preschool"  group="red">
           <div>
               <h3>Red Group</h3>
             <ul>
