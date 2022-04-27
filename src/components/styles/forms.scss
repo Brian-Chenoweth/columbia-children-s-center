@@ -6,7 +6,17 @@
 
 form.contact, .footer-form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    @media screen and (max-width:820px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width:581px) {
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+    }
 
     padding: 0 10px;
 
@@ -17,7 +27,7 @@ form.contact, .footer-form {
     label {
         display: flex;
         flex-direction: column;
-        width: 95%;
+        // width: 95%;
     }
 
     p {
@@ -82,6 +92,10 @@ form.contact, .footer-form {
     background-position: 50% 25%;
     padding: 75px 0;
 
+    @media screen and (max-width:820px) {
+        padding: 50px 0;
+    }
+
     h2 {
         text-align: center;
         font-size: 48px;
@@ -94,6 +108,14 @@ form.contact, .footer-form {
         max-width: 1300px; 
         margin: 0 auto;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+        @media screen and (max-width:820px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width:581px) {
+            grid-template-columns: 1fr;
+            grid-gap: 5px;
+        }
         label, p {
             color: white;
         }

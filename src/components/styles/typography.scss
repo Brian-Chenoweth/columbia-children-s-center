@@ -1,17 +1,23 @@
 h1 {
     font-size: 48px;
     color: #395193;
-    margin: 65px 0 45px;
+    margin: 65px 0 10px;
 }
 
 h2 {
-    margin: 50px 0 25px;
-    font-size: 26px;
+    margin: 50px 0 20px;
+    font-size: 30px;
+    color: rgba(4, 116, 60, .85);
+    &#age {
+        margin-top: 0;
+        color: lighten(#395193, 20%);
+    }
 }
 
 h3 {
-    margin: 50px 0 25px;
-    font-size: 22px;
+    margin: 40px 0 20px;
+    font-size: 26px;
+    color: lighten(#000, 25%);
 }
 
 .history h2.history {
