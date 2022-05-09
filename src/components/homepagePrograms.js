@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from "gatsby"
-import {hero, imgWrap, heroDescriptionBk, heroDescription, heroDate, homepageProgramWrap, homepageProgramWrapWrap, button } from './styles/homepagePrograms.module.scss'
+import {hero, imgWrap, heroDescriptionBk, heroDescription, heroDate, homepageProgramWrap, homepageProgramWrapWrap, button, spanPrograms  } from './styles/homepagePrograms.module.scss'
 // import { button } from '../components/styles/layout.module.scss'
 
 const homepagePrograms = ({ children }) => {
@@ -9,7 +9,7 @@ const homepagePrograms = ({ children }) => {
 
   return (
     <div className={homepageProgramWrapWrap}>
-      <h1>Columbia Children's Center</h1><span>Programs</span>
+      <h1>Columbia Children's Center</h1><span className={spanPrograms}>Programs</span>
       <div className={homepageProgramWrap}>
 
       <Link to="/programs/young-toddler/">

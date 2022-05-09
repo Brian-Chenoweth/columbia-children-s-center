@@ -98,7 +98,10 @@ form.contact, .footer-form {
 
     h2 {
         text-align: center;
-        font-size: 48px;
+        font-size: 3rem;
+        @media screen and (max-width: 767px) {
+            font-size: 2rem;
+          }
         margin-top: 0;
         color: white;
         margin-bottom: 45px;

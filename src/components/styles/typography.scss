@@ -1,7 +1,10 @@
 h1 {
-    font-size: 48px;
+    font-size: 3rem;
     color: #395193;
     margin: 65px 0 10px;
+    @media screen and (max-width: 767px) {
+        font-size: 2rem;
+      }
 }
 
 h2 {
@@ -12,17 +15,22 @@ h2 {
         margin-top: 0;
         color: lighten(#395193, 20%);
     }
+    @media screen and (max-width: 767px) {
+        font-size: 22px;
+    }
 }
 
 h3 {
     margin: 40px 0 20px;
     font-size: 26px;
     color: lighten(#000, 25%);
+    @media screen and (max-width: 767px) {
+        font-size: 20px;
+    }
 }
 
 .history h2.history {
     font-family: "SeaweedScript-Regular", sans-serif;
-    // font-family: "SeaweedScript-Regular";
     src: url("../../fonts/SeaweedScript-Regular.ttf");
     font-display: swap;
     font-size: 125px;
@@ -30,16 +38,16 @@ h3 {
     color: #395193;
     text-align: center;
     margin: 120px 0 20px 0;
+    @media screen and (max-width: 767px) {
+        font-size: 75px;
+        margin: 75px 0 20px 0;
+    }
 }
 
 .history .content p {
     margin: 0;
     text-align: center;
 }
-
-// .history {
-//     text-align: center;
-// }
 
 header.sticky {
     position: sticky;

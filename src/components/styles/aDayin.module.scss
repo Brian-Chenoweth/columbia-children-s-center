@@ -7,7 +7,10 @@
     }
 
     @media screen and (max-width: 600px) {
-        grid-template-columns: 75% 25%;
+        grid-template-columns: 100%;
+        .gatsby-image-wrapper {
+            // display: none !important;
+        }
     }
 
     .gatsby-image-wrapper {

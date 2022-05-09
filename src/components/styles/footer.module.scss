@@ -1,7 +1,6 @@
 footer {
     background-color: #395193;
     color: #fff;
-    // padding: 50px 0;
     p {
         color: white;
     }
@@ -14,11 +13,22 @@ footer {
     max-width: 1300px; 
     margin: 0 auto;
 
+    @media screen and (max-width: 695px) {
+        flex-direction: column;
+        .social-icons-wrap {
+            margin-top: 25px;
+        }
+    }
+
     .social-icons-wrap {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: end;
+
+        @media screen and (max-width: 695px) {
+            align-items: flex-start;   
+        }
 
         p {
             margin: 15px 0 0;

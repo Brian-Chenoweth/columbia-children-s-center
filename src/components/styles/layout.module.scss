@@ -39,12 +39,18 @@ p {
     line-height: 1.75;
     color: #080708;
     font-size: 19px;
+    @media screen and (max-width: 767px) {
+        font-size: 17px;
+    }
 }
 
 .content {
     ul, li {
         font-size: 19px;
         line-height: 1.75;
+        @media screen and (max-width: 767px) {
+            font-size: 17px;
+        }
     }   
 }
 
@@ -91,6 +97,11 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 25px;
 
+    @media screen and (max-width: 900px) {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
     h2 {
         margin-top: 25px;
     }
@@ -100,7 +111,6 @@ a {
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // gap: 25px;
 
     @media screen and (max-width: 800px) {
         grid-template-columns: 1fr;
