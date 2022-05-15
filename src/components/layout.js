@@ -8,7 +8,7 @@ import Header from '../components/header'
 
 const Layout = ({ pageTitle, metaDesc, children }) => {
 
-  const data = useStaticQuery(graphql`query { site { siteMetadata { title logo } } }`)
+  const data = useStaticQuery(graphql`query { site { siteMetadata { title logo icon } } }`)
 
   return (
     <div className={pageTitle.toLowerCase()}>
@@ -22,6 +22,8 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
               }
             })()}
             <meta name="description" content={metaDesc} />
+            <meta name="icon" href="../../images/favicon.ico" />
+            <link rel="icon" type="image/png" href="../../images/favicon.ico" sizes="16x16" />
         </Helmet>
         <Header />
         <Navigation />
