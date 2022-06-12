@@ -19,8 +19,8 @@ nav {
     max-width: 1300px;
     margin: 0 auto;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
     li {
         &:first-of-type {
            a {padding-left: 0;}
@@ -36,8 +36,7 @@ nav {
         color: darken(#395193, 25%);
     }
     li a {
-        // transition: all .4s;
-        font-size: 20px;
+        font-size: 19px;
     }
 }
 

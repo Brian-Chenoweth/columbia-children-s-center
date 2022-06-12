@@ -6,7 +6,6 @@
 
 form.contact, .footer-form {
     display: grid;
-    // grid-template-columns: 1fr 1fr;
 
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
@@ -18,7 +17,10 @@ form.contact, .footer-form {
         grid-gap: 5px;
     }
 
-    padding: 0 10px;
+    @media screen and (max-width:1350px) {
+        // padding: 0 25px;
+    }
+
 
     @media screen and (max-width: 800px) {
         grid-template-columns: 1fr;

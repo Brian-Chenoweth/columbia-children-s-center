@@ -9,7 +9,7 @@ h1 {
 
 h2 {
     margin: 50px 0 20px;
-    font-size: 30px;
+    font-size: 28px;
     color: rgba(4, 116, 60, .85);
     &#age {
         margin-top: 0;
@@ -25,7 +25,7 @@ h3 {
     font-size: 26px;
     color: lighten(#000, 25%);
     @media screen and (max-width: 767px) {
-        font-size: 20px;
+        font-size: 19px;
     }
 }
 
