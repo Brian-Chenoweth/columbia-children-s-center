@@ -39,12 +39,17 @@ p {
     line-height: 1.75;
     color: #080708;
     font-size: 18px;
+    margin-top: 5px;
     @media screen and (max-width: 767px) {
         font-size: 17px;
     }
 }
 
+
 .content {
+    ul {
+        margin-bottom: 25px;
+    }
     ul, li {
         font-size: 18px;
         line-height: 1.75;
@@ -58,7 +63,7 @@ p {
     margin: auto;
     max-width: 100%;
     padding: 0 25px;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
      @include for-desktop-up {    
         max-width: 1300px; 
      }
@@ -76,11 +81,13 @@ h3 {
 
 a {
     transition: all .3s;
+    // color: #4E3993;
+    color: #397E93;
 }
 
 .button {
     display: inline-block;
-    background-color: #04743c;
+    background-color: #39934E;
     padding: .75em 3em;
     margin: .5em 0;
     color: white;
@@ -88,7 +95,7 @@ a {
     font-size: 19px;
     border-radius: 5px;
     &:hover {
-        background-color:  darken(#04743c, 10%);
+        background-color:  darken(#39934E, 10%);
     }
 }
 

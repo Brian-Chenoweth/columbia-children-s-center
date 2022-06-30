@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Layout from '../../components/layout'
-import { grid2 } from '../../components/styles/layout.module.scss'
+import Layout from '../components/layout'
+import { grid2 } from '../components/styles/layout.module.scss'
 
 const CovidPage = () => {
   const pageTitle = "Covid";

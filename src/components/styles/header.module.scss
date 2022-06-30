@@ -6,6 +6,9 @@ header {
 
     a {
         max-width: 25%;
+        @media screen and (max-width: 800px) {
+            max-width: 45%;   
+        }
     }
 
 }
@@ -33,6 +36,19 @@ header.sticky {
         font-size: 19px;
         &:hover {
             color: darken(#3C559A, 15%);
+        }
+    }
+    @media screen and (max-width: 800px) {
+        a, p {
+            font-size: 16px;
+        }  
+    }
+    @media screen and (max-width: 600px) {
+        a, p {
+            font-size: 14px;
+        }  
+        p {
+            margin-bottom: 0;
         }
     }
 }

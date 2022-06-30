@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet';
-import { container, heading, content } from './styles/layout.module.scss'
+import { container, heading, content, list } from './styles/layout.module.scss'
 import Navigation from '../components/navigation'
+import Navi from '../components/navi'
 import Footer from '../components/footer'
 import Header from '../components/header'
 
@@ -26,7 +27,8 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
             <link rel="icon" type="image/png" href="../../images/favicon.ico" sizes="16x16" />
         </Helmet>
         <Header />
-        <Navigation />
+        {/* <Navigation /> */}
+        <Navi />
           {(() => {
               if (pageTitle === "Columbia Children's Center") {
                 return ( <h1 className={heading} style={{display: "none"}}>{pageTitle}</h1> )
@@ -35,8 +37,8 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
               }
             })()}
             <div className={content}>{children}</div>
+            <Footer />
       </main>
-      <Footer />
     </div>
   )
 }
