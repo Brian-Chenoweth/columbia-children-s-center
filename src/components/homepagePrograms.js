@@ -12,7 +12,7 @@ const homepagePrograms = ({ children }) => {
       <h1>Columbia Children's Center</h1><span className={spanPrograms}>Programs</span>
       <div className={homepageProgramWrap}>
 
-      <Link to="/programs/young-toddler/">
+      <Link to="/young-toddler/">
         <div className={hero}>
           <div className={imgWrap}>
             <StaticImage src="../images/home/young-toddler.jpg" alt="Young Toddler" />
@@ -24,12 +24,12 @@ const homepagePrograms = ({ children }) => {
             <div className={heroDate}>
               <p>18 months - 2½ years</p>
             </div>
-            <Link to="/programs/young-toddler/" className={button}>Learn More</Link>
+            <Link to="/young-toddler/" className={button}>Learn More</Link>
           </div>
         </div>
         </Link>
 
-        <Link to="/programs/early-years/">
+        <Link to="/early-years/">
         <div className={hero}>
           <div className={imgWrap}>
             <StaticImage src="../images/home/early-years.jpg" alt="Early Years" />
@@ -41,13 +41,13 @@ const homepagePrograms = ({ children }) => {
             <div className={heroDate}>
               <p>2 years - 3 years</p>
             </div>
-            <Link to="/programs/early-years/" className={button}>Learn More</Link>
+            <Link to="/early-years/" className={button}>Learn More</Link>
           </div>
         </div>
         </Link>
       
         
-        <Link to="/programs/preschool/">
+        <Link to="/preschool/">
         <div className={hero}>
           <div className={imgWrap}>
             <StaticImage src="../images/home/preschool.jpg" alt="Preschool" />
@@ -59,13 +59,13 @@ const homepagePrograms = ({ children }) => {
             <div className={heroDate}>
               <p>3 years - 4 years</p>
             </div>
-            <Link to="/programs/preschool/" className={button}>Learn More</Link>
+            <Link to="/preschool/" className={button}>Learn More</Link>
           </div>
         </div>
         </Link>
 
 
-        <Link to="/programs/kindergarten-readiness/">
+        <Link to="/kindergarten-readiness/">
         <div className={hero}>
           <div className={imgWrap}>
             <StaticImage src="../images/home/kindergartenReadiness.jpg" alt="Kindergarten Readiness<" />
@@ -77,7 +77,7 @@ const homepagePrograms = ({ children }) => {
             <div className={heroDate}>
               <p>4 years - 5 years</p>
             </div>
-            <Link to="/programs/kindergarten-readiness/" className={button}>Learn More</Link>
+            <Link to="/kindergarten-readiness/" className={button}>Learn More</Link>
           </div>
         </div>
         </Link>
