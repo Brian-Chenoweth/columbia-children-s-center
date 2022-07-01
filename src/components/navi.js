@@ -23,11 +23,10 @@ const Navi = () => {
               <NavDropdown.Item className={dropdownItem} href="/about/philosophy-goals/">Philosophy &amp; Goals</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Programs">
-              <NavDropdown.Item className={dropdownItem} href="/programs/">Programs</NavDropdown.Item>
-              <NavDropdown.Item className={dropdownItem} href="/programs/young-toddler/">Young Toddler</NavDropdown.Item>
-              <NavDropdown.Item className={dropdownItem} href="/programs/early-years/">Early Years</NavDropdown.Item>
-              <NavDropdown.Item className={dropdownItem} href="/programs/preschool/">Preschool</NavDropdown.Item>
-              <NavDropdown.Item className={dropdownItem} href="/programs/kindergarten-readiness/">Kindergarten Readiness</NavDropdown.Item>
+              <NavDropdown.Item className={dropdownItem} href="/young-toddler/">Young Toddler</NavDropdown.Item>
+              <NavDropdown.Item className={dropdownItem} href="/early-years/">Early Years</NavDropdown.Item>
+              <NavDropdown.Item className={dropdownItem} href="/preschool/">Preschool</NavDropdown.Item>
+              <NavDropdown.Item className={dropdownItem} href="/kindergarten-readiness/">Kindergarten Readiness</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="/enrollment/">Enrollment</Nav.Link>
           <Nav.Link href="/covid/">Covid</Nav.Link>
