@@ -168,7 +168,7 @@ const Footer = () => {
           <div className={socialIcons}>
             <Link to={data.site.siteMetadata.socialMedia.facebook} target="_blank"><FacebookIcon fontSize="large"/></Link>
             <Link to={data.site.siteMetadata.socialMedia.instagram} target="_blank"><InstagramIcon fontSize="large"/></Link>
-            <Link to={data.site.siteMetadata.socialMedia.youtube} target="_blank"><YouTubeIcon fontSize="large"/></Link>
+            {/* <Link to={data.site.siteMetadata.socialMedia.youtube} target="_blank"><YouTubeIcon fontSize="large"/></Link> */}
           </div>
           <p>&copy; {new Date().getFullYear()} Columbia Children's Center. All Rights Reserved.</p>
         </div>
