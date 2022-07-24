@@ -1,6 +1,9 @@
 import * as React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import { footerContent, socialIconsWrap, facebook, instagram, youtube} from './styles/footer.module.scss'
+import { footerContent, socialIconsWrap, socialIcons } from './styles/footer.module.scss'
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Footer = () => {
 
@@ -162,10 +165,10 @@ const Footer = () => {
         Monday - Friday: 7:00 a.m. - 5:30 p.m.</p>
         </div>
         <div className={socialIconsWrap}>
-          <div>
-            <Link to={data.site.siteMetadata.socialMedia.facebook} className={facebook} target="_blank">facebook</Link>
-            <Link to={data.site.siteMetadata.socialMedia.instagram} className={instagram} target="_blank">instagram</Link>
-            <Link to={data.site.siteMetadata.socialMedia.youtube} className={youtube} target="_blank">youtube</Link>
+          <div className={socialIcons}>
+            <Link to={data.site.siteMetadata.socialMedia.facebook} target="_blank"><FacebookIcon fontSize="large"/></Link>
+            <Link to={data.site.siteMetadata.socialMedia.instagram} target="_blank"><InstagramIcon fontSize="large"/></Link>
+            <Link to={data.site.siteMetadata.socialMedia.youtube} target="_blank"><YouTubeIcon fontSize="large"/></Link>
           </div>
           <p>&copy; {new Date().getFullYear()} Columbia Children's Center. All Rights Reserved.</p>
         </div>

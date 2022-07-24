@@ -56,33 +56,10 @@ footer {
         color: lighten(#395193,35%);
     }
 
-    .social-icons-wrap a {
-        color: transparent;
-        height: 35px !important;
-        width: auto;
-        max-width: 50px;
-        display: inline-block;
-        padding: 0 25px;
-        &:first-of-type {padding-left: 0;}
-        &:last-of-type {padding-left: 0;}
-    }
-    .instagram {
-        background-image: url("../../images/social/instagram.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: auto 100%;
-    }
-    .facebook {
-        background-image: url("../../images/social/facebook.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: auto 100%;
-    }
-    .youtube {
-        background-image: url("../../images/social/youtube.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: auto 100%;
+    .social-icons {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 20px;
     }
 
     p {
