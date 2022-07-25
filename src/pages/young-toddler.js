@@ -41,7 +41,7 @@ const YTPage = () => {
             </ul>
           </div> 
         </AdayIn>
-        <TuitionRates pageTitle={pageTitle} halfDayFive="$229.00" fullDayFive="$297.00"/>
+        <TuitionRates pageTitle={pageTitle} halfDayFive="$265.00" fullDayFive="$345.00" halfDayFour="$235.00" fullDayFour="$295.00" halfDayThree="$205.00" fullDayThree="$250.00" halfDayTwo="$155.00" fullDayTwo="$205.00"/>
         <div className={employeesWrap}>
           <Employee employeeName="Cynthia Hernandez" employeeTitle="Young Toddler Teacher " employeeImg="Cynthia"/>
           <Employee employeeName="Danielle Gauna" employeeTitle="Assistant" employeeImg="Danielle"/>

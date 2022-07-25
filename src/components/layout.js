@@ -5,6 +5,7 @@ import { container, heading, content, list } from './styles/layout.module.scss'
 import Navi from '../components/navi'
 import Footer from '../components/footer'
 import Header from '../components/header'
+import favicon from ".././images/favicon.ico"
 
 const Layout = ({ pageTitle, metaDesc, children }) => {
 
@@ -14,6 +15,8 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
     <div className={pageTitle.toLowerCase()}>
       <main className={container}>
         <Helmet htmlAttributes={{ lang: 'en' }}>
+          <link rel="icon" href={favicon} type="image/x-icon"/>
+          <link rel="shortcut icon" href={favicon} type="image/x-icon"/>
           {(() => {
               if (pageTitle === "Columbia Children's Center") {
                 return (  <title>{data.site.siteMetadata.title}</title> ) 
@@ -22,8 +25,6 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
               }
             })()}
             <meta name="description" content={metaDesc} />
-            <meta name="icon" href="../../images/favicon.ico" />
-            <link rel="icon" type="image/png" href="../../images/favicon.ico" sizes="16x16" />
         </Helmet>
         <Header />
         {/* <Navigation /> */}
