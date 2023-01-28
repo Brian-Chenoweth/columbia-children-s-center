@@ -1,31 +1,47 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Image from 'gatsby-image'
 
 const Employee = ({ employeeName, employeeImg, employeeTitle }) => {
 
     const data = useStaticQuery(graphql`
-        query { allFile(filter: {relativeDirectory: {in: "employees"}}, sort: {fields: name}) { edges { node { id relativePath relativeDirectory publicURL extension name sourceInstanceName childImageSharp {
-            gatsbyImageData
-          } } } } } `)
-      
-  return (
-    <div className={`${employeeImg.toLowerCase()} employee-wrap`}>
+    query {
+        allFile(
+            filter: { relativeDirectory: { in: "employees" } },
+            sort: { fields: name }
+        ) {
+            edges {
+                node {
+                    id
+                    relativePath
+                    relativeDirectory
+                    publicURL
+                    extension
+                    name
+                    sourceInstanceName
+                    childImageSharp {
+                        fluid(maxWidth: 1000) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+        }
+    }
+`)
+
+    const image = data.allFile.edges.find(file => file.node.name === employeeImg)
+    return (
+    <div className={`employee-wrap`}>
 
         <div className={'employee-img-wrap'}>
-            {data.allFile.edges.filter(file => file.node.name === employeeImg).map((file) => {
-                const image = getImage(file.node)
-                return (
-                    <GatsbyImage image={image} />
-                );
-             })}
+            {image ? <Image fluid={image.node.childImageSharp.fluid} alt={employeeName}/> : null}
         </div>
 
-        <div className={`${employeeImg.toLowerCase()} employee-name-title-wrap`}>
+        <div className={`employee-name-title-wrap`}>
             <h2 className={employeeName}>{employeeName}</h2>
             <h3 className={`employee-title`}>{employeeTitle}</h3>
         </div>
-
 
     </div>
   )

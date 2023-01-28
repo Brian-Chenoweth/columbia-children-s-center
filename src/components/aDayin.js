@@ -1,11 +1,9 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { aDayIn } from './styles/aDayin.module.scss'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
+import Img from "gatsby-image"
 
 const AdayIn = ({ pageTitle, children }) => {
-
 
     const data = useStaticQuery(graphql`
         query  { 
@@ -17,28 +15,29 @@ const AdayIn = ({ pageTitle, children }) => {
                         edges { 
                             node { 
                                 relativePath relativeDirectory name extension publicURL id childImageSharp {
-                                    gatsbyImageData (width: 300)
+                                    fluid(maxWidth: 300) {
+                                      ...GatsbyImageSharpFluid
+                                    }
                                   }
                             } 
                         } 
                     } 
                 } `)
-
+    
   return (
-        <div>
-            <h2>A day in our {pageTitle} program</h2>
-            <div className={aDayIn}>
-                {children}      
-                    {data.allFile.edges.map((file, index) => {
-                        const image = getImage(file.node)
-                        return (
-                            <div>
-                                <GatsbyImage image={image} />
-                            </div>
-                        )
-                    })}
-            </div>
+    <div>
+        <h2>A day in our {pageTitle} program</h2>
+        <div className={aDayIn}>
+            {children}      
+                {data.allFile.edges.map((file, index) => {
+                    return (
+                        <div key={file.node.id}>
+                            <Img fluid={file.node.childImageSharp.fluid} />
+                        </div>
+                    )
+                })}
         </div>
+    </div>
   )
 }
 

@@ -4,26 +4,32 @@ import Employee from '../../components/employee'
 import { teamWrap } from './our-team.module.scss'
 
 const OurTeamPage = () => {
+  const employeeData = [
+    { name: "Cortney Dasmann", title: "Director", img: "Cortney" },
+    { name: "Amanda D'hoedt", title: "Young Toddler Teacher", img: "Amanda" },
+    { name: "Tiffany Schofield", title: "Young Toddler Teacher", img: "Tiffany" },
+    { name: "Shirley Adelhelm", title: "Young Toddler Teacher / Breaker", img: "Shirley" },
+    { name: "Vanessa Cabatan", title: "Early Year's Lead Teacher", img: "Vanessa" },
+    { name: "Jackie Rubalcava", title: "Early Year's Teacher Assistant", img: "Jackie" },
+    { name: "Brittney Willoughby", title: "Preschool Lead Teacher", img: "Brittney" },
+    { name: "Emily Cavin", title: "Preschool Teacher", img: "Emily" },
+    { name: "Litzey Dominguez", title: "Preschool Teacher Assistant", img: "Litzey" },
+    { name: "Brigitte Ortiz-Tello", title: "Outdoor Classroom Teacher", img: "Brigitte" },
+    { name: "Nicolle Rogers", title: "Kindergarten Readiness Lead Teacher", img: "Nicolle" },
+    { name: "Sam Wise", title: "Kindergarten Readiness Lead Teacher", img: "Sam" },
+  ]
+
   return (
     <Layout pageTitle="Our Team" metaDesc="Meet the team of Columbia Children's Center.">
       <div className={teamWrap}>
-        <Employee employeeName="Cortney Dasmann" employeeTitle="Program Director" employeeImg="Cortney"/>
-        <Employee employeeName="Cynthia Hernandez" employeeTitle="Young Toddler Teacher" employeeImg="Cynthia"/>
-        <Employee employeeName="Danielle Gauna" employeeTitle="Young Toddler Assistant" employeeImg="Danielle"/>
-        <Employee employeeName="Shirley Adelhelm" employeeTitle="Young Toddler Teacher / Breaker" employeeImg="Shirley"/>
-        <Employee employeeName="Vanessa Mendoza" employeeTitle="Early Year's Teacher" employeeImg="Vanessa"/>
-        <Employee employeeName="Cheyenne Perry" employeeTitle="Early Year's Assistant" employeeImg="Cheyenne"/>
-        <Employee employeeName="Jackie Rubalcava" employeeTitle="Early Year's Assistant" employeeImg="Jackie"/>
-        <Employee employeeName="Emily Cavin" employeeTitle="Red Group Teacher" employeeImg="Emily"/>
-        <Employee employeeName="Kayla Matthews" employeeTitle="Yellow Group Teacher" employeeImg="Kayla"/>
-        <Employee employeeName="Brittney Willoughby" employeeTitle="Preschool Assistant" employeeImg="Brittney"/>
-        <Employee employeeName="Jessica Uribe" employeeTitle="Preschool Assistant" employeeImg="Jessica"/>
-        <Employee employeeName="Luisa Guillen" employeeTitle="Preschool Assistant" employeeImg="Luisa"/>
-        <Employee employeeName="Nicolle Rogers" employeeTitle="Blue Group Teacher" employeeImg="Nicolle"/>
-        <Employee employeeName="Samantha Wise" employeeTitle="Green Group Teacher" employeeImg="Samantha"/>
-        <Employee employeeName="Litzey Dominguez" employeeTitle="Kindergarten Readiness Assistant" employeeImg="Litzey"/>
-        <Employee employeeName="Brigette Ortiz-Tello" employeeTitle="Kindergarten Readiness Assistant" employeeImg="Brigette"/>
-        <Employee employeeName="Yari Trenado-Garcia" employeeTitle="Floater" employeeImg="Yari"/>
+        {employeeData.map(employee => (
+          <Employee
+            key={employee.name}
+            employeeName={employee.name}
+            employeeTitle={employee.title}
+            employeeImg={employee.img}
+          />
+        ))}
       </div>
     </Layout>
   )
