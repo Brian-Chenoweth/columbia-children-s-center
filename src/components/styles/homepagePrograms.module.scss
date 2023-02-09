@@ -76,7 +76,7 @@
 
     .button {
       display: inline-block;
-      background-color: #3C559A;
+      background-color: lighten(#3C559A, 15%);
       padding: .75em 3em;
       margin: .5em 0;
       color: white;
@@ -84,7 +84,7 @@
       font-size: 19px;
       border-radius: 5px;
       &:hover {
-          background-color:  darken(#3C559A, 10%);
+          background-color: darken(#3C559A, 10%);
       }
   }
   }

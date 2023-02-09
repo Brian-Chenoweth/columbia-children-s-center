@@ -47,10 +47,6 @@ const Footer = () => {
             </p>
 
             <p>
-              <label for="childAge">Child's Age*<input type="number" name="childAge"  placeholder="Child's Age" required/></label>
-            </p>
-
-            <p>
               <label for="pottyTrained">Potty Trained?
                   <select name="pottyTrained[]">
                     <option disabled selected="true">Select</option>
