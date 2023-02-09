@@ -18,7 +18,6 @@ const Navi = () => {
           <Nav.Link href="/">Home</Nav.Link>
           <NavDropdown title="About">
               <NavDropdown.Item className={dropdownItem} href="/about/">About</NavDropdown.Item>
-              <NavDropdown.Item className={dropdownItem} href="/about/history/">History</NavDropdown.Item>
               <NavDropdown.Item className={dropdownItem} href="/about/our-team/">Our Team</NavDropdown.Item>
               <NavDropdown.Item className={dropdownItem} href="/about/philosophy-goals/">Philosophy &amp; Goals</NavDropdown.Item>
           </NavDropdown>
@@ -28,8 +27,6 @@ const Navi = () => {
               <NavDropdown.Item className={dropdownItem} href="/preschool/">Preschool</NavDropdown.Item>
               <NavDropdown.Item className={dropdownItem} href="/kindergarten-readiness/">Kindergarten Readiness</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="/enrollment/">Enrollment</Nav.Link>
-          <Nav.Link href="/covid/">Covid</Nav.Link>
           <Nav.Link href="/careers/">Careers</Nav.Link>
           <Nav.Link href="/contact/">Contact</Nav.Link>
         </Nav>

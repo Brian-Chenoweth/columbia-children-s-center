@@ -29,26 +29,6 @@ h3 {
     }
 }
 
-.history h2.history {
-    font-family: "SeaweedScript-Regular", sans-serif;
-    src: url("../../fonts/SeaweedScript-Regular.ttf");
-    font-display: swap;
-    font-size: 125px;
-    line-height: 100px;
-    color: #395193;
-    text-align: center;
-    margin: 120px 0 20px 0;
-    @media screen and (max-width: 767px) {
-        font-size: 75px;
-        margin: 75px 0 20px 0;
-    }
-}
-
-.history .content p {
-    margin: 0;
-    text-align: center;
-}
-
 header.sticky {
     position: sticky;
     top: 0;
