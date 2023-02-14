@@ -4,10 +4,8 @@ import { contact } from '../components/styles/forms.scss'
 
 const TyPage = () => {
   return (
-    <Layout pageTitle="Thank You" metaDesc="Thank You">
+    <Layout pageTitle="Thank You!">
       <div>
-
-        <h1>Thank you!</h1>
         
       </div>
     </Layout>
