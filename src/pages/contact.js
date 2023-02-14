@@ -1,23 +1,23 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import Layout from '../components/layout'
 import { contact, dayDesired } from '../components/styles/forms.scss'
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.querySelector('.contact');
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-    const formData = new FormData(event.target); // Create a new FormData object from the form data
-    console.log(Object.fromEntries(formData)); // Log the form data as an object to the console
-  });
-});
+function ContactPage() {
+  const [formValues, setFormValues] = useState({});
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    setFormValues(data);
+    console.log(data); // Log the form data as an object to the console
+  }
 
+  
 
-
-const ContactPage = () => {
   return (
     <Layout pageTitle="Contact" metaDesc="Contact Columbia Children's Center">
       <div>
@@ -31,8 +31,11 @@ const ContactPage = () => {
 
           <form name="contact" className="contact"  method="post"
               action="/thank-you/"
-              data-netlify="true">
+              data-netlify="true"
+              onSubmit={handleSubmit}>
+                
               <input type="hidden" name="form-name" value="contact" />
+
             <p>
               <label for="parentName">Parent or Gurdian Name*<input type="text" name="first_name"  placeholder="First Name Last Name" required/></label> 
             </p>
@@ -166,5 +169,10 @@ const ContactPage = () => {
     </Layout>
   )
 }
+
+
+
+
+
 
 export default ContactPage
