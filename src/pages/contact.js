@@ -12,15 +12,21 @@ function ContactPage() {
     event.preventDefault();
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
+    const wrap = document.querySelector('#contact-wrap');
+
     setFormValues(data);
     console.log(data); // Log the form data as an object to the console
+    wrap.innerHTML = ''
+    var h2 = document.createElement('h2');
+    h2.innerHTML = "Thank you!";
+    document.getElementById('contact-wrap').appendChild(h2);
   }
 
   
 
   return (
     <Layout pageTitle="Contact" metaDesc="Contact Columbia Children's Center">
-      <div>
+      <div id="contact-wrap">
         <p><strong>Columbia Children's Center</strong><br/>
         840 E. Stowell Road<br/>
         Santa Maria, CA 93454<br/>
@@ -30,7 +36,6 @@ function ContactPage() {
           <p><em>Fields marked * are required</em></p>
 
           <form name="contact" className="contact"  method="post"
-              action="/thank-you/"
               data-netlify="true"
               onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="contact" />
