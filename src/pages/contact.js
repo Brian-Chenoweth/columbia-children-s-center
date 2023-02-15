@@ -7,6 +7,7 @@ import { contact, dayDesired } from '../components/styles/forms.scss'
 
 function ContactPage() {
   const [formValues, setFormValues] = useState({});
+  const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -15,18 +16,20 @@ function ContactPage() {
     const wrap = document.querySelector('#contact-wrap');
 
     setFormValues(data);
-    console.log(data); // Log the form data as an object to the console
-    wrap.innerHTML = ''
-    var h2 = document.createElement('h2');
-    h2.innerHTML = "Thank you!";
-    document.getElementById('contact-wrap').appendChild(h2);
+    setSubmitted(true);
+    console.log(data); // Log the form data as an object to the console;
   }
 
+  
   
 
   return (
     <Layout pageTitle="Contact" metaDesc="Contact Columbia Children's Center">
-      <div id="contact-wrap">
+    <div id="contact-wrap">
+        {submitted ? (
+          <p>Thank you for submitting the form!</p>
+        ) : (
+          <div>
         <p><strong>Columbia Children's Center</strong><br/>
         840 E. Stowell Road<br/>
         Santa Maria, CA 93454<br/>
@@ -167,6 +170,10 @@ function ContactPage() {
               <button type="submit">Send</button>
             </p>
           </form>
+
+          </div>
+
+        )}
 
         
       </div>
