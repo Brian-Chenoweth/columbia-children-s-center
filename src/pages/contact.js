@@ -40,7 +40,8 @@ function ContactPage() {
 
           <form name="contact" className="contact"  method="post"
               data-netlify="true"
-              onSubmit={handleSubmit}>
+              onSubmit={handleSubmit}
+              action="/thank-you/">
               <input type="hidden" name="form-name" value="contact" />
 
             <p>
