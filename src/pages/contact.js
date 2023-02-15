@@ -1,24 +1,46 @@
 import React, { useState } from 'react'
 import Layout from '../components/layout'
+import { navigate } from 'gatsby';
 import { contact, dayDesired } from '../components/styles/forms.scss'
 
 
 
 
+
 function ContactPage() {
-  const [formValues, setFormValues] = useState({});
-  // const [submitted, setSubmitted] = useState(false);
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
-    const wrap = document.querySelector('#contact-wrap');
-
-    setFormValues(data);
-    // setSubmitted(true);
-    console.log(data); // Log the form data as an object to the console;
+  function encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) =>
+          encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
   }
+
+  const [formValues, setFormValues] = useState({});
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': event.target.getAttribute('name'),
+        ...formValues,
+      }),
+    })
+      .then(() => navigate('/thank-you/'))
+      .catch((error) => alert(error));
+
+      const formData = new FormData(event.target);
+      const data = Object.fromEntries(formData);
+      const wrap = document.querySelector('#contact-wrap');
+  
+      setFormValues(data);
+      // setSubmitted(true);
+      console.log(data); // Log the form data as an object to the console;
+  };
+
 
   
   
