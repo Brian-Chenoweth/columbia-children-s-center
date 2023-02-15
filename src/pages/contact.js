@@ -4,6 +4,7 @@ import { navigate } from 'gatsby';
 import { contact, dayDesired } from '../components/styles/forms.scss'
 
 
+
 function ContactPage() {
   function encode(data) {
     return Object.keys(data)
@@ -18,39 +19,25 @@ function ContactPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const form = event.target;
-    const formData = new FormData(form);
-
-    // Get the form data and construct the request body
-    const body = {
-      first_name: formData.get('first_name'),
-      last_name: formData.get('last_name'),
-      comments: formData.get('comments'),
-      address: formData.get('address'),
-      Phone: formData.get('Phone'),
-      Email: formData.get('Email'),
-      school: formData.get('school'),
-      lead_source: formData.get('lead_source'),
-      child1_first_name: formData.get('child1_first_name'),
-      child1_last_name: formData.get('child1_last_name'),
-      child1_birthday: formData.get('child1_birthday'),
-      child1_expected_start_date: formData.get('child1_expected_start_date'),
-      hash: 'e2a87dc338397c5b85c4e8599c66477c'
-    };
-
-    // Send the request
-    fetch('https://live.childcarecrm.com.au/import/webImportReceiver.php', {
+    fetch('/', {
       method: 'POST',
-      body: JSON.stringify(body)
-    }).then((response) => {
-      if (response.ok) {
-        // Handle successful response
-        console.log('Data was successfully posted to childcare CRM.');
-      } else {
-        // Handle error response
-        console.log('Failed to post data to childcare CRM.');
-      }
-    });
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': event.target.getAttribute('name'),
+        ...formValues,
+      }),
+    })
+      .then(() => navigate('/thank-you/'))
+      .catch((error) => alert(error));
+
+      const formData = new FormData(event.target);
+      const data = Object.fromEntries(formData);
+      const wrap = document.querySelector('#contact-wrap');
+  
+      setFormValues(data);
+      // setSubmitted(true);
+      console.log(data); // Log the form data as an object to the console;
+      
   };
 
 
