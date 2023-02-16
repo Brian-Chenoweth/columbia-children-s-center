@@ -19,13 +19,13 @@ module.exports = {
         trackingId: "UA-123797488-1",
       },
     },
+    "gatsby-plugin-netlify",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sass",
-    "gatsby-plugin-netlify",
     {
       resolve: "gatsby-source-filesystem",
       options: {
