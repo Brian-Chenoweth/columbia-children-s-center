@@ -5,6 +5,8 @@ import { contact, dayDesired } from '../components/styles/forms.scss'
 
 
 
+
+
 function ContactPage() {
   function encode(data) {
     return Object.keys(data)
@@ -37,6 +39,42 @@ function ContactPage() {
       setFormValues(data);
       // setSubmitted(true);
       console.log(data); // Log the form data as an object to the console;
+
+
+
+      let body = {
+        first_name: formData.first_name,
+        last_name: formData.last_name,
+        comments: formData.comments,
+        address: formData.address,
+        Phone: formData.Phone,
+        Email: formData.Email,
+        school: formData.school,
+        lead_source: formData.lead_source,
+        child1_first_name: formData.child1_first_name,
+        child1_last_name: formData.child1_last_name,
+        child1_birthday: formData.child1_birthday,
+        child1_expected_start_date: formData.child1_expected_start_date,
+        hash: "e2a87dc338397c5b85c4e8599c66477c",
+      };
+      let post_url = "https://live.childcarecrm.com/import/webImportReceiver.php";
+      fetch(post_url, {
+        method: "POST",
+        body: JSON.stringify(body),
+      })
+        .then((response) => {
+          if (response.ok) {
+            return response.text();
+          } else {
+            throw new Error("Network response was not ok");
+          }
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.error("There was a problem with the fetch operation:", error);
+        });
       
   };
 
