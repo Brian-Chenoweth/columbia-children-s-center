@@ -60,6 +60,7 @@ function ContactPage() {
       let post_url = "https://live.childcarecrm.com/import/webImportReceiver.php";
       fetch(post_url, {
         method: "POST",
+        mode: 'no-cors',
         body: JSON.stringify(body),
       })
         .then((response) => {
@@ -99,7 +100,11 @@ function ContactPage() {
               <input type="hidden" name="form-name" value="contact" />
 
             <p>
-              <label for="parentName">Parent or Gurdian Name*<input type="text" name="first_name"  placeholder="First Name Last Name" required/></label> 
+              <label for="first_name">Parent or First Gurdian Name*<input type="text" name="first_name"  placeholder="First Name" required/></label> 
+            </p>
+
+            <p>
+              <label for="last_name">Parent or Gurdian Name*<input type="text" name="last_name"  placeholder="Last Name" required/></label> 
             </p>
 
             <p>
@@ -107,11 +112,19 @@ function ContactPage() {
             </p>
 
             <p>
+              <label for="address">Address*<input type="text" name="address"  placeholder="Address" required/></label>
+            </p>
+
+            <p>
               <label for="email">Email*<input type="email" name="email"  placeholder="Email" required/></label>
             </p>
 
             <p>
-              <label for="childName">Child's Name*<input type="text" name="childName"  placeholder="First Name Last Name" required/></label>
+              <label for="child1_first_name">Child's First Name*<input type="text" name="child1_first_name"  placeholder="First Name" required/></label>
+            </p>
+
+            <p>
+              <label for="child1_last_name">Child's last Name*<input type="text" name="child1_last_name"  placeholder="Last Name" required/></label>
             </p>
 
             <p>
@@ -119,14 +132,15 @@ function ContactPage() {
             </p>
 
             <p>
-              <label for="pottyTrained">Potty Trained?
-                  <select name="pottyTrained[]">
+              <label for="potty-trained">Potty Trained?
+                  <select name="potty-trained[]">
                     <option disabled selected="true">Select</option>
-                    <option value="yes" name="pottyTrained">Yes</option>
-                    <option value="no" name="pottyTrained">No</option>
+                    <option value="yes" name="potty-trained">Yes</option>
+                    <option value="no" name="potty-trained">No</option>
                   </select>
                 </label>
             </p>
+
 
             <p>
               <span style={{ display: `block`}}>Days Desired</span>
@@ -218,7 +232,7 @@ function ContactPage() {
             
 
             <p>
-              <label>Message: <textarea name="message"></textarea></label>
+              <label>Message: <textarea name="comments"></textarea></label>
             </p>
             
             <p>
