@@ -57,7 +57,7 @@ function ContactPage() {
         child1_expected_start_date: formData.child1_expected_start_date,
         hash: "e2a87dc338397c5b85c4e8599c66477c",
       };
-      let post_url = "/api";
+      let post_url = "https://live.childcarecrm.com/import/webImportReceiver.php";
       fetch(post_url, {
         method: "POST",
         body: JSON.stringify(body),
