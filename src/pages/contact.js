@@ -4,9 +4,12 @@ import { navigate } from 'gatsby';
 import { contact, dayDesired } from '../components/styles/forms.scss'
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> parent of edba84a (Remove fetch try)
 function ContactPage() {
   function encode(data) {
     return Object.keys(data)
@@ -21,16 +24,8 @@ function ContactPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': event.target.getAttribute('name'),
-        ...formValues,
-      }),
-    })
-      .then(() => navigate('/thank-you/'))
-      .catch((error) => alert(error));
+    // const form = event.target;
+    // const formData = new FormData(form);
 
       const formData = new FormData(event.target);
       const data = Object.fromEntries(formData);
