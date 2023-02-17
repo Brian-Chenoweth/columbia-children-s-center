@@ -4,12 +4,9 @@ import { navigate } from 'gatsby';
 import { contact, dayDesired } from '../components/styles/forms.scss'
 
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> parent of edba84a (Remove fetch try)
 function ContactPage() {
   function encode(data) {
     return Object.keys(data)
