@@ -21,8 +21,16 @@ function ContactPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // const form = event.target;
-    // const formData = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': event.target.getAttribute('name'),
+        ...formValues,
+      }),
+    })
+      .then(() => navigate('/thank-you/'))
+      .catch((error) => alert(error));
 
       const formData = new FormData(event.target);
       const data = Object.fromEntries(formData);
@@ -69,7 +77,6 @@ function ContactPage() {
         });
       
   };
-
 
   
 
