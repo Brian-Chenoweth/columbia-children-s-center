@@ -1,3 +1,5 @@
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -58,4 +60,16 @@ module.exports = {
       __key: "documents",
     },
   ],
+  developMiddleware: app => {
+    app.use(
+      '/api',
+      createProxyMiddleware({
+        target: 'https://live.childcarecrm.com',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '/import/webImportReceiver.php',
+        },
+      })
+    );
+  },
 };
