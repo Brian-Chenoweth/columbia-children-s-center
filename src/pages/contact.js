@@ -55,10 +55,9 @@ function ContactPage() {
         child1_last_name: data.child1_last_name,
         child1_birthday: data.child1_birthday,
         child1_expected_start_date: data.child1_expected_start_date,
-        hash: "e2a87dc338397c5b85c4e8599c66477c",
       };
       console.log(body)
-      let post_url = "https://live.childcarecrm.com/import/webImportReceiver.php";
+      let post_url = "https://live.childcarecrm.com/import/webImportReceiver.php?hash=e2a87dc338397c5b85c4e8599c66477c";
       fetch(post_url, {
         method: "POST",
         mode: 'no-cors',
