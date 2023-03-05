@@ -8,17 +8,18 @@ import JSONDat from "../data/adayin/early-years.json"
 import { StaticImage } from 'gatsby-plugin-image'
 import { introImage } from '.././components/styles/page.module.scss'
 import { employeesWrap } from '.././components/styles/employee.module.scss'
+import { sliderImg } from '.././components/styles/layout.module.scss'
 import Slider from "react-slick";
 import { Helmet } from 'react-helmet';
-import earlyYears1 from '.././images/programs/early-years/early-years1.jpg';
-import earlyYears2 from '.././images/programs/early-years/early-years2.jpg';
-import earlyYears3 from '.././images/programs/early-years/early-years3.jpeg';
-import earlyYears4 from '.././images/programs/early-years/early-years4.jpeg';
-import earlyYears5 from '.././images/programs/early-years/early-years5.jpeg';
-import earlyYears6 from '.././images/programs/early-years/early-years6.jpeg';
-import earlyYears7 from '.././images/programs/early-years/early-years7.jpeg';
-import earlyYears8 from '.././images/programs/early-years/early-years8.jpeg';
-import earlyYears9 from '.././images/programs/early-years/early-years9.jpeg';
+import earlyYears1 from '.././images/programs/early-years/earlyYears1.jpg';
+import earlyYears2 from '.././images/programs/early-years/earlyYears2.jpg';
+import earlyYears3 from '.././images/programs/early-years/earlyYears3.jpg';
+import earlyYears4 from '.././images/programs/early-years/earlyYears4.jpg';
+import earlyYears5 from '.././images/programs/early-years/earlyYears5.jpg';
+import earlyYears6 from '.././images/programs/early-years/earlyYears6.jpg';
+import earlyYears7 from '.././images/programs/early-years/earlyYears7.jpg';
+import earlyYears8 from '.././images/programs/early-years/earlyYears8.jpg';
+import earlyYears9 from '.././images/programs/early-years/earlyYears9.jpg';
 
 
 const EYPage = () => {
@@ -29,13 +30,30 @@ const EYPage = () => {
   const ageRange = "2 years to 3 years";
 
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2500
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
@@ -55,23 +73,15 @@ const EYPage = () => {
     </Helmet>
         <StaticImage src=".././images/home/early-years.jpg" width={500} className={introImage}/>
         <h2 id="age">{ageRange}</h2>
-        <p>Our classroom promotes independence through play, art expression and teacher directed activities, self-help skills such as eating skills, potty training, hand washing, and independently cleaning up. Each child is sent a daily note through our communication software that explains your child's daily activity, toilet times, eating, and rest time.</p>
-        <p>We introduce students to circle time activities including, alphabets, colors, counting, songs, and story time. The age appropriate activities in this classroom promote socialization, taking turns, sharing, and expressing feelings in appropriate manner.</p>
-        <p>Our maximum care giver to child ratio is one 1:9. The maximum group size in this program is 18 children.</p>
+
+        <p>Our Early Years Program serves children between the ages of 18 months and 3 years. Our teacher to child ratio is 1:9 to ensure that each child receives individual attention and support. Our program is designed to provide a safe and nurturing environment that allows children to learn and grow in a confident way.</p>
+        <p>To ensure that each child receives the attention they need, we keep our group size at a maximum of 18 children. Our structured, yet flexible approach, allows children to thrive and reach their full potential.</p>
+        <p>Our Early Years classroom is designed to be both stimulating and age-appropriate, with a variety of activities and toys that encourage exploration and learning.</p>
+        <p>Children are encouraged to communicate their wants and needs. We focus on creating learning and social experiences through play. We introduce children to circle time activities including alphabet, colors, counting, songs and story time. The age appropriate activities promote socialization, taking turns, sharing and expressing feelings in an appropriate manner.</p>
+        <p>We believe that play-based learning is the best way for young children to learn and we strive to provide an environment that is both fun and educational. Our experienced staff is dedicated to providing the best care and education for your child.</p>
+
 
         {/* {JSONDat && <ProgramSlider programImages="early-years"/>} */}
-
-        <Slider {...settings}>
-          <img src={earlyYears1} alt="Early Years" />
-          <img src={earlyYears2} alt="Early Years" />
-          <img src={earlyYears3} alt="Early Years" />
-          <img src={earlyYears4} alt="Early Years" />
-          <img src={earlyYears5} alt="Early Years" />
-          <img src={earlyYears6} alt="Early Years" />
-          <img src={earlyYears7} alt="Early Years" />
-          <img src={earlyYears8} alt="Early Years" />
-          <img src={earlyYears9} alt="Early Years" />
-        </Slider>
 
         <AdayIn pageTitle={pageTitle} >
           <div>
@@ -82,7 +92,20 @@ const EYPage = () => {
             </ul>
           </div> 
         </AdayIn>
-        <TuitionRates pageTitle={pageTitle} halfDayFive="$265.00" fullDayFive="$345.00" halfDayFour="$235.00" fullDayFour="$295.00" halfDayThree="$205.00" fullDayThree="$250.00" halfDayTwo="$155.00" fullDayTwo="$205.00">Single extra days may be arranged with the director at a rate of half day: $74.00, full day: $89.00.</TuitionRates>
+
+        <Slider {...settings}>
+          <img className={sliderImg} src={earlyYears1} alt="Early Years" />
+          <img className={sliderImg} src={earlyYears2} alt="Early Years" />
+          <img className={sliderImg} src={earlyYears3} alt="Early Years" />
+          <img className={sliderImg} src={earlyYears4} alt="Early Years" />
+          <img className={sliderImg} src={earlyYears5} alt="Early Years" />
+          <img className={sliderImg} src={earlyYears6} alt="Early Years" />
+          <img className={sliderImg} src={earlyYears7} alt="Early Years" />
+          <img className={sliderImg} src={earlyYears8} alt="Early Years" />
+          <img className={sliderImg} src={earlyYears9} alt="Early Years" />
+        </Slider>
+
+        <TuitionRates pageTitle={pageTitle} halfDayFive="$265.00" fullDayFive="$345.00" halfDayFour="$235.00" fullDayFour="$295.00" halfDayThree="$205.00" fullDayThree="$250.00" halfDayTwo="$155.00" fullDayTwo="$205.00">Single extra days may be arranged with the director at a rate of half day: $85.00, full day: $105.00.</TuitionRates>
         <div className={employeesWrap}>
           <Employee employeeName="Vanessa Cabatan" employeeTitle="Early Year's Lead Teacher" employeeImg="Vanessa"/>
           <Employee employeeName="Jackie Rubalcava" employeeTitle="Early Year's Teacher Assistant" employeeImg="Jackie"/>

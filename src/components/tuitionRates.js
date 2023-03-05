@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { tuitionRates } from './styles/tuitionRates.module.scss'
+import { tuitionRates, tuitionRatesWrap } from './styles/tuitionRates.module.scss'
 
 const TuitionRates = ({ halfDayFive, halfDayFour, halfDayThree, halfDayTwo, fullDayFive, fullDayFour, fullDayThree, fullDayTwo, pageTitle, children }) => {
 
   return (
-    <div>
+    <div className={tuitionRatesWrap}>
         <h2>{pageTitle} Weekly Tuition Rates</h2>
         <div className={tuitionRates}>
 
@@ -73,7 +73,7 @@ const TuitionRates = ({ halfDayFive, halfDayFour, halfDayThree, halfDayTwo, full
 
         </div>
         <div>
-            <p>There is an annual registration fee of $100.00 per child. A 10% discount will be given for each additional child in a family.</p>
+            <p>There is an annual registration fee of $150.00 per child. A 10% discount will be given for each additional child in a family.</p>
             <p>{children}</p>
         </div>
     </div>

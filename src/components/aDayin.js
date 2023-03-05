@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { aDayIn } from './styles/aDayin.module.scss'
+import { aDayIn, aDayInPhoto } from './styles/aDayin.module.scss'
 import Img from "gatsby-image"
 
 const AdayIn = ({ pageTitle, children }) => {
@@ -31,7 +31,7 @@ const AdayIn = ({ pageTitle, children }) => {
             {children}      
                 {data.allFile.edges.map((file, index) => {
                     return (
-                        <div key={file.node.id}>
+                        <div key={file.node.id} className={aDayInPhoto}>
                             <Img fluid={file.node.childImageSharp.fluid} />
                         </div>
                     )
