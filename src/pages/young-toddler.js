@@ -82,7 +82,7 @@ const YTPage = () => {
           width={500} 
           className={introImage}
         />
-        <h2 id="age">{ageRange}</h2>
+        <h2 id="age"  style={{marginTop: "0"}}>{ageRange}</h2>
         
         <p>Our Young Toddler Program serves children between the ages of 18 months and 30 months. Our teacher to child ratio is 1:6 to ensure that each child receives individual attention and support. Our program is designed to provide a safe and nurturing environment that allows children to learn and grow in a confident way.</p>
         

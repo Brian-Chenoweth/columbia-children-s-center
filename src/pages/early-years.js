@@ -72,7 +72,7 @@ const EYPage = () => {
       />
     </Helmet>
         <StaticImage src=".././images/home/early-years.jpg" width={500} className={introImage}/>
-        <h2 id="age">{ageRange}</h2>
+        <h2 id="age"  style={{marginTop: "0"}}>{ageRange}</h2>
 
         <p>Our Early Years Program serves children between the ages of 18 months and 3 years. Our teacher to child ratio is 1:9 to ensure that each child receives individual attention and support. Our program is designed to provide a safe and nurturing environment that allows children to learn and grow in a confident way. </p>
         <p>To ensure that each child receives the attention they need, we keep our group size at a maximum of 18 children. Our structured, yet flexible approach, allows children to thrive and reach their full potential.</p>
