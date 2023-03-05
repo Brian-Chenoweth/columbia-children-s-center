@@ -11,15 +11,15 @@ import { employeesWrap } from '.././components/styles/employee.module.scss'
 import { sliderImg } from '.././components/styles/layout.module.scss'
 import Slider from "react-slick";
 import { Helmet } from 'react-helmet';
-import earlyYears1 from '.././images/programs/early-years/earlyYears1.jpg';
-import earlyYears2 from '.././images/programs/early-years/earlyYears2.jpg';
-import earlyYears3 from '.././images/programs/early-years/earlyYears3.jpg';
-import earlyYears4 from '.././images/programs/early-years/earlyYears4.jpg';
-import earlyYears5 from '.././images/programs/early-years/earlyYears5.jpg';
-import earlyYears6 from '.././images/programs/early-years/earlyYears6.jpg';
-import earlyYears7 from '.././images/programs/early-years/earlyYears7.jpg';
-import earlyYears8 from '.././images/programs/early-years/earlyYears8.jpg';
-import earlyYears9 from '.././images/programs/early-years/earlyYears9.jpg';
+import earlyYears1 from '.././images/programs/early-years/early-years1.jpg';
+import earlyYears2 from '.././images/programs/early-years/early-years2.jpg';
+import earlyYears3 from '.././images/programs/early-years/early-years3.jpg';
+import earlyYears4 from '.././images/programs/early-years/early-years4.jpg';
+import earlyYears5 from '.././images/programs/early-years/early-years5.jpg';
+import earlyYears6 from '.././images/programs/early-years/early-years6.jpg';
+import earlyYears7 from '.././images/programs/early-years/early-years7.jpg';
+import earlyYears8 from '.././images/programs/early-years/early-years8.jpg';
+import earlyYears9 from '.././images/programs/early-years/early-years9.jpg';
 
 
 const EYPage = () => {
