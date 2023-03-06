@@ -1,11 +1,13 @@
 .homepage-slider-wrap {
-    height: 500px;
+    height: 450px;
     overflow: hidden;
     position: relative;
 
     @media screen and (max-width: 700px) {
       height: 300px;
     }
+
+    // @media screen and (max-width: 700px) {backgroundSize: cover;}
 
     left: 50%;
     margin-left: -50vw;
@@ -25,22 +27,43 @@
     background-position: center;
     position: absolute;
     animation: slide 25s infinite;
-    opacity: 0;
+    opacity: 1;
   }
 
-  .homepage-slider-wrap > div:nth-child(2) {
-    animation-delay: 5s;
-  }
-  .homepage-slider-wrap > div:nth-child(3) {
-    animation-delay: 10s;
+  .homepage-slider-wrap div[data-testid="layer-1"] {
+    // background-size: 1000px auto !important;
   }
 
-  .homepage-slider-wrap > div:nth-child(4) {
-    animation-delay: 15s;
+  @media screen and (max-width: 700px) {
+    .homepage-slider-wrap div[data-testid="layer-0"] {
+      background-size: 175% auto !important;
+      background-position: center 30% !important;
+    }
+    .homepage-slider-wrap div[data-testid="layer-1"] {
+      background-size: 150px auto !important;
+      margin-top: -100px;
+    }
   }
-  .homepage-slider-wrap > div:nth-child(5) {
-    animation-delay: 20s;
-  }
+
+
+
+
+
+
+
+  // .homepage-slider-wrap > div:nth-child(2) {
+  //   animation-delay: 5s;
+  // }
+  // .homepage-slider-wrap > div:nth-child(3) {
+  //   animation-delay: 10s;
+  // }
+
+  // .homepage-slider-wrap > div:nth-child(4) {
+  //   animation-delay: 15s;
+  // }
+  // .homepage-slider-wrap > div:nth-child(5) {
+  //   animation-delay: 20s;
+  // }
 
   @keyframes slide {
     10% {
@@ -50,7 +73,7 @@
       opacity: 1;
     }
     30% {
-      opacity: 0;
+      opacity: 1;
     }
     40% {
       transform: scale(1.2);
