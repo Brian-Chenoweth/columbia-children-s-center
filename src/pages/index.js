@@ -2,10 +2,10 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import HomepageSlider from '../components/homepageSlider'
 import HomepagePrograms from '../components/homepagePrograms'
-import HomepageAbout from '../components/HomepageAbout'
+import HomepageAboutOne from '../components/HomepageAboutOne'
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
 import './styles/index.module.scss'
-import { homepageSliderWrap } from '.././components/styles/homepageSlider.module.scss'
+import { homepageSliderWrap, homepageSliderWrapTwo } from '.././components/styles/homepageSlider.module.scss'
 import { StaticImage } from 'gatsby-plugin-image'
 
 var kidsRaisingHands = require ('../images/home/kids-raising-hands.webp');
@@ -32,7 +32,18 @@ const IndexPage = () => {
       </div>
 
       
-      <HomepageAbout />
+      <HomepageAboutOne />
+
+      <div className={homepageSliderWrapTwo}>
+
+      <ParallaxBanner
+          layers={[
+            { image: kidsRaisingHands.default, speed: -60, style: {inset:'-225px, 0px'} },
+          ]}
+          className="aspect-[2/1]"
+        />
+
+      </div>
       
       <HomepagePrograms />
 
