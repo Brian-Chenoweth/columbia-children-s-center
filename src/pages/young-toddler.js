@@ -122,7 +122,7 @@ const YTPage = () => {
           <img className={sliderImg} src={youngToddler14} alt="Young Toddler" />
         </Slider>        
 
-        <TuitionRates 
+        {/* <TuitionRates 
           pageTitle={pageTitle} 
           halfDayFive="$265.00" 
           fullDayFive="$345.00" 
@@ -134,7 +134,7 @@ const YTPage = () => {
           fullDayTwo="$205.00"
         >
           Single extra days may be arranged with the director at a rate of half day: $85.00, full day: $105.00.
-          </TuitionRates>
+          </TuitionRates> */}
         <div className={employeesWrap}>
           <Employee 
             employeeName="Amanda D'hoedt" 
