@@ -8,76 +8,77 @@ import { contact, dayDesired } from '../components/styles/forms.scss'
 
 
 function ContactPage() {
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) =>
-          encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-      )
-      .join('&');
-  }
 
-  const [formValues, setFormValues] = useState({});
+  // function encode(data) {
+  //   return Object.keys(data)
+  //     .map(
+  //       (key) =>
+  //         encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+  //     )
+  //     .join('&');
+  // }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': event.target.getAttribute('name'),
-        ...formValues,
-      }),
-    })
-      .then(() => navigate('/thank-you/'))
-      .catch((error) => alert(error));
+  // const [formValues, setFormValues] = useState({});
 
-      const formData = new FormData(event.target);
-      const data = Object.fromEntries(formData);
-      const wrap = document.querySelector('#contact-wrap');
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   fetch('/', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: encode({
+  //       'form-name': event.target.getAttribute('name'),
+  //       ...formValues,
+  //     }),
+  //   })
+  //     .then(() => navigate('/thank-you/'))
+  //     .catch((error) => alert(error));
+
+  //     const formData = new FormData(event.target);
+  //     const data = Object.fromEntries(formData);
+  //     const wrap = document.querySelector('#contact-wrap');
   
-      setFormValues(data);
-      // setSubmitted(true);
-      console.log(data); // Log the form data as an object to the console;
+  //     setFormValues(data);
+  //     // setSubmitted(true);
+  //     console.log(data); // Log the form data as an object to the console;
 
 
 
-      let body = {
-        first_name: data.first_name,
-        last_name: data.last_name,
-        comments: data.comments,
-        address: data.address,
-        Phone: data.Phone,
-        Email: data.Email,
-        school: data.school,
-        lead_source: data.lead_source,
-        child1_first_name: data.child1_first_name,
-        child1_last_name: data.child1_last_name,
-        child1_birthday: data.child1_birthday,
-        child1_expected_start_date: data.child1_expected_start_date,
-      };
-      console.log(body)
-      let post_url = "https://live.childcarecrm.com/import/webImportReceiver.php?hash=e2a87dc338397c5b85c4e8599c66477c";
-      fetch(post_url, {
-        method: "POST",
-        mode: 'no-cors',
-        body: JSON.stringify(body),
-      })
-        .then((response) => {
-          if (response.ok) {
-            return response.text();
-          } else {
-            throw new Error("Network response was not ok");
-          }
-        })
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((error) => {
-          console.error("There was a problem with the fetch operation:", error);
-        });
+  //     let body = {
+  //       first_name: data.first_name,
+  //       last_name: data.last_name,
+  //       comments: data.comments,
+  //       address: data.address,
+  //       Phone: data.Phone,
+  //       Email: data.Email,
+  //       school: data.school,
+  //       lead_source: data.lead_source,
+  //       child1_first_name: data.child1_first_name,
+  //       child1_last_name: data.child1_last_name,
+  //       child1_birthday: data.child1_birthday,
+  //       child1_expected_start_date: data.child1_expected_start_date,
+  //     };
+  //     console.log(body)
+  //     let post_url = "https://live.childcarecrm.com/import/webImportReceiver.php?hash=e2a87dc338397c5b85c4e8599c66477c";
+  //     fetch(post_url, {
+  //       method: "POST",
+  //       mode: 'no-cors',
+  //       body: JSON.stringify(body),
+  //     })
+  //       .then((response) => {
+  //         if (response.ok) {
+  //           return response.text();
+  //         } else {
+  //           throw new Error("Network response was not ok");
+  //         }
+  //       })
+  //       .then((data) => {
+  //         console.log(data);
+  //       })
+  //       .catch((error) => {
+  //         console.error("There was a problem with the fetch operation:", error);
+  //       });
       
-  };
+  // };
 
   
 
@@ -93,18 +94,12 @@ function ContactPage() {
 
           <p><em>Fields marked * are required</em></p>
 
-          <form name="contact" className="contact"  method="post"
-              data-netlify="true"
-              onSubmit={handleSubmit}
-              action="/thank-you/">
-              <input type="hidden" name="form-name" value="contact" />
-
+          <form name="contact" className="footer-form"  method="post"
+              action="/thank-you/"
+              data-netlify="true">
+              <input type="hidden" name="form-name" value="footer-form" />
             <p>
-              <label for="first_name">Parent or First Gurdian Name*<input type="text" name="first_name"  placeholder="First Name" required/></label> 
-            </p>
-
-            <p>
-              <label for="last_name">Parent or Gurdian Name*<input type="text" name="last_name"  placeholder="Last Name" required/></label> 
+              <label for="parentName">Parent or Gurdian Name*<input type="text" name="parentName"  placeholder="First Name Last Name" required/></label> 
             </p>
 
             <p>
@@ -112,35 +107,26 @@ function ContactPage() {
             </p>
 
             <p>
-              <label for="address">Address*<input type="text" name="address"  placeholder="Address" required/></label>
-            </p>
-
-            <p>
               <label for="email">Email*<input type="email" name="email"  placeholder="Email" required/></label>
             </p>
 
             <p>
-              <label for="child1_first_name">Child's First Name*<input type="text" name="child1_first_name"  placeholder="First Name" required/></label>
+              <label for="childName">Child's Name*<input type="text" name="childName"  placeholder="First Name Last Name" required/></label>
             </p>
 
             <p>
-              <label for="child1_last_name">Child's last Name*<input type="text" name="child1_last_name"  placeholder="Last Name" required/></label>
+              <label for="childBirthday">Child's Birthday*<input type="date" name="childBirthday"  placeholder="Child's Birthday" required/></label>
             </p>
 
             <p>
-              <label for="child1_birthday">Child's Birthday*<input type="date" name="child1_birthday"  placeholder="Child's Birthday" required/></label>
-            </p>
-
-            <p>
-              <label for="potty-trained">Potty Trained?
-                  <select name="potty-trained[]">
+              <label for="pottyTrained">Potty Trained?
+                  <select name="pottyTrained[]">
                     <option disabled selected="true">Select</option>
-                    <option value="yes" name="potty-trained">Yes</option>
-                    <option value="no" name="potty-trained">No</option>
+                    <option value="yes" name="pottyTrained">Yes</option>
+                    <option value="no" name="pottyTrained">No</option>
                   </select>
                 </label>
             </p>
-
 
             <p>
               <span style={{ display: `block`}}>Days Desired</span>
@@ -229,16 +215,12 @@ function ContactPage() {
                 <input type="date" name="desiredStartDate"  placeholder="Desired Start Date" required/>
               </label>
             </p>
+          
             
-
-            <p>
-              <label>Message: <textarea name="comments"></textarea></label>
-            </p>
-            
-            <p>
+            <p className="flexEnd">
               <button type="submit">Send</button>
             </p>
-          </form>
+        </form>
 
           </div>
 
