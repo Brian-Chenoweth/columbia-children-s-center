@@ -5,7 +5,8 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { nav, navbar, dropdownItem, container } from './styles/navigation.module.scss'
-
+import ParentHandbook from '../documents/parent-handbook-2022-2023.pdf';
+import IllnessPolicy from '../documents/illness-11.22.pdf';
 
 const Navi = () => {
 
@@ -27,6 +28,13 @@ const Navi = () => {
               <NavDropdown.Item className={dropdownItem} href="/preschool/">Preschool</NavDropdown.Item>
               <NavDropdown.Item className={dropdownItem} href="/kindergarten-readiness/">Kindergarten Readiness</NavDropdown.Item>
           </NavDropdown>
+
+
+          <NavDropdown title="Parents">
+              <NavDropdown.Item className={dropdownItem} href={ParentHandbook} target="_blank">Parent Handbook</NavDropdown.Item>
+              <NavDropdown.Item className={dropdownItem} href={IllnessPolicy} target="_blank">Illness Policy</NavDropdown.Item>
+          </NavDropdown>
+
           <Nav.Link href="/careers/">Careers</Nav.Link>
           <Nav.Link href="/contact/">Contact</Nav.Link>
         </Nav>
