@@ -97,7 +97,7 @@ function ContactPage() {
           <form name="contact" className="footer-form"  method="post"
               action="/thank-you/"
               data-netlify="true">
-              <input type="hidden" name="form-name" value="footer-form" />
+              <input type="hidden" name="form-name" value="contact" />
             <p>
               <label for="parentName">Parent or Gurdian Name*<input type="text" name="parentName"  placeholder="First Name Last Name" required/></label> 
             </p>
