@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-import { footerContent, socialIconsWrap, socialIcons } from './styles/footer.module.scss'
+import { footerContent, socialIconsWrap, socialIcons, preferredContactMethod } from './styles/footer.module.scss'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { useState } from 'react';
 
 const Footer = () => {
 
@@ -18,6 +19,22 @@ const Footer = () => {
   }`)
 
 
+  const [isChecked, setIsChecked] = useState(false);
+
+  function handleCheckboxChange() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    let isChecked = false;
+    checkboxes.forEach((checkbox) => {
+      if (checkbox.checked) {
+        isChecked = true;
+      }
+    });
+    setIsChecked(isChecked);
+  }
+
+
+  
+
   return (
     <div>
       <div className="footer-form-wrap">
@@ -27,7 +44,7 @@ const Footer = () => {
               data-netlify="true">
               <input type="hidden" name="form-name" value="footer-form" />
             <p>
-              <label for="parentName">Parent or Gurdian Name*<input type="text" name="parentName"  placeholder="First Name Last Name" required/></label> 
+              <label for="parentName">Parent or Guardian Name*<input type="text" name="parentName"  placeholder="First Name Last Name" required/></label> 
             </p>
 
             <p>
@@ -47,8 +64,8 @@ const Footer = () => {
             </p>
 
             <p>
-              <label for="pottyTrained">Potty Trained?
-                  <select name="pottyTrained[]">
+              <label for="pottyTrained">Potty Trained?*
+                  <select name="pottyTrained[]" required>
                     <option disabled selected="true">Select</option>
                     <option value="yes" name="pottyTrained">Yes</option>
                     <option value="no" name="pottyTrained">No</option>
@@ -57,36 +74,36 @@ const Footer = () => {
             </p>
 
             <p>
-              <span style={{ display: `block`}}>Days Desired</span>
+              <span style={{ display: `block`}}>Days Desired*</span>
 
               <div className="daysDesired">
                 
                 <label for="dayDesired1">Monday
-                  <input type="checkbox" id="dayDesired1" name="dayDesired1" value="Monday" />
+                  <input type="checkbox" id="dayDesired1" name="dayDesired1" value="Monday" onChange={handleCheckboxChange}/>
                 </label>
                 
                 <label for="dayDesired2">Tuesday
-                  <input type="checkbox" id="dayDesired2" name="dayDesired2" value="Tuesday" />
+                  <input type="checkbox" id="dayDesired2" name="dayDesired2" value="Tuesday" onChange={handleCheckboxChange}/>
                 </label>
                 
                 <label for="dayDesired3">Wednesday
-                  <input type="checkbox" id="dayDesired3" name="dayDesired3" value="Wednesday" />
+                  <input type="checkbox" id="dayDesired3" name="dayDesired3" value="Wednesday" onChange={handleCheckboxChange} />
                 </label>
                 
                 <label for="dayDesired4">Thursday
-                  <input type="checkbox" id="dayDesired4" name="dayDesired4" value="Thursday" />
+                  <input type="checkbox" id="dayDesired4" name="dayDesired4" value="Thursday" onChange={handleCheckboxChange} />
                 </label>
                 
                 <label for="dayDesired5">Friday
-                  <input type="checkbox" id="dayDesired5" name="dayDesired5" value="Friday" />
+                  <input type="checkbox" id="dayDesired5" name="dayDesired5" value="Friday" onChange={handleCheckboxChange} />
                 </label>
               </div>
 
             </p>
 
             <p>
-              <label for="desiredStartHour">Desired Start Hour
-                <select name="desiredStartHour[]">
+              <label for="desiredStartHour">Desired Start Hour*
+                <select name="desiredStartHour[]" required>
                   <option disabled selected="true">Select</option>
                   <option value="7:00" name="desiredStartHour">7:00</option>
                   <option value="7:30" name="desiredStartHour">7:30</option>
@@ -112,8 +129,8 @@ const Footer = () => {
             </p>
 
             <p>
-              <label for="desiredEndHour">Desired End Hour
-              <select name="desiredEndHour[]">
+              <label for="desiredEndHour">Desired End Hour*
+              <select name="desiredEndHour[]" required>
                 <option disabled selected="true">Select</option>
                 <option value="8:00" name="desiredEndHour">8:00</option>
                 <option value="8:30" name="desiredEndHour">8:30</option>
@@ -139,14 +156,25 @@ const Footer = () => {
             </p>
 
             <p>
-              <label for="desiredStartDate">Desired Start Date 
-                <input type="date" name="desiredStartDate"  placeholder="Desired Start Date" required/>
+              <label for="desiredStartDate">Desired Start Date*
+                <input type="date" name="desiredStartDate"  placeholder="Desired Start Date*" required/>
+              </label>
+            </p>
+
+            <p>
+              <label for="preferredContactMethod">Preferred Contact Method*
+              <select name="preferredContactMethod[]" required className={preferredContactMethod}>
+                <option disabled selected="true">Select</option>
+                <option value="Call" name="Call">Call</option>
+                <option value="Text" name="Text">Text</option>
+                <option value="Email" name="Email">Email</option>
+                </select>
               </label>
             </p>
           
             
             <p className="flexEnd">
-              <button type="submit">Send</button>
+              {isChecked ? <button type="submit" id="submit">Send</button> : <button type="submit" id="submit" disabled>Send</button> }
             </p>
         </form>
        </div>  
