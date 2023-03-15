@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Layout from '../components/layout'
 import { navigate } from 'gatsby';
-import { contact, dayDesired, preferredContactMethod } from '../components/styles/forms.scss'
+import { contact, dayDesired } from '../components/styles/forms.scss'
+import { preferredContactMethodContact } from '.././components/styles/footer.module.scss'
 
 function ContactPage() {
 
@@ -225,7 +226,7 @@ function ContactPage() {
 
             <p>
               <label for="preferredContactMethod">Preferred Contact Method*
-              <select name="preferredContactMethod[]" required className={preferredContactMethod}>
+              <select name="preferredContactMethod[]" required className={preferredContactMethodContact}>
                 <option disabled selected="true">Select</option>
                 <option value="Call" name="Call">Call</option>
                 <option value="Text" name="Text">Text</option>
