@@ -60,10 +60,15 @@ form.contact, .footer-form {
         width: 100%;
         color: white;
         transition: all .4s;
+        // margin: 8px 0;
         &:hover {
             background-color: darken(#39934E, 10%);
             cursor: pointer;
         }
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 
@@ -86,8 +91,16 @@ form.contact, .footer-form {
         display: flex;
         justify-content: center;
         align-items: flex-end;
+        margin: 6px 0;
     }
 
+}
+
+form.contact {
+    button[type=submit] {
+        margin-bottom: 6px;
+        height: 60px;
+    }
 }
 
 .footer-form-wrap {

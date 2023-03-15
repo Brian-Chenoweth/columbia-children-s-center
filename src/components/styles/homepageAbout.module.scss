@@ -3,6 +3,10 @@
     p {
         color: white;
         font-size: 22px;
+        margin-bottom: 1.25rem;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
 
         &:first-of-type {
             &::first-letter {

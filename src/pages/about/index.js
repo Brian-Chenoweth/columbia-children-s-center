@@ -23,7 +23,7 @@ const AboutPage = () => {
         <h2>Flexible Schedules</h2>
         <p>Most programs offer 2-5 day enrollment and half and full day schedules.</p>
         <h2>Safe Environment</h2>
-        <p>Our building is secure. Parents use a finger print system to sign in and out their child. Classroom space is secured with a keypad entry.</p>
+        <p>Our building is secure. Classroom space is secured with a keypad entry.</p>
         <h2>Dedicated &amp; Educated Staff</h2>
         <p>Staff have education in Early Childhood Studies and are CPR certified.</p>
         <h2>Open Door Policy</h2>

@@ -94,7 +94,7 @@ function ContactPage() {
 
           <p><em>Fields marked * are required</em></p>
 
-          <form name="contact" className="footer-form"  method="post"
+          <form name="contact" className="contact"  method="post"
               action="/thank-you/"
               data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />

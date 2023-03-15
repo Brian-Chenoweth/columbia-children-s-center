@@ -21,7 +21,7 @@ const CareersPage = () => {
         <li>Beautiful Break Room with Snacks Provided</li>
         <li>Beautiful Classrooms</li>
         <li>Outdoor Classroom Program</li>
-        <li>Team orientated</li>
+        <li>Team Oriented</li>
         <li>Locally Owned Since 1992</li>
       </ol> 
 
