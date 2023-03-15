@@ -105,7 +105,19 @@ const EYPage = () => {
           <img className={sliderImg} src={earlyYears9} alt="Early Years" />
         </Slider>
 
-        {/* <TuitionRates pageTitle={pageTitle} halfDayFive="$265.00" fullDayFive="$345.00" halfDayFour="$235.00" fullDayFour="$295.00" halfDayThree="$205.00" fullDayThree="$250.00" halfDayTwo="$155.00" fullDayTwo="$205.00">Single extra days may be arranged with the director at a rate of half day: $85.00, full day: $105.00.</TuitionRates> */}
+        <TuitionRates 
+          pageTitle={pageTitle} 
+          halfDayFive="$280.00" 
+          fullDayFive="$365.00" 
+          halfDayFour="$250.00" 
+          fullDayFour="$310.00" 
+          halfDayThree="$215.00" 
+          fullDayThree="$265.00" 
+          halfDayTwo="$165.00" 
+          fullDayTwo="$215.00"
+        >
+          Single extra days may be arranged with the director at a rate of half day: $90.00, full day: $110.00.
+          </TuitionRates>
         <div className={employeesWrap}>
           <Employee employeeName="Vanessa Cabatan" employeeTitle="Early Year's Lead Teacher" employeeImg="Vanessa"/>
           <Employee employeeName="Jackie Rubalcava" employeeTitle="Early Year's Teacher Assistant" employeeImg="Jackie"/>
