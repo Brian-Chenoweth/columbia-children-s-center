@@ -4,7 +4,13 @@
     }
 }
 
-.footer-form {}
+.footer-form {
+    button[type=submit] {
+        margin-top: 35px;
+    }
+}
+
+
 
 form.contact, .footer-form {
     display: grid;
