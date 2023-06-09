@@ -35,6 +35,10 @@ const Navi = () => {
               <NavDropdown.Item className={dropdownItem} href={IllnessPolicy} target="_blank">Illness Policy</NavDropdown.Item>
           </NavDropdown>
 
+          <NavDropdown title="Summer Camp Curriculum">
+              <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/1dNi68GUFHFVor9Wpa2l-oLxxXiYZhJSrQnOgqujJW78/edit?usp=sharing" target="_blank">Preschool</NavDropdown.Item>
+          </NavDropdown>
+
           <Nav.Link href="/careers/">Careers</Nav.Link>
           <Nav.Link href="/contact/">Contact</Nav.Link>
         </Nav>
