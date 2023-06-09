@@ -37,6 +37,8 @@ const Navi = () => {
 
           <NavDropdown title="Summer Camp Curriculum">
               <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/1dNi68GUFHFVor9Wpa2l-oLxxXiYZhJSrQnOgqujJW78/edit?usp=sharing" target="_blank">Preschool</NavDropdown.Item>
+              <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/18gVQP36QWs55D3zrskfoIG1HpZiaQo17qfbLIjuaM_Y/edit?usp=sharing" target="_blank">Kindergarten Readiness</NavDropdown.Item>
+              <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/12tmp2mV0_7_sWWYJJsvxwjFzguNWz5DLvxUrGlAI8Hk/edit?usp=sharing" target="_blank">Outdoor Group</NavDropdown.Item>
           </NavDropdown>
 
           <Nav.Link href="/careers/">Careers</Nav.Link>
