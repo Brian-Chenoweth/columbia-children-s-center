@@ -25,6 +25,9 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
               }
             })()}
             <meta name="description" content={metaDesc} />
+            <meta name="keywords" content="preschool, Columbia Children's Center, Santa Maria, California, early childhood education, childcare, 18 months to 5 years" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta charset="UTF-8" />
         </Helmet>
         <Header />
         {/* <Navigation /> */}
