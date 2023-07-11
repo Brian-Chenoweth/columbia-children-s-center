@@ -40,6 +40,11 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
                 "latitude": 34.93841552734375,
                 "longitude": -120.42646026611328
               },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.6",
+                "reviewCount": "11"
+              },
               "review": [
                 {
                   "@type": "Review",
