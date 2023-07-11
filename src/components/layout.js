@@ -16,30 +16,29 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
   return (
     <div className={pageTitle.toLowerCase()}>
       <main className={container}>
-        <Helmet htmlAttributes={{ lang: 'en' }}
-        script={[
-          helmetJsonLdProp<Organization>({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Columbia Children's Center",
-            url: "https://columbiachildrenscenter.com/",
-            logo: "https://columbiachildrenscenter.com/static/cd84102905614be0e50a022883c578c7/d3084/logo.webp",
-            description: "Columbia Children's Center offers childcare and preschool for children 18 months thru 5 years.",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "840 E. Stowell Road",
-              addressLocality: "Santa Maria",
-              addressRegion: "CA",
-              postalCode: "93454",
-              addressCountry: "US"
-            },
-            telephone: "805-922-5437",
-            sameAs: [
-              "https://www.facebook.com/people/Columbia-Childrens-Center/100063793190740/",
-              "https://www.instagram.com/columbia.childrens.center/"
-            ],
-          }),
-        ]}>
+        <Helmet>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Preschool",
+              "name": "Columbia Children's Center",
+              "alternateName": "Columbia",
+              "url": "https://columbiachildrenscenter.com/",
+              "logo": "https://columbiachildrenscenter.com/static/cd84102905614be0e50a022883c578c7/67d73/logo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "805-922-5437",
+                "contactType": "customer service",
+                "areaServed": "US",
+                "availableLanguage": ["en","es"]
+              },
+              "sameAs": [
+                "https://www.instagram.com/columbia.childrens.center/",
+                "https://www.facebook.com/people/Columbia-Childrens-Center/100063793190740/",
+                "https://columbiachildrenscenter.com/"
+              ]
+            })}
+          </script>
           <link rel="icon" href={favicon} type="image/x-icon"/>
           <link rel="shortcut icon" href={favicon} type="image/x-icon"/>
           {(() => {
