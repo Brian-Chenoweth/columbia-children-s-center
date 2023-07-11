@@ -52,6 +52,7 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
                   "name": "Leilani Sarellano"
                 }
               },
+              "description": "We are a state licensed early childhood program. Offering childcare and preschool for children 18 months thru 6 years. We are conveniently located on Stowell Road close to the 101 freeway and Allan Hancock College.",
               "currenciesAccepted": "USD",
               "paymentAccepted":"Cash, Credit Card",
               "email": "mailto:lisa@columbiachildrenscenter.com",
