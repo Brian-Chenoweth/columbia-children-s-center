@@ -45,18 +45,32 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
                 "ratingValue": "4.6",
                 "reviewCount": "11"
               },
-              "review": {
-                "@type": "Review",
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "5",
-                  "bestRating": "5"
+              "review": [
+                {
+                  "@type": "Review",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                  },
+                  "author": {
+                    "@type": "Person",
+                    "name": "Leilani Sarellano"
+                  }
                 },
-                "author": {
-                  "@type": "Person",
-                  "name": "Leilani Sarellano"
+                {
+                  "@type": "Review",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                  },
+                  "author": {
+                    "@type": "Person",
+                    "name": "Butch L"
+                  }
                 }
-              },
+              ],
               "currenciesAccepted": "USD",
               "paymentAccepted":"Cash, Credit Card",
               "email": "mailto:lisa@columbiachildrenscenter.com",
