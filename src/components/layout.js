@@ -41,6 +41,8 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
                 "longitude": -120.42646026611328
               },
               "currenciesAccepted": "USD",
+              "paymentAccepted":"Cash, Credit Card",
+              "email": "mailto:lisa@columbiachildrenscenter.com",
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": [
