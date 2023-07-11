@@ -13,6 +13,7 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
 
   const data = useStaticQuery(graphql`query { site { siteMetadata { title logo icon } } }`)
 
+  
   return (
     <div className={pageTitle.toLowerCase()}>
       <main className={container}>
@@ -20,23 +21,37 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Preschool",
+              "@type": "ChildCare",
               "name": "Columbia Children's Center",
-              "alternateName": "Columbia",
+              "image": "https://columbiachildrenscenter.com/static/cd84102905614be0e50a022883c578c7/67d73/logo.png",
+              "@id": "https://columbiachildrenscenter.com/",
               "url": "https://columbiachildrenscenter.com/",
-              "logo": "https://columbiachildrenscenter.com/static/cd84102905614be0e50a022883c578c7/67d73/logo.png",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "805-922-5437",
-                "contactType": "customer service",
-                "areaServed": "US",
-                "availableLanguage": ["en","es"]
+              "telephone": "805-922-5437",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "840 E. Stowell Road",
+                "addressLocality": "Santa Maria",
+                "addressRegion": "CA",
+                "postalCode": "93454",
+                "addressCountry": "US"
               },
-              "sameAs": [
-                "https://www.instagram.com/columbia.childrens.center/",
-                "https://www.facebook.com/people/Columbia-Childrens-Center/100063793190740/",
-                "https://columbiachildrenscenter.com/"
-              ]
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 34.93841552734375,
+                "longitude": -120.42646026611328
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "07:00",
+                "closes": "17:30"
+              } 
             })}
           </script>
           <link rel="icon" href={favicon} type="image/x-icon"/>
