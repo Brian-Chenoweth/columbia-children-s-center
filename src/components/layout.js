@@ -40,6 +40,18 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
                 "latitude": 34.93841552734375,
                 "longitude": -120.42646026611328
               },
+              "review": {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "Leilani Sarellano"
+                }
+              },
               "currenciesAccepted": "USD",
               "paymentAccepted":"Cash, Credit Card",
               "email": "mailto:lisa@columbiachildrenscenter.com",
