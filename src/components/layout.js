@@ -40,6 +40,7 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
                 "latitude": 34.93841552734375,
                 "longitude": -120.42646026611328
               },
+              "currenciesAccepted": "USD",
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": [
@@ -51,7 +52,11 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
                 ],
                 "opens": "07:00",
                 "closes": "17:30"
-              } 
+              },
+              "sameAs": [
+                "https://www.instagram.com/columbia.childrens.center/",
+                "https://www.facebook.com/people/Columbia-Childrens-Center/100063793190740/"
+              ] 
             })}
           </script>
           <link rel="icon" href={favicon} type="image/x-icon"/>
