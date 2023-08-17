@@ -124,16 +124,12 @@ const YTPage = () => {
 
         <TuitionRates 
           pageTitle={pageTitle} 
-          halfDayFive="$280.00" 
           fullDayFive="$365.00" 
-          halfDayFour="$250.00" 
           fullDayFour="$310.00" 
-          halfDayThree="$215.00" 
           fullDayThree="$265.00" 
-          halfDayTwo="$165.00" 
           fullDayTwo="$215.00"
         >
-          Single extra days may be arranged with the director at a rate of half day: $90.00, full day: $110.00.
+          Single extra days may be arranged with the director at a rate of: $110.00.
           </TuitionRates>
         <div className={employeesWrap}>
           <Employee 
