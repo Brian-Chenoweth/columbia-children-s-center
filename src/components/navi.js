@@ -35,12 +35,6 @@ const Navi = () => {
               <NavDropdown.Item className={dropdownItem} href={IllnessPolicy} target="_blank">Illness Policy</NavDropdown.Item>
           </NavDropdown>
 
-          <NavDropdown title="Summer Camp Curriculum">
-              <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/1eNT9MWb916ZnHx1uw-h7M_0XcRLcsxhm9ksODepaw_E/edit?usp=sharing" target="_blank">Preschool</NavDropdown.Item>
-              <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/1j-T3QzOPMwSbCpqv8YlqwZ43U1zm8t11UakiWbJoxPo/edit?usp=sharing" target="_blank">Kindergarten Readiness</NavDropdown.Item>
-              <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/1VYuzj7FjLcxzeWJG3t9m2_xWUhJZGtTfNGNn0AeGhuI/edit?usp=sharing" target="_blank">Outdoor Group</NavDropdown.Item>
-          </NavDropdown>
-
           <Nav.Link href="/careers/">Careers</Nav.Link>
           <Nav.Link href="/contact/">Contact</Nav.Link>
         </Nav>
