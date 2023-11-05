@@ -141,12 +141,12 @@ const PPage = () => {
                 employeeImg="Litzey"
             />
             <Employee 
-                employeeName="Michelle" 
+                employeeName="Michelle Mora" 
                 employeeTitle="Preschool Teacher Assistant" 
                 employeeImg="Michelle"
             />
             <Employee 
-                employeeName="Lexie" 
+                employeeName="Lexie Martinez" 
                 employeeTitle="Preschool Teacher Assistant" 
                 employeeImg="Lexie"
             />
@@ -156,7 +156,7 @@ const PPage = () => {
                 employeeImg="Brigitte"
             />
             <Employee 
-                employeeName="Veronica" 
+                employeeName="Veronica Trejo" 
                 employeeTitle="Outdoor Classroom Teacher Assistant" 
                 employeeImg="Veronica"
             />

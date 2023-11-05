@@ -119,8 +119,16 @@ const EYPage = () => {
           Single extra days may be arranged with the director at a rate of half day: $90.00, full day: $110.00.
           </TuitionRates>
         <div className={employeesWrap}>
-          <Employee employeeName="Vanessa Cabatan" employeeTitle="Early Year's Lead Teacher" employeeImg="Vanessa"/>
-          <Employee employeeName="Aniesa" employeeTitle="Early Year's Teacher Assistant" employeeImg="Aniesa"/>
+          <Employee 
+            employeeName="Vanessa Cabatan"
+            employeeTitle="Early Year's Lead Teacher"
+            employeeImg="Vanessa"
+          />
+          <Employee
+            employeeName="Aniesa Cabrera"
+            employeeTitle="Early Year's Teacher Assistant"
+            employeeImg="Aniesa"
+          />
         </div>
     </Layout>
 
