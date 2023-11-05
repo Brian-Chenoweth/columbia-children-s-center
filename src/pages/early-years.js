@@ -120,7 +120,7 @@ const EYPage = () => {
           </TuitionRates>
         <div className={employeesWrap}>
           <Employee employeeName="Vanessa Cabatan" employeeTitle="Early Year's Lead Teacher" employeeImg="Vanessa"/>
-          <Employee employeeName="Jackie Rubalcava" employeeTitle="Early Year's Teacher Assistant" employeeImg="Jackie"/>
+          <Employee employeeName="Aniesa" employeeTitle="Early Year's Teacher Assistant" employeeImg="Aniesa"/>
         </div>
     </Layout>
 
