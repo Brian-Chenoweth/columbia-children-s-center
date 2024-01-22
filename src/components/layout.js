@@ -18,6 +18,8 @@ const Layout = ({ pageTitle, metaDesc, children }) => {
     <div className={pageTitle.toLowerCase()}>
       <main className={container}>
         <Helmet>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6753339908489719"
+     crossorigin="anonymous"></script>
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
