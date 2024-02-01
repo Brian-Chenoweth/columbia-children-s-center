@@ -6,20 +6,19 @@ import { teamWrap } from './our-team.module.scss'
 const OurTeamPage = () => {
   const employeeData = [
     { name: "Cortney Dasmann", title: "Director", img: "Cortney" },
-    { name: "Amanda D'hoedt", title: "Young Toddler Teacher", img: "Amanda" },
     { name: "Tiffany Schofield", title: "Young Toddler Teacher", img: "Tiffany" },
+    { name: "Cynthia Hernandez", title: "Young Toddler Teacher", img: "Cynthia" },
     { name: "Shirley Adelhelm", title: "Young Toddler Teacher / Breaker", img: "Shirley" },
     { name: "Jackie Rubalcava", title: "Young Toddler Teacher Assistant", img: "Jackie" },
     { name: "Vanessa Cabatan", title: "Early Year's Lead Teacher", img: "Vanessa" },
-    { name: "Aniesa Cabrera", title: "Early Year's Teacher Assistant", img: "Aniesa" },
-    { name: "Brittney Willoughby", title: "Preschool Lead Teacher", img: "Brittney" },
+    { name: "Sam Wise", title: "Preschool Lead Teacher", img: "Sam" },
     { name: "Litzey Dominguez", title: "Preschool Teacher", img: "Litzey" },
     { name: "Michelle Mora", title: "Preschool Teacher Assistant", img: "Michelle" },
     { name: "Lexie Martinez", title: "Preschool Teacher Assistant", img: "Lexie" },
     { name: "Brigitte Ortiz-Tello", title: "Outdoor Classroom Teacher", img: "Brigitte" },
     { name: "Veronica Trejo", title: "Outdoor Teacher Assistant", img: "Veronica" },
     { name: "Nicolle Rogers", title: "Kindergarten Readiness Lead Teacher", img: "Nicolle" },
-    { name: "Sam Wise", title: "Kindergarten Readiness Lead Teacher", img: "Sam" },
+    { name: "Amanda D'hoedt", title: "Kindergarten Readiness Teacher", img: "Amanda" },
   ]
 
   return (

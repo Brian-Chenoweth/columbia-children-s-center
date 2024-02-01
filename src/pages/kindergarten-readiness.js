@@ -115,7 +115,11 @@ const KRPage = () => {
         
         <div className={employeesWrap}>
           <Employee employeeName="Nicolle Rogers" employeeTitle="Kindergarten Readiness Lead Teacher" employeeImg="Nicolle"/>
-          <Employee employeeName="Sam Wise" employeeTitle="Kindergarten Readiness Lead Teacher" employeeImg="Sam"/>
+          <Employee 
+            employeeName="Amanda D'hoedt" 
+            employeeTitle="Kindergarten Readiness Teacher" 
+            employeeImg="Amanda"
+          />
           <Employee employeeName="Brigitte Ortiz-Tello" employeeTitle="Outdoor Classroom Teacher" employeeImg="Brigitte"/>
         </div>
       </Layout>

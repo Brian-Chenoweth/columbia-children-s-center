@@ -130,11 +130,7 @@ const PPage = () => {
             Single extra days may be arranged with the director at a rate of half day: $70.00, full day: $85.00.
         </TuitionRates>
         <div className={employeesWrap}>
-            <Employee 
-                employeeName="Brittney Willoughby" 
-                employeeTitle="Preschool Lead Teacher" 
-                employeeImg="Brittney"
-            />
+            <Employee employeeName="Sam Wise" employeeTitle="Preschool Lead Teacher" employeeImg="Sam"/>
             <Employee 
                 employeeName="Litzey Dominguez" 
                 employeeTitle="Preschool Teacher" 
