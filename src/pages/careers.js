@@ -9,7 +9,7 @@ const CareersPage = () => {
       <p>Columbia Children's Center is a privately owned preschool established in 1992. We value the ideas and interests of the children in our care. We believe that children learn best through active participation with their environment and that the teacher's job is to provide a variety of opportunities and experiences to provide growth in all areas.</p>
       <p>We are currently seeking dedicated, compassionate and experienced individuals to join our team. Candidates should possess a passion for early childhood education and have a genuine love for nurturing young minds. A minimum of 12 units in Early Childhood Education or a willingness to complete college classes in the field is required. Prior experience working with young children is highly valued.</p>
       <p>If you share our philosophy and believe in fostering creativity and curiosity in young children, we encourage you to apply.</p>
-      <a href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=c78a2d85-6d22-441e-ad4b-fff7c02a473a&env=na4&acct=d8bad836-3159-4bae-b582-e08465161ee0&v=2" target="_blank" className={button}>Apply Now</a>
+      <a href="https://na1.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhBIttChvy5P3LqHHc8C1FQfproT61m-6vkFDqVKHDLj1a1asfFqX0or2fUYqc7By0o*" target="_blank" className={button}>Apply Now</a>
 
       <h2>10 Reasons to Work at CCC</h2>
       <ol>
