@@ -132,13 +132,8 @@ const PPage = () => {
         <div className={employeesWrap}>
             <Employee employeeName="Sam Wise" employeeTitle="Preschool Lead Teacher" employeeImg="Sam"/>
             <Employee 
-                employeeName="Litzey Dominguez" 
-                employeeTitle="Preschool Teacher" 
-                employeeImg="Litzey"
-            />
-            <Employee 
                 employeeName="Michelle Mora" 
-                employeeTitle="Preschool Teacher Assistant" 
+                employeeTitle="Preschool Teacher" 
                 employeeImg="Michelle"
             />
             <Employee 
@@ -147,14 +142,14 @@ const PPage = () => {
                 employeeImg="Lexie"
             />
             <Employee 
+                employeeName="Veronica Trejo" 
+                employeeTitle="Preschool Teacher Assistant" 
+                employeeImg="Veronica"
+            />
+            <Employee 
                 employeeName="Brigitte Ortiz-Tello" 
                 employeeTitle="Outdoor Classroom Teacher" 
                 employeeImg="Brigitte"
-            />
-            <Employee 
-                employeeName="Veronica Trejo" 
-                employeeTitle="Outdoor Classroom Teacher Assistant" 
-                employeeImg="Veronica"
             />
         </div>
 
