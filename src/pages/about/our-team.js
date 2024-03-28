@@ -14,7 +14,7 @@ const OurTeamPage = () => {
     { name: "Sam Wise", title: "Preschool Lead Teacher", img: "Sam" },
     { name: "Michelle Mora", title: "Preschool Teacher", img: "Michelle" },
     { name: "Lexie Martinez", title: "Preschool Teacher Assistant", img: "Lexie" },
-    { name: "Brigitte Ortiz-Tello", title: "Outdoor Classroom Teacher", img: "Brigitte" },
+    { name: "Brigitte Ortiz-Tello", title: "Outdoor Lead Teacher", img: "Brigitte" },
     { name: "Veronica Trejo", title: "Preschool Teacher Assistant", img: "Veronica" },
     { name: "Nicolle Rogers", title: "Kindergarten Readiness Lead Teacher", img: "Nicolle" },
     { name: "Amanda D'hoedt", title: "Kindergarten Readiness Teacher", img: "Amanda" },

@@ -120,7 +120,7 @@ const KRPage = () => {
             employeeTitle="Kindergarten Readiness Teacher" 
             employeeImg="Amanda"
           />
-          <Employee employeeName="Brigitte Ortiz-Tello" employeeTitle="Outdoor Classroom Teacher" employeeImg="Brigitte"/>
+          <Employee employeeName="Brigitte Ortiz-Tello" employeeTitle="Outdoor Lead Teacher" employeeImg="Brigitte"/>
         </div>
       </Layout>
     )

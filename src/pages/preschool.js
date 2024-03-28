@@ -148,7 +148,7 @@ const PPage = () => {
             />
             <Employee 
                 employeeName="Brigitte Ortiz-Tello" 
-                employeeTitle="Outdoor Classroom Teacher" 
+                employeeTitle="Outdoor Lead Teacher" 
                 employeeImg="Brigitte"
             />
         </div>
