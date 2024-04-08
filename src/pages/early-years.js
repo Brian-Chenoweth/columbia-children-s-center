@@ -107,16 +107,16 @@ const EYPage = () => {
 
         <TuitionRates 
           pageTitle={pageTitle} 
-          halfDayFive="$280.00" 
-          fullDayFive="$365.00" 
-          halfDayFour="$250.00" 
-          fullDayFour="$310.00" 
-          halfDayThree="$215.00" 
-          fullDayThree="$265.00" 
-          halfDayTwo="$165.00" 
-          fullDayTwo="$215.00"
+          halfDayFive="$295" 
+          fullDayFive="$385" 
+          halfDayFour="$265" 
+          fullDayFour="$325" 
+          halfDayThree="$225" 
+          fullDayThree="$280" 
+          halfDayTwo="$175" 
+          fullDayTwo="$225"
         >
-          Single extra days may be arranged with the director at a rate of half day: $90.00, full day: $110.00.
+          Single extra days may be arranged with the director at a rate of half day: $95, full day: $115.
           </TuitionRates>
         <div className={employeesWrap}>
           <Employee 

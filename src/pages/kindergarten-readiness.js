@@ -102,15 +102,15 @@ const KRPage = () => {
 
         <TuitionRates 
             pageTitle={pageTitle} 
-            halfDayFive="$220.00" 
-            fullDayFive="$290.00" 
-            halfDayFour="$190.00" 
-            fullDayFour="$245.00" 
-            halfDayThree="$155.00" 
-            fullDayThree="$200.00" 
-            halfDayTwo="$125.00" 
-            fullDayTwo="$155.00">
-            Single extra days may be arranged with the director at a rate of half day: $70.00, full day: $85.00.
+            halfDayFive="$230" 
+            fullDayFive="$310" 
+            halfDayFour="$200" 
+            fullDayFour="$260" 
+            halfDayThree="$165" 
+            fullDayThree="$210" 
+            halfDayTwo="$135" 
+            fullDayTwo="$165">
+            Single extra days may be arranged with the director at a rate of half day: $75, full day: $90.
         </TuitionRates>
         
         <div className={employeesWrap}>

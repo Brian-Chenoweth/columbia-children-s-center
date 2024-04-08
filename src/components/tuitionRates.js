@@ -93,7 +93,7 @@ const TuitionRates = ({ halfDayFive, halfDayFour, halfDayThree, halfDayTwo, full
 
         </div>
         <div>
-            <p>There is an annual registration fee of $150.00 per child. A 10% discount will be given for each additional child in a family.</p>
+            <p>There is an annual registration fee of $150 per child. A 10% discount will be given for each additional child in a family.</p>
             <p>{children}</p>
         </div>
     </div>
