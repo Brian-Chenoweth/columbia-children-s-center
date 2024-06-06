@@ -36,7 +36,7 @@ const Navi = () => {
           </NavDropdown>
 
           <Nav.Link href="/careers/">Careers</Nav.Link>
-          <Nav.Link href="https://app.tryplayground.com/listings/4SKAHmOEKiQLtYGXByAK" target='_blank'>Contact</Nav.Link>
+          <Nav.Link href="https://schools.procareconnect.com/register/8ec3f6fc-4e95-438c-906d-cf6e25788037" target='_blank'>Contact</Nav.Link>
         </Nav>
     </Navbar.Collapse>
     </Container>
