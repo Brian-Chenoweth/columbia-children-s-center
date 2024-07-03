@@ -31,7 +31,7 @@ const Navi = () => {
 
 
           <NavDropdown title="Parents">
-              <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/1re9J4IoiuIdDLvCSpvekSdSzrfOBUMxVwf0qEbtEpPk/" target="_blank">Parent Handbook</NavDropdown.Item>
+              <NavDropdown.Item className={dropdownItem} href="https://columbia-childrens-center-inc.waybook.com/public/documents/doc_0qoka017pybojdpev2ei8rrvnkatcaqj?token=pd1iujrrdudcyqrdkgbgnve5giwcykdx1stmmxrosv2yocp6xk81k00qkcgeshfj21rztja3srskit54&embed=true" target="_blank">Parent Handbook</NavDropdown.Item>
               <NavDropdown.Item className={dropdownItem} href={IllnessPolicy} target="_blank">Illness Policy</NavDropdown.Item>
           </NavDropdown>
 
