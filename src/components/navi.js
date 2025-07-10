@@ -5,7 +5,6 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { nav, navbar, dropdownItem, container } from './styles/navigation.module.scss'
-import ParentHandbook from '../documents/parent-handbook-2022-2023.pdf';
 import IllnessPolicy from '../documents/illness-11.22.pdf';
 
 const Navi = () => {
@@ -30,10 +29,10 @@ const Navi = () => {
           </NavDropdown>
 
 
-          <NavDropdown title="Parents">
+          {/* <NavDropdown title="Parents">
               <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/1re9J4IoiuIdDLvCSpvekSdSzrfOBUMxVwf0qEbtEpPk/edit?usp=sharing" target="_blank">Parent Handbook</NavDropdown.Item>
               <NavDropdown.Item className={dropdownItem} href={IllnessPolicy} target="_blank">Illness Policy</NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
 
           <Nav.Link href="/careers/">Careers</Nav.Link>
           <Nav.Link href="https://schools.procareconnect.com/form/fa223adc-c95c-436e-b0bc-b2f252f5f9d9" target='_blank'>Contact</Nav.Link>
