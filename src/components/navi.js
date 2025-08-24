@@ -29,10 +29,10 @@ const Navi = () => {
           </NavDropdown>
 
 
-          {/* <NavDropdown title="Parents">
-              <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/1re9J4IoiuIdDLvCSpvekSdSzrfOBUMxVwf0qEbtEpPk/edit?usp=sharing" target="_blank">Parent Handbook</NavDropdown.Item>
-              <NavDropdown.Item className={dropdownItem} href={IllnessPolicy} target="_blank">Illness Policy</NavDropdown.Item>
-          </NavDropdown> */}
+          <NavDropdown title="Parents">
+              <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/1lHmOCMmep3syn0HJR3P69kk7cSwGme1HGHe8MjYr7H4/edit?usp=sharing" target="_blank">Parent Handbook</NavDropdown.Item>
+              {/* <NavDropdown.Item className={dropdownItem} href={IllnessPolicy} target="_blank">Illness Policy</NavDropdown.Item> */}
+          </NavDropdown>
 
           <Nav.Link href="/careers/">Careers</Nav.Link>
           <Nav.Link href="https://schools.procareconnect.com/form/fa223adc-c95c-436e-b0bc-b2f252f5f9d9" target='_blank'>Contact</Nav.Link>
