@@ -5,7 +5,7 @@ import { teamWrap } from './our-team.module.scss'
 
 const OurTeamPage = () => {
   const employeeData = [
-    { name: "Cortney Dasmann", title: "Director", img: "Cortney" },
+    { name: "Scott Chenoweth", title: "Director", img: "Scott" },
     { name: "Tiffany Schofield", title: "Young Toddler Teacher", img: "Tiffany" },
     { name: "Cynthia Hernandez", title: "Young Toddler Teacher", img: "Cynthia" },
     { name: "Shirley Adelhelm", title: "Young Toddler Teacher / Breaker", img: "Shirley" },
