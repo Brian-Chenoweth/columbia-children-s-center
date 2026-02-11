@@ -1,8 +1,8 @@
-.team-wrap {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 25px;
-    text-align: center;
+.teamWrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  text-align: center;
 
     @media screen and (max-width: 900px) {
         grid-template-columns: repeat(2, 1fr);
