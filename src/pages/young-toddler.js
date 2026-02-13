@@ -133,11 +133,6 @@ const YTPage = () => {
           </TuitionRates>
         <div className={employeesWrap}>
           <Employee 
-            employeeName="Tiffany Schofield" 
-            employeeTitle="Young Toddler Teacher" 
-            employeeImg="Tiffany"
-          />
-          <Employee 
             employeeName="Cynthia Hernandez" 
             employeeTitle="Young Toddler Teacher" 
             employeeImg="Cynthia"
@@ -146,11 +141,6 @@ const YTPage = () => {
             employeeName="Shirley Adelhelm" 
             employeeTitle="Young Toddler Teacher / Breaker" 
             employeeImg="Shirley"
-          />
-          <Employee
-           employeeName="Jackie Rubalcava"
-           employeeTitle="Young Toddler Teacher Assistant"
-           employeeImg="Jackie"
           />
         </div>
     </Layout>

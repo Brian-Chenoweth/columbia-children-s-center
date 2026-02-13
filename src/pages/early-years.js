@@ -124,6 +124,11 @@ const EYPage = () => {
             employeeTitle="Early Year's Lead Teacher"
             employeeImg="Vanessa"
           />
+          <Employee
+           employeeName="Jackie Rubalcava"
+           employeeTitle="Early Year's Teacher"
+           employeeImg="Jackie"
+          />
         </div>
     </Layout>
 
