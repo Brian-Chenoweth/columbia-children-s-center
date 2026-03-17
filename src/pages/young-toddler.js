@@ -31,6 +31,36 @@ const YTPage = () => {
   const pageTitle = "Young Toddler";
   const metaDesc = "Young toddler child care in Santa Maria for children ages 18 months to 2 1/2 years. Columbia Children's Center provides nurturing early learning, play-based exploration, and individualized support.";
   const ageRange = "18 months to 2½ years";
+  const faqSchema = {
+    '@type': 'FAQPage',
+    '@id': 'https://columbiachildrenscenter.com/young-toddler/#faq',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What age does the Young Toddler program start?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our Young Toddler program serves children from 18 months to 30 months.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the teacher-to-child ratio in the Young Toddler classroom?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our teacher-to-child ratio is 1:6, which helps us provide close support and individual attention.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do toddlers learn in this program?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Toddlers learn through play-based exploration, communication practice, social interaction, and age-appropriate activities designed to support confidence, curiosity, and early development.',
+        },
+      },
+    ],
+  };
 
   var settings = {
     dots: false,
@@ -65,6 +95,7 @@ const YTPage = () => {
       metaDesc={metaDesc}
       titleOverride="Young Toddler Child Care in Santa Maria, CA | Columbia Children's Center"
       pathname="/young-toddler/"
+      schemaData={[faqSchema]}
     >
       <Helmet>
           <link
@@ -133,7 +164,14 @@ const YTPage = () => {
           fullDayTwo="$225"
         >
           Single extra days may be arranged with the director at a rate of: $115.
-          </TuitionRates>
+        </TuitionRates>
+        <h2>Young Toddler FAQs</h2>
+        <h3>What age does the Young Toddler program start?</h3>
+        <p>Our Young Toddler program serves children from 18 months to 30 months.</p>
+        <h3>What is the teacher-to-child ratio in the Young Toddler classroom?</h3>
+        <p>Our teacher-to-child ratio is 1:6, which helps us provide close support and individual attention.</p>
+        <h3>How do toddlers learn in this program?</h3>
+        <p>Toddlers learn through play-based exploration, communication practice, social interaction, and age-appropriate activities designed to support confidence, curiosity, and early development.</p>
         <div className={employeesWrap}>
           <Employee 
             employeeName="Cynthia Hernandez" 

@@ -28,6 +28,36 @@ const PPage = () => {
   const pageTitle = "Preschool";
   const metaDesc = "Preschool in Santa Maria for children ages 3 to 4 years. Columbia Children's Center helps preschoolers build confidence, early academic skills, and strong social development in a safe, play-based classroom.";
   const ageRange = "3 years to 4 years";
+  const faqSchema = {
+    '@type': 'FAQPage',
+    '@id': 'https://columbiachildrenscenter.com/preschool/#faq',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What age is your preschool program?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our preschool program is designed for children ages 3 to 4 years.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What does your Santa Maria preschool program focus on?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We focus on confidence building, self-esteem, listening skills, early cognitive development, language growth, social development, and hands-on learning through centers, circle time, art, music, and movement.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer full-day preschool in Santa Maria?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Our preschool program offers both half-day and full-day schedule options, and extra days may also be arranged with the director.',
+        },
+      },
+    ],
+  };
   
   var settings = {
     dots: false,
@@ -62,6 +92,7 @@ const PPage = () => {
         titleOverride="Preschool Program in Santa Maria, CA | Columbia Children's Center"
         metaDesc={metaDesc}
         pathname="/preschool/"
+        schemaData={[faqSchema]}
       >
         <Helmet>
           <link
@@ -134,6 +165,13 @@ const PPage = () => {
             fullDayTwo="$165">
             Single extra days may be arranged with the director at a rate of half day: $75, full day: $90.
         </TuitionRates>
+        <h2>Preschool FAQs</h2>
+        <h3>What age is your preschool program?</h3>
+        <p>Our preschool program is designed for children ages 3 to 4 years.</p>
+        <h3>What does your Santa Maria preschool program focus on?</h3>
+        <p>We focus on confidence building, self-esteem, listening skills, early cognitive development, language growth, social development, and hands-on learning through centers, circle time, art, music, and movement.</p>
+        <h3>Do you offer full-day preschool in Santa Maria?</h3>
+        <p>Yes. Our preschool program offers both half-day and full-day schedule options, and extra days may also be arranged with the director.</p>
         <div className={employeesWrap}>
             <Employee 
                 employeeName="Elizabeth Pantoja" 

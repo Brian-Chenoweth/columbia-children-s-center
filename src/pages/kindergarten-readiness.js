@@ -28,6 +28,36 @@ const KRPage = () => {
     const pageTitle = "Kindergarten Readiness";
     const metaDesc = "Kindergarten readiness program in Santa Maria for children ages 4 to 5 years. Columbia Children's Center helps children build confidence, classroom skills, and school readiness through caring instruction.";
     const ageRange = "4 years to 5 years";
+    const faqSchema = {
+      '@type': 'FAQPage',
+      '@id': 'https://columbiachildrenscenter.com/kindergarten-readiness/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What age is the Kindergarten Readiness program for?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Our Kindergarten Readiness program is for children ages 4 to 5 years.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does this program prepare children for kindergarten?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We help children build confidence, classroom routines, social-emotional skills, and early academic readiness through hands-on activities, guided learning, and interactive classroom experiences.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What kinds of activities are included in the Kindergarten Readiness classroom?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Children take part in hands-on and interactive activities that support emotional, social, and academic growth, along with opportunities to explore, communicate, and create.',
+          },
+        },
+      ],
+    };
 
     var settings = {
       dots: false,
@@ -62,6 +92,7 @@ const KRPage = () => {
         titleOverride="Kindergarten Readiness in Santa Maria, CA | Columbia Children's Center"
         metaDesc={metaDesc}
         pathname="/kindergarten-readiness/"
+        schemaData={[faqSchema]}
       >
          <Helmet>
           <link
@@ -99,7 +130,7 @@ const KRPage = () => {
           <div>
             <ul>
               {JSONDat.days.map((data, index) => {
-                return<li><strong>{data.time}</strong> {data.day}</li>  
+                return<li key={index}><strong>{data.time}</strong> {data.day}</li>  
               })} 
             </ul>
           </div> 
@@ -117,6 +148,13 @@ const KRPage = () => {
             fullDayTwo="$165">
             Single extra days may be arranged with the director at a rate of half day: $75, full day: $90.
         </TuitionRates>
+        <h2>Kindergarten Readiness FAQs</h2>
+        <h3>What age is the Kindergarten Readiness program for?</h3>
+        <p>Our Kindergarten Readiness program is for children ages 4 to 5 years.</p>
+        <h3>How does this program prepare children for kindergarten?</h3>
+        <p>We help children build confidence, classroom routines, social-emotional skills, and early academic readiness through hands-on activities, guided learning, and interactive classroom experiences.</p>
+        <h3>What kinds of activities are included in the Kindergarten Readiness classroom?</h3>
+        <p>Children take part in hands-on and interactive activities that support emotional, social, and academic growth, along with opportunities to explore, communicate, and create.</p>
         
         <div className={employeesWrap}>
           <Employee employeeName="Nicolle Rogers" employeeTitle="Kindergarten Readiness Lead Teacher" employeeImg="Nicolle"/>

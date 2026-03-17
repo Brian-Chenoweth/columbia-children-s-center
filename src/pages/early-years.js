@@ -28,6 +28,36 @@ const EYPage = () => {
   const pageTitle = "Early Years";
   const metaDesc = "Early childhood program in Santa Maria for children ages 2 to 3 years. Columbia Children's Center promotes independence, language growth, and social development through play-based learning.";
   const ageRange = "2 years to 3 years";
+  const faqSchema = {
+    '@type': 'FAQPage',
+    '@id': 'https://columbiachildrenscenter.com/early-years/#faq',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What age is the Early Years program for?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our Early Years program is for children ages 2 to 3 years.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What skills do children practice in the Early Years classroom?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Children practice communication, independence, early circle time participation, socialization, taking turns, sharing, and early learning concepts such as colors, counting, songs, and story time.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do you support social development in Early Years?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We support social development through play, guided group activities, communication practice, and age-appropriate routines that help children express feelings and interact with others in positive ways.',
+        },
+      },
+    ],
+  };
 
   var settings = {
     dots: false,
@@ -62,6 +92,7 @@ const EYPage = () => {
     titleOverride="Early Childhood Program in Santa Maria, CA | Columbia Children's Center"
     metaDesc={metaDesc}
     pathname="/early-years/"
+    schemaData={[faqSchema]}
   >
     <Helmet>
         <link
@@ -122,7 +153,14 @@ const EYPage = () => {
           fullDayTwo="$225"
         >
           Single extra days may be arranged with the director at a rate of half day: $95, full day: $115.
-          </TuitionRates>
+        </TuitionRates>
+        <h2>Early Years FAQs</h2>
+        <h3>What age is the Early Years program for?</h3>
+        <p>Our Early Years program is for children ages 2 to 3 years.</p>
+        <h3>What skills do children practice in the Early Years classroom?</h3>
+        <p>Children practice communication, independence, early circle time participation, socialization, taking turns, sharing, and early learning concepts such as colors, counting, songs, and story time.</p>
+        <h3>How do you support social development in Early Years?</h3>
+        <p>We support social development through play, guided group activities, communication practice, and age-appropriate routines that help children express feelings and interact with others in positive ways.</p>
         <div className={employeesWrap}>
           <Employee 
             employeeName="Vanessa Cabatan"

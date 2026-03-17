@@ -1,6 +1,88 @@
 .localSeoSection {
   margin: 3rem auto;
-  max-width: 1080px;
+  max-width: 1120px;
+}
+
+.localHero {
+  background: linear-gradient(135deg, #f4fbfd 0%, #fff9ef 100%);
+  border: 1px solid #dcecf2;
+  border-radius: 28px;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.localHeroGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.35fr 0.95fr;
+}
+
+.eyebrow {
+  color: #397e93;
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  margin: 0 0 1rem;
+  max-width: 12ch;
+}
+
+.heroLead {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  max-width: 60ch;
+}
+
+.heroStats {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1.5rem 0;
+}
+
+.heroStat {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #d6e8ee;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.heroStat strong {
+  color: #397e93;
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.heroPanel {
+  background: #163645;
+  border-radius: 24px;
+  color: #fff;
+  padding: 1.75rem;
+}
+
+.heroPanel h2,
+.heroPanel h3,
+.heroPanel p,
+.heroPanel li {
+  color: #fff;
+}
+
+.heroPanel ul {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.heroPanel a {
+  color: #fff;
 }
 
 .localSeoGrid {
@@ -19,6 +101,11 @@
 .localSeoCard h2,
 .localSeoCard h3 {
   margin-top: 0;
+}
+
+.accentCard {
+  background: #fff9ef;
+  border-color: #f0deba;
 }
 
 .checkList {
@@ -54,8 +141,81 @@
   background: #2d6374;
 }
 
-@media screen and (max-width: 768px) {
-  .localSeoGrid {
+.neighborhoodGrid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.25rem;
+}
+
+.neighborhoodPill {
+  background: #fff;
+  border: 1px solid #d6e8ee;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.faqList {
+  display: grid;
+  gap: 1rem;
+}
+
+.faqItem {
+  background: #fff;
+  border: 1px solid #d6e8ee;
+  border-radius: 18px;
+  padding: 1.1rem 1.2rem;
+}
+
+.faqItem h3 {
+  margin-bottom: 0.5rem;
+}
+
+.tourBanner {
+  background: linear-gradient(135deg, #397e93 0%, #245264 100%);
+  border-radius: 24px;
+  color: #fff;
+  margin-top: 1.5rem;
+  padding: 1.75rem;
+}
+
+.tourBanner h2,
+.tourBanner p {
+  color: #fff;
+}
+
+.tourBanner .ctaButton {
+  background: #fff;
+  color: #245264;
+}
+
+.tourBanner .ctaButton:hover {
+  background: #edf7fb;
+  color: #163645;
+}
+
+.tourBanner .ctaButtonAlt {
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  color: #fff;
+}
+
+.tourBanner .ctaButtonAlt:hover {
+  background: rgba(255, 255, 255, 0.34);
+  color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  .localHeroGrid,
+  .localSeoGrid,
+  .neighborhoodGrid,
+  .heroStats {
     grid-template-columns: 1fr;
+  }
+
+  .heroTitle {
+    max-width: none;
   }
 }
