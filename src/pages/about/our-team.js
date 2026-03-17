@@ -22,7 +22,12 @@ const OurTeamPage = () => {
   ]
 
   return (
-    <Layout pageTitle="Our Team" metaDesc="Meet the team of Columbia Children's Center.">
+    <Layout
+      pageTitle="Our Team"
+      titleOverride="Meet Our Preschool Team | Columbia Children's Center"
+      metaDesc="Meet the teachers and leadership team at Columbia Children's Center in Santa Maria, CA."
+      pathname="/about/our-team/"
+    >
       <div className={teamWrap}>
         {employeeData.map(employee => (
           <Employee

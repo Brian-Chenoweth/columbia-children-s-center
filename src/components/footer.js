@@ -1,10 +1,8 @@
 import * as React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
-import { footerContent, socialIconsWrap, socialIcons, preferredContactMethod } from './styles/footer.module.scss'
+import { useStaticQuery, graphql } from 'gatsby'
+import { footerContent, socialIconsWrap, socialIcons } from './styles/footer.module.scss'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import { useState } from 'react';
 
 const Footer = () => {
 
@@ -19,22 +17,6 @@ const Footer = () => {
   }`)
 
 
-  const [isChecked, setIsChecked] = useState(false);
-
-  function handleCheckboxChange() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    let isChecked = false;
-    checkboxes.forEach((checkbox) => {
-      if (checkbox.checked) {
-        isChecked = true;
-      }
-    });
-    setIsChecked(isChecked);
-  }
-
-
-  
-
   return (
     <footer>
       <div className={footerContent}>
@@ -46,9 +28,8 @@ const Footer = () => {
         </div>
         <div className={socialIconsWrap}>
           <div className={socialIcons}>
-            <Link to={data.site.siteMetadata.socialMedia.facebook} target="_blank"><FacebookIcon fontSize="large"/></Link>
-            <Link to={data.site.siteMetadata.socialMedia.instagram} target="_blank"><InstagramIcon fontSize="large"/></Link>
-            {/* <Link to={data.site.siteMetadata.socialMedia.youtube} target="_blank"><YouTubeIcon fontSize="large"/></Link> */}
+            <a href={data.site.siteMetadata.socialMedia.facebook} target="_blank" rel="noreferrer"><FacebookIcon fontSize="large"/></a>
+            <a href={data.site.siteMetadata.socialMedia.instagram} target="_blank" rel="noreferrer"><InstagramIcon fontSize="large"/></a>
           </div>
           <p>&copy; {new Date().getFullYear()} Columbia Children's Center. All Rights Reserved.</p>
         </div>

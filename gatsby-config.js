@@ -2,10 +2,29 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://columbiachildrenscenter.com",
     title: "Columbia Children's Center",
-    logo: "./images/logo.png",
-    icon: "./images/building-flag.png",
+    description: "Preschool and child care in Santa Maria, CA for children ages 18 months to 5 years. Columbia Children's Center has served local families since 1992.",
+    image: "/columbia-childrens-center-front.png",
+    business: {
+      name: "Columbia Children's Center",
+      email: "lisa@columbiachildrenscenter.com",
+      telephone: "+1-805-922-5437",
+      telephoneDisplay: "805-922-KIDS (5437)",
+      foundingDate: "1992",
+      priceRange: "$$",
+      streetAddress: "840 E. Stowell Road",
+      addressLocality: "Santa Maria",
+      addressRegion: "CA",
+      postalCode: "93454",
+      addressCountry: "US",
+      latitude: 34.93841552734375,
+      longitude: -120.42646026611328,
+      openingHours: {
+        opens: "07:00",
+        closes: "17:30",
+      },
+    },
     socialMedia: {
       facebook: "https://www.facebook.com/Columbia-Childrens-Center-149240848454100/",
       instagram: "https://www.instagram.com/columbia.childrens.center/",
@@ -23,7 +42,12 @@ module.exports = {
     },
     "gatsby-plugin-netlify",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        excludes: ["/404", "/404.html", "/dev-404-page", "/offline-plugin-app-shell-fallback"],
+      },
+    },
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",

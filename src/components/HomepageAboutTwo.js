@@ -5,10 +5,10 @@ const homepageAboutTwo = ({ children }) => {
   return (
     <div className={homepageAboutWrap + ' ' + 'one'}>
         <div className={homepageAboutContent}>
-          <p>We understand that choosing a child development program for your child can be a difficult decision.</p>
-          <p>We hope that our 30 years of experience will help you to feel comfortable with your decision.</p>
-          <p>We believe that communication between parents and teachers is essential to the success of your child's education.</p>
-          <p>We believe that it takes a village to raise a child and we look forward to being a part of your family's village.</p>
+          <h2>Built around communication, safety, and early learning</h2>
+          <p>Choosing a preschool in Santa Maria is a major decision. Our goal is to help families feel informed and confident from the first tour through each stage of enrollment.</p>
+          <p>Communication between parents and teachers is central to a successful early education experience, and we work hard to build lasting partnerships with families.</p>
+          <p>We believe it takes a village to raise a child, and we are proud to be part of that village for families throughout Santa Maria and the surrounding community.</p>
         </div>
     </div>
   )

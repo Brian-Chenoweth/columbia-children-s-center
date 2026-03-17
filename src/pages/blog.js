@@ -5,7 +5,12 @@ import Layout from '../components/layout'
 
 const BlogPage = ( {data} ) => {
   return (
-    <Layout pageTitle="My Blog Posts">
+    <Layout
+      pageTitle="Blog"
+      titleOverride="Preschool Blog | Columbia Children's Center"
+      metaDesc="Articles and updates from Columbia Children's Center in Santa Maria, CA."
+      pathname="/blog/"
+    >
       {
         data.allMdx.nodes.map((node) => (
           <article key={node.id}>

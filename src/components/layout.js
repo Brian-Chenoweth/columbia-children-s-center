@@ -1,213 +1,217 @@
-import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import * as React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { container, heading, content, list } from './styles/layout.module.scss'
-import Navi from '../components/navi'
-import Footer from '../components/footer'
-import Header from '../components/header'
-import favicon from ".././images/favicon.ico"
-import { Organization } from "schema-dts";
-import { helmetJsonLdProp } from "react-schemaorg";
+import { container, heading, content } from './styles/layout.module.scss';
+import Navi from '../components/navi';
+import Footer from '../components/footer';
+import Header from '../components/header';
+import favicon from '../images/favicon.ico';
 
-const Layout = ({ pageTitle, metaDesc, children }) => {
+const buildBreadcrumbs = (siteUrl, pathname, pageTitle) => {
+  const normalizedPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '') + '/';
+  const crumbs = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: siteUrl,
+    },
+  ];
 
-  const data = useStaticQuery(graphql`query { site { siteMetadata { title logo icon } } }`)
+  if (normalizedPath !== '/') {
+    crumbs.push({
+      '@type': 'ListItem',
+      position: 2,
+      name: pageTitle,
+      item: `${siteUrl}${normalizedPath}`,
+    });
+  }
 
-  
+  return crumbs;
+};
+
+const Layout = ({
+  pageTitle,
+  titleOverride,
+  metaDesc,
+  pathname = '/',
+  imagePath,
+  noIndex = false,
+  schemaType = 'WebPage',
+  schemaData = [],
+  children,
+}) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          siteUrl
+          title
+          description
+          image
+          business {
+            name
+            email
+            telephone
+            telephoneDisplay
+            foundingDate
+            priceRange
+            streetAddress
+            addressLocality
+            addressRegion
+            postalCode
+            addressCountry
+            latitude
+            longitude
+            openingHours {
+              opens
+              closes
+            }
+          }
+          socialMedia {
+            facebook
+            instagram
+            youtube
+          }
+        }
+      }
+    }
+  `);
+
+  const { siteMetadata } = data.site;
+  const siteUrl = siteMetadata.siteUrl.replace(/\/$/, '');
+  const normalizedPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '') + '/';
+  const canonical = `${siteUrl}${normalizedPath === '/' ? '/' : normalizedPath}`;
+  const metaDescription = metaDesc || siteMetadata.description;
+  const title = titleOverride || (pageTitle === siteMetadata.title
+    ? siteMetadata.title
+    : `${pageTitle} | ${siteMetadata.title}`);
+  const imageUrl = `${siteUrl}${imagePath || siteMetadata.image}`;
+  const business = siteMetadata.business;
+
+  const baseSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${siteUrl}/#website`,
+        url: `${siteUrl}/`,
+        name: siteMetadata.title,
+        description: siteMetadata.description,
+        inLanguage: 'en-US',
+      },
+      {
+        '@type': 'ChildCare',
+        '@id': `${siteUrl}/#organization`,
+        name: business.name,
+        url: `${siteUrl}/`,
+        image: imageUrl,
+        logo: imageUrl,
+        description: siteMetadata.description,
+        email: business.email,
+        telephone: business.telephone,
+        foundingDate: business.foundingDate,
+        priceRange: business.priceRange,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: business.streetAddress,
+          addressLocality: business.addressLocality,
+          addressRegion: business.addressRegion,
+          postalCode: business.postalCode,
+          addressCountry: business.addressCountry,
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: business.latitude,
+          longitude: business.longitude,
+        },
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: business.openingHours.opens,
+            closes: business.openingHours.closes,
+          },
+        ],
+        areaServed: ['Santa Maria', 'Orcutt', 'Nipomo'],
+        sameAs: [
+          siteMetadata.socialMedia.facebook,
+          siteMetadata.socialMedia.instagram,
+          siteMetadata.socialMedia.youtube,
+        ],
+      },
+      {
+        '@type': schemaType,
+        '@id': `${canonical}#webpage`,
+        url: canonical,
+        name: title,
+        description: metaDescription,
+        isPartOf: {
+          '@id': `${siteUrl}/#website`,
+        },
+        about: {
+          '@id': `${siteUrl}/#organization`,
+        },
+        breadcrumb: {
+          '@id': `${canonical}#breadcrumb`,
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${canonical}#breadcrumb`,
+        itemListElement: buildBreadcrumbs(siteUrl, normalizedPath, pageTitle),
+      },
+      ...schemaData,
+    ],
+  };
+
   return (
     <div className={pageTitle.toLowerCase()}>
       <main className={container}>
         <Helmet>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6753339908489719"
-     crossorigin="anonymous"></script>
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ChildCare",
-              "name": "Columbia Children's Center",
-              "image": "https://columbiachildrenscenter.com/static/cd84102905614be0e50a022883c578c7/67d73/logo.png",
-              "@id": "https://columbiachildrenscenter.com/",
-              "url": "https://columbiachildrenscenter.com/",
-              "telephone": "805-922-5437",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "840 E. Stowell Road",
-                "addressLocality": "Santa Maria",
-                "addressRegion": "CA",
-                "postalCode": "93454",
-                "addressCountry": "US"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 34.93841552734375,
-                "longitude": -120.42646026611328
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.6",
-                "reviewCount": "11"
-              },
-              "review": [
-                {
-                  "@type": "Review",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                  },
-                  "author": {
-                    "@type": "Person",
-                    "name": "Leilani Sarellano"
-                  }
-                },
-                {
-                  "@type": "Review",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                  },
-                  "author": {
-                    "@type": "Person",
-                    "name": "Butch L"
-                  }
-                },
-                {
-                  "@type": "Review",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                  },
-                  "author": {
-                    "@type": "Person",
-                    "name": "Marcus Degas"
-                  }
-                },
-                {
-                  "@type": "Review",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                  },
-                  "author": {
-                    "@type": "Person",
-                    "name": "Nick Healey"
-                  }
-                },
-                {
-                  "@type": "Review",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                  },
-                  "author": {
-                    "@type": "Person",
-                    "name": "R M"
-                  }
-                },
-                {
-                  "@type": "Review",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                  },
-                  "author": {
-                    "@type": "Person",
-                    "name": "L C"
-                  }
-                },
-                {
-                  "@type": "Review",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                  },
-                  "author": {
-                    "@type": "Person",
-                    "name": "Salina Bolden"
-                  }
-                },
-                {
-                  "@type": "Review",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                  },
-                  "author": {
-                    "@type": "Person",
-                    "name": "Craig D Jones"
-                  }
-                },
-                {
-                  "@type": "Review",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                  },
-                  "author": {
-                    "@type": "Person",
-                    "name": "amber ramirez"
-                  }
-                }
-              ],
-              "currenciesAccepted": "USD",
-              "paymentAccepted":"Cash, Credit Card",
-              "email": "mailto:lisa@columbiachildrenscenter.com",
-              "description": "We are a state licensed early childhood program. Offering childcare and preschool for children 18 months thru 6 years. We are conveniently located on Stowell Road close to the 101 freeway and Allan Hancock College.",
-              "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday"
-                ],
-                "opens": "07:00",
-                "closes": "17:30"
-              },
-              "sameAs": [
-                "https://www.instagram.com/columbia.childrens.center/",
-                "https://www.facebook.com/people/Columbia-Childrens-Center/100063793190740/"
-              ] 
-            })}
-          </script>
-          <link rel="icon" href={favicon} type="image/x-icon"/>
-          <link rel="shortcut icon" href={favicon} type="image/x-icon"/>
-          {(() => {
-              if (pageTitle === "Columbia Children's Center") {
-                return (  <title>{data.site.siteMetadata.title}</title> ) 
-              } else {
-                return (  <title>{pageTitle} | {data.site.siteMetadata.title} </title> ) 
-              }
-            })()}
-            <meta name="description" content={metaDesc} />
-            <meta name="keywords" content="preschool, Columbia Children's Center, Santa Maria, California, early childhood education, childcare, 18 months to 5 years" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <meta charset="UTF-8" />
+          <html lang="en" />
+          <title>{title}</title>
+          <meta charSet="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="description" content={metaDescription} />
+          <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'} />
+          <meta name="geo.region" content="US-CA" />
+          <meta name="geo.placename" content="Santa Maria" />
+          <meta name="ICBM" content={`${business.latitude}, ${business.longitude}`} />
+          <meta property="og:locale" content="en_US" />
+          <meta property="og:type" content={normalizedPath === '/' ? 'website' : 'article'} />
+          <meta property="og:site_name" content={siteMetadata.title} />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={metaDescription} />
+          <meta property="og:url" content={canonical} />
+          <meta property="og:image" content={imageUrl} />
+          <meta property="og:image:alt" content="Columbia Children's Center preschool in Santa Maria, California" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={metaDescription} />
+          <meta name="twitter:image" content={imageUrl} />
+          <link rel="canonical" href={canonical} />
+          <link rel="icon" href={favicon} type="image/x-icon" />
+          <link rel="shortcut icon" href={favicon} type="image/x-icon" />
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6753339908489719"
+            crossOrigin="anonymous"
+          />
+          <script type="application/ld+json">{JSON.stringify(baseSchema)}</script>
         </Helmet>
         <Header />
-        {/* <Navigation /> */}
         <Navi />
-          {(() => {
-              if (pageTitle === "Columbia Children's Center") {
-                return ( <h1 className={heading} style={{display: "none"}}>{pageTitle}</h1> )
-              } else {
-                return ( <h1 className={heading}>{pageTitle}</h1> )
-              }
-            })()}
-            <div className={content}>{children}</div>
-            <Footer />
+        {pageTitle === siteMetadata.title ? (
+          <h1 className={heading} style={{ display: 'none' }}>{pageTitle}</h1>
+        ) : (
+          <h1 className={heading}>{pageTitle}</h1>
+        )}
+        <div className={content}>{children}</div>
+        <Footer />
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

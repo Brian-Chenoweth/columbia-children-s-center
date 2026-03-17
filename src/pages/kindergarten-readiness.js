@@ -26,7 +26,7 @@ import { sliderImg } from '.././components/styles/layout.module.scss'
 const KRPage = () => {
     
     const pageTitle = "Kindergarten Readiness";
-    const metaDesc = "We provide a nurturing, caring and safe environment for your child to learn and grow through age-appropriate experiences for children 4 years to 5 years.";
+    const metaDesc = "Kindergarten readiness program in Santa Maria for children ages 4 to 5 years. Columbia Children's Center helps children build confidence, classroom skills, and school readiness through caring instruction.";
     const ageRange = "4 years to 5 years";
 
     var settings = {
@@ -57,7 +57,12 @@ const KRPage = () => {
     };
 
     return (
-      <Layout pageTitle={pageTitle} metaDesc={metaDesc}>
+      <Layout
+        pageTitle={pageTitle}
+        titleOverride="Kindergarten Readiness in Santa Maria, CA | Columbia Children's Center"
+        metaDesc={metaDesc}
+        pathname="/kindergarten-readiness/"
+      >
          <Helmet>
           <link
           rel="stylesheet"
@@ -71,9 +76,9 @@ const KRPage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </Helmet>
-        <StaticImage src=".././images/home/kindergartenReadiness.jpg" width={500} className={introImage}/>
+        <StaticImage src=".././images/home/kindergartenReadiness.jpg" width={500} className={introImage} alt="Kindergarten readiness classroom at Columbia Children's Center in Santa Maria" />
         <h2 id="age"  style={{marginTop: "0"}}>{ageRange}</h2>
-        <p>Here at Columbia Children's Center we provide a nurturing, caring and safe environment for your child to learn and grow through age-appropriate experiences. We are very proud of our Kindergarten Readiness Program. Our goal is to enhance your child's confidence and prepare them for a successful school experience. We believe that warmth is a vital element for a growing child. Our curriculum is designed so that your child will discover that learning is fun while making new friends and building strong relationships with their teachers who deeply care about their happiness and education.</p>
+        <p>Here at Columbia Children&apos;s Center, our Santa Maria kindergarten readiness program provides a nurturing, caring, and safe environment for your child to learn and grow through age-appropriate experiences. Our goal is to build confidence and prepare children for a successful school experience.</p>
         <p>We have a variety of Centers in our classroom. Your child will be involved in hands-on and interactive activities to develop their emotional, social, and academic skills. They will be provided many opportunities to explore, communicate and create in a warm and loving atmosphere.</p>
         {/* <ProgramSlider programImages="kindergarten-readiness"/> */}
 

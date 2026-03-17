@@ -26,7 +26,7 @@ const EYPage = () => {
   
 
   const pageTitle = "Early Years";
-  const metaDesc = "Our classroom promotes independence through play, art expression and teacher directed activities for kids 2 years to 3 years.";
+  const metaDesc = "Early childhood program in Santa Maria for children ages 2 to 3 years. Columbia Children's Center promotes independence, language growth, and social development through play-based learning.";
   const ageRange = "2 years to 3 years";
 
   var settings = {
@@ -57,7 +57,12 @@ const EYPage = () => {
   };
 
   return (
-  <Layout pageTitle={pageTitle} metaDesc={metaDesc}>
+  <Layout
+    pageTitle={pageTitle}
+    titleOverride="Early Childhood Program in Santa Maria, CA | Columbia Children's Center"
+    metaDesc={metaDesc}
+    pathname="/early-years/"
+  >
     <Helmet>
         <link
         rel="stylesheet"
@@ -71,10 +76,10 @@ const EYPage = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
       />
     </Helmet>
-        <StaticImage src=".././images/home/early-years.jpg" width={500} className={introImage}/>
+        <StaticImage src=".././images/home/early-years.jpg" width={500} className={introImage} alt="Early Years classroom at Columbia Children's Center in Santa Maria" />
         <h2 id="age"  style={{marginTop: "0"}}>{ageRange}</h2>
 
-        <p>Our Early Years Program serves children between the ages of 18 months and 3 years. Our teacher to child ratio is 1:9 to ensure that each child receives individual attention and support. Our program is designed to provide a safe and nurturing environment that allows children to learn and grow in a confident way. </p>
+        <p>Our Early Years program in Santa Maria serves children between the ages of 2 and 3 years. Our teacher to child ratio is 1:9 to ensure that each child receives individual attention and support in a safe, nurturing classroom. </p>
         <p>To ensure that each child receives the attention they need, we keep our group size at a maximum of 18 children. Our structured, yet flexible approach, allows children to thrive and reach their full potential.</p>
         <p>Our Early Years classroom is designed to be both stimulating and age-appropriate, with a variety of activities and toys that encourage exploration and learning.</p>
         <p>Children are encouraged to communicate their wants and needs. We focus on creating learning and social experiences through play. We introduce children to circle time activities including alphabet, colors, counting, songs and story time. The age appropriate activities promote socialization, taking turns, sharing and expressing feelings in an appropriate manner.</p>

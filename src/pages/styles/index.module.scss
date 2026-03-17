@@ -1,3 +1,61 @@
-.heading {
-    display: none;
+.localSeoSection {
+  margin: 3rem auto;
+  max-width: 1080px;
+}
+
+.localSeoGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.localSeoCard {
+  background: #f4fbfd;
+  border: 1px solid #d5ebf1;
+  border-radius: 18px;
+  padding: 1.5rem;
+}
+
+.localSeoCard h2,
+.localSeoCard h3 {
+  margin-top: 0;
+}
+
+.checkList {
+  padding-left: 1.25rem;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.ctaButton {
+  background: #39934e;
+  border-radius: 999px;
+  color: #fff;
+  display: inline-block;
+  padding: 0.85rem 1.4rem;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  color: #fff;
+  background: #2d743d;
+}
+
+.ctaButtonAlt {
+  background: #397e93;
+}
+
+.ctaButtonAlt:hover {
+  background: #2d6374;
+}
+
+@media screen and (max-width: 768px) {
+  .localSeoGrid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -26,7 +26,7 @@ import { sliderImg } from '.././components/styles/layout.module.scss'
 const PPage = () => {
     
   const pageTitle = "Preschool";
-  const metaDesc = "Our goal is to provide a fun, safe, positive environment; emphasizing on confidence building and self-esteem for children 3 years to 4 years.";
+  const metaDesc = "Preschool in Santa Maria for children ages 3 to 4 years. Columbia Children's Center helps preschoolers build confidence, early academic skills, and strong social development in a safe, play-based classroom.";
   const ageRange = "3 years to 4 years";
   
   var settings = {
@@ -57,7 +57,12 @@ const PPage = () => {
   };
 
     return (
-      <Layout pageTitle={pageTitle} metaDesc={metaDesc}>
+      <Layout
+        pageTitle={pageTitle}
+        titleOverride="Preschool Program in Santa Maria, CA | Columbia Children's Center"
+        metaDesc={metaDesc}
+        pathname="/preschool/"
+      >
         <Helmet>
           <link
           rel="stylesheet"
@@ -71,9 +76,9 @@ const PPage = () => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </Helmet>
-        <StaticImage src=".././images/home/preschool.jpg" width={500} className={introImage}/>
+        <StaticImage src=".././images/home/preschool.jpg" width={500} className={introImage} alt="Preschool classroom at Columbia Children's Center in Santa Maria" />
         <h2 id="age"  style={{marginTop: "0"}}>{ageRange}</h2>
-        <p>Our goal is to provide a fun, safe, positive environment; emphasizing on confidence building and self-esteem. The Preschool Program concentrates on listening and basic cognitive skills such as colors, shapes and alphabet and number recognition.</p>
+        <p>Our Santa Maria preschool program provides a fun, safe, and positive environment that emphasizes confidence building and self-esteem. Children in this classroom strengthen listening skills and early cognitive skills such as color, shape, alphabet, and number recognition.</p>
         <p>Our daily schedule includes circle time, which promotes social development, sharing, cooperation and participation as a group. Math and Science activities reinforce practice counting, recognizing numbers, colors, sizes and shapes, as well as scissor practice. Story time and a language arts activity promote language development, alphabet and name recognition, individual expression and creativity. We have music and movement to develop skills of expression, rhythm, listening, coordination, as well as large motor skills.</p>
         <p>Our classroom has centers such as Science, Reading, Dramatic Play, Manipulative, and Art. These centers encourage your child's learning experience. Our maximum teacher to child ratio is 1:12.</p>
         {/* <ProgramSlider programImages="preschool"/> */}

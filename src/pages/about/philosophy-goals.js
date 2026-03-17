@@ -6,8 +6,13 @@ import { grid2 } from '../../components/styles/layout.module.scss'
 
 const PhilosophyGoalsPage = () => {
   return (
-    <Layout pageTitle="Philosophy &amp; Goals" metaDesc="We believe that children have the right to a nurturing, safe environment where they can feel comfortable and secure.">
-        <StaticImage src="../../images/building-flag.png" width={300} className={introImage}/>
+    <Layout
+      pageTitle="Philosophy &amp; Goals"
+      titleOverride="Preschool Philosophy and Goals | Columbia Children's Center"
+      metaDesc="Learn about the philosophy and early learning goals that guide Columbia Children's Center in Santa Maria, CA."
+      pathname="/about/philosophy-goals/"
+    >
+        <StaticImage src="../../images/building-flag.png" width={300} className={introImage} alt="Columbia Children's Center flag graphic" />
         <p>We believe that children have the right to a nurturing, safe environment where they can feel comfortable and secure. We believe that children have a right to develop to their maximum abilities and that teachers have the responsibility to provide opportunities for this development to occur.</p>
         <p>We recognize that each child is an individual and that each child must be allowed to develop at his or her own pace. We accept and respect differences between children including developmental and physical differences and differences in racial and ethnic heritages. Every child regardless of sex, race, religion or ethnic origin must have the same opportunities and advantages as every other child.</p>
         <p>We believe each child has the right to develop a positive self-image - to feel good about who they are. We sincerely hope that in treating each child with love and respect, they in turn will learn to treat others with that same love and respect.</p>

@@ -29,7 +29,7 @@ import { sliderImg } from '.././components/styles/layout.module.scss'
 
 const YTPage = () => {
   const pageTitle = "Young Toddler";
-  const metaDesc = "Our Young Toddler Program serves children from 18 months - 30 months";
+  const metaDesc = "Young toddler child care in Santa Maria for children ages 18 months to 2 1/2 years. Columbia Children's Center provides nurturing early learning, play-based exploration, and individualized support.";
   const ageRange = "18 months to 2½ years";
 
   var settings = {
@@ -63,6 +63,8 @@ const YTPage = () => {
     <Layout 
       pageTitle={pageTitle} 
       metaDesc={metaDesc}
+      titleOverride="Young Toddler Child Care in Santa Maria, CA | Columbia Children's Center"
+      pathname="/young-toddler/"
     >
       <Helmet>
           <link
@@ -81,10 +83,11 @@ const YTPage = () => {
           src=".././images/home/young-toddler.jpg" 
           width={500} 
           className={introImage}
+          alt="Young toddler program at Columbia Children's Center in Santa Maria"
         />
         <h2 id="age"  style={{marginTop: "0"}}>{ageRange}</h2>
         
-        <p>Our Young Toddler Program serves children between the ages of 18 months and 30 months. Our teacher to child ratio is 1:6 to ensure that each child receives individual attention and support. Our program is designed to provide a safe and nurturing environment that allows children to learn and grow in a confident way.</p>
+        <p>Our young toddler program in Santa Maria serves children between the ages of 18 months and 30 months. Our teacher to child ratio is 1:6 so each child receives individual attention and support in a safe, nurturing setting.</p>
         
         <p>To ensure that each child receives the attention they need, we keep our group size at a maximum of 12 children. Our structured, yet flexible approach, allows children to thrive and reach their full potential.</p>
         

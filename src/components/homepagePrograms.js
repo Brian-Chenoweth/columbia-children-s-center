@@ -9,7 +9,7 @@ const homepagePrograms = ({ children }) => {
 
   return (
     <div className={homepageProgramWrapWrap}>
-      <h1>Columbia Children's Center</h1><span className={spanPrograms}>Programs</span>
+      <h2>Columbia Children&apos;s Center</h2><span className={spanPrograms}>Programs</span>
       <div className={homepageProgramWrap}>
 
       <Link to="/young-toddler/">

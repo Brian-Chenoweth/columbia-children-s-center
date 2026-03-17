@@ -5,8 +5,9 @@ const homepageAboutOne = ({ children }) => {
   return (
     <div className={homepageAboutWrap + ' ' + 'one'}>
         <div className={homepageAboutContent}>
-          <p>Welcome to Columbia Children's Center, where we have been providing high-quality early childhood education since 1992.</p>
-          <p>At Columbia Children's Center, we believe that every child is unique and special.</p>
+          <h2>Trusted preschool and child care in Santa Maria since 1992</h2>
+          <p>Welcome to Columbia Children&apos;s Center, a locally owned preschool in Santa Maria where families have found nurturing early childhood education for more than 30 years.</p>
+          <p>Every child is unique. Our teachers create a safe, engaging environment where children can build confidence, friendships, independence, and a love of learning.</p>
         </div>
     </div>
   )
