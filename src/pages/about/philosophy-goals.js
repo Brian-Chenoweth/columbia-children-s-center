@@ -11,6 +11,7 @@ const PhilosophyGoalsPage = () => {
       titleOverride="Preschool Philosophy and Goals | Columbia Children's Center"
       metaDesc="Learn about the philosophy and early learning goals that guide Columbia Children's Center in Santa Maria, CA."
       pathname="/about/philosophy-goals/"
+      schemaType="AboutPage"
     >
         <StaticImage src="../../images/building-flag.png" width={300} className={introImage} alt="Columbia Children's Center flag graphic" />
         <p>We believe that children have the right to a nurturing, safe environment where they can feel comfortable and secure. We believe that children have a right to develop to their maximum abilities and that teachers have the responsibility to provide opportunities for this development to occur.</p>

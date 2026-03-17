@@ -16,6 +16,7 @@ const AboutPage = () => {
         titleOverride="About Our Santa Maria Preschool | Columbia Children's Center"
         metaDesc="Learn about Columbia Children's Center, a locally owned preschool and child care center in Santa Maria, CA serving children ages 18 months to 5 years since 1992."
         pathname="/about/"
+        schemaType="AboutPage"
       >
         <StaticImage src="../../images/kids-building.png" width={300} className={introImage} alt="Columbia Children's Center building illustration" />
         <p>We are a state-licensed early childhood program offering child care and preschool in Santa Maria for children ages 18 months through 5 years. We are conveniently located on Stowell Road near Highway 101 and Allan Hancock College. Our building was designed specifically for child care and includes secure entry, bright classrooms, child-sized facilities, fire sprinklers throughout, and convenient parking for drop-off and pick-up.</p>

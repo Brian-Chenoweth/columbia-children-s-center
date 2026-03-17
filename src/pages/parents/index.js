@@ -10,6 +10,7 @@ const ParentsPage = () => {
       titleOverride="Parent Resources | Columbia Children's Center"
       metaDesc="Parent resources for families enrolled at Columbia Children's Center in Santa Maria, CA."
       pathname="/parents/"
+      schemaType="CollectionPage"
     >
       <p>
         This page collects quick resources for current and prospective Columbia Children&apos;s Center

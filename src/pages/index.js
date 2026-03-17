@@ -42,6 +42,36 @@ function supportsWebP() {
 
 const IndexPage = () => {
   const useWebP = supportsWebP();
+  const faqSchema = {
+    '@type': 'FAQPage',
+    '@id': 'https://columbiachildrenscenter.com/#faq',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Where is Columbia Children\'s Center located?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Columbia Children\'s Center is located at 840 E. Stowell Road, Santa Maria, CA 93454.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What ages do you serve?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We serve children from 18 months through 5 years old across four age-based programs.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer full-day and half-day preschool?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Schedule options vary by program, and most classrooms offer flexible half-day and full-day enrollment options.',
+        },
+      },
+    ],
+  };
 
   return (
     <ParallaxProvider>
@@ -50,6 +80,7 @@ const IndexPage = () => {
         titleOverride="Preschool in Santa Maria, CA | Columbia Children's Center"
         pathname="/"
         metaDesc="Columbia Children's Center is a trusted preschool in Santa Maria, CA serving children ages 18 months to 5 years with play-based learning, caring teachers, and flexible schedules since 1992."
+        schemaData={[faqSchema]}
       >
         <div className={homepageSliderWrap}>
           <ParallaxBanner

@@ -10,6 +10,7 @@ const BlogPage = ( {data} ) => {
       titleOverride="Preschool Blog | Columbia Children's Center"
       metaDesc="Articles and updates from Columbia Children's Center in Santa Maria, CA."
       pathname="/blog/"
+      schemaType="CollectionPage"
     >
       {
         data.allMdx.nodes.map((node) => (

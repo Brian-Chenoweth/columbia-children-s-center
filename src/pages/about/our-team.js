@@ -27,6 +27,7 @@ const OurTeamPage = () => {
       titleOverride="Meet Our Preschool Team | Columbia Children's Center"
       metaDesc="Meet the teachers and leadership team at Columbia Children's Center in Santa Maria, CA."
       pathname="/about/our-team/"
+      schemaType="AboutPage"
     >
       <div className={teamWrap}>
         {employeeData.map(employee => (
