@@ -170,6 +170,7 @@ const IndexPage = () => {
                     Schedule a Tour
                   </a>
                   <Link to="/preschool/" className={`${ctaButton} ${ctaButtonAlt}`}>See Our Preschool Program</Link>
+                  <Link to="/preschool-santa-maria/" className={`${ctaButton} ${ctaButtonAlt}`}>Santa Maria Preschool Info</Link>
                 </div>
               </div>
 
@@ -212,6 +213,10 @@ const IndexPage = () => {
                 <li>Convenient Stowell Road location near Highway 101 and Allan Hancock College</li>
                 <li>Secure campus, bright classrooms, and strong parent communication</li>
               </ul>
+              <p>
+                Looking specifically for a <Link to="/preschool-santa-maria/">preschool in Santa Maria</Link>?
+                Visit our local overview page for program details, FAQs, and tour information.
+              </p>
             </div>
 
             <div className={`${localSeoCard} ${accentCard}`}>

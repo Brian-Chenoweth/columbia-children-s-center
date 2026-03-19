@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import Layout from '.././components/layout'
 import Employee from '.././components/employee'
 import AdayIn from '.././components/aDayin'
@@ -112,6 +113,11 @@ const PPage = () => {
         <p>Our Santa Maria preschool program provides a fun, safe, and positive environment that emphasizes confidence building and self-esteem. Children in this classroom strengthen listening skills and early cognitive skills such as color, shape, alphabet, and number recognition.</p>
         <p>Our daily schedule includes circle time, which promotes social development, sharing, cooperation and participation as a group. Math and Science activities reinforce practice counting, recognizing numbers, colors, sizes and shapes, as well as scissor practice. Story time and a language arts activity promote language development, alphabet and name recognition, individual expression and creativity. We have music and movement to develop skills of expression, rhythm, listening, coordination, as well as large motor skills.</p>
         <p>Our classroom has centers such as Science, Reading, Dramatic Play, Manipulative, and Art. These centers encourage your child's learning experience. Our maximum teacher to child ratio is 1:12.</p>
+        <p>
+          If you are comparing options for a preschool in Santa Maria, you can also visit our
+          <Link to="/preschool-santa-maria/"> Santa Maria preschool page</Link> for location details, FAQs,
+          and tour information.
+        </p>
         {/* <ProgramSlider programImages="preschool"/> */}
         <AdayIn pageTitle="Preschool">
           <div>

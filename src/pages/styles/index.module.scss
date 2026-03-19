@@ -3,6 +3,16 @@
   max-width: 1120px;
 }
 
+.localFeatureImage {
+  border-radius: 28px;
+  display: block;
+  overflow: hidden;
+}
+
+.localFeatureImage img {
+  display: block;
+}
+
 .localHero {
   background: linear-gradient(135deg, #f4fbfd 0%, #fff9ef 100%);
   border: 1px solid #dcecf2;

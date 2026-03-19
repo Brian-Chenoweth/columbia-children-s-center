@@ -34,6 +34,7 @@ const Layout = ({
   pageTitle,
   titleOverride,
   metaDesc,
+  metaKeywords,
   pathname = '/',
   imagePath,
   noIndex = false,
@@ -83,6 +84,15 @@ const Layout = ({
   const normalizedPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '') + '/';
   const canonical = `${siteUrl}${normalizedPath === '/' ? '/' : normalizedPath}`;
   const metaDescription = metaDesc || siteMetadata.description;
+  const keywords = metaKeywords || [
+    'preschool Santa Maria',
+    'Santa Maria preschool',
+    'preschool in Santa Maria CA',
+    'child care Santa Maria',
+    'daycare Santa Maria',
+    'best preschool Santa Maria',
+    'preschool near me',
+  ].join(', ');
   const title = titleOverride || (pageTitle === siteMetadata.title
     ? siteMetadata.title
     : `${pageTitle} | ${siteMetadata.title}`);
@@ -112,6 +122,7 @@ const Layout = ({
         telephone: business.telephone,
         foundingDate: business.foundingDate,
         priceRange: business.priceRange,
+        hasMap: `https://www.google.com/maps/search/?api=1&query=${business.latitude},${business.longitude}`,
         address: {
           '@type': 'PostalAddress',
           streetAddress: business.streetAddress,
@@ -138,6 +149,21 @@ const Layout = ({
           siteMetadata.socialMedia.facebook,
           siteMetadata.socialMedia.instagram,
           siteMetadata.socialMedia.youtube,
+        ],
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            contactType: 'customer service',
+            telephone: business.telephone,
+            areaServed: 'US',
+            availableLanguage: ['English'],
+          },
+        ],
+        keywords: [
+          'preschool Santa Maria',
+          'child care Santa Maria',
+          'daycare Santa Maria',
+          'preschool near me',
         ],
       },
       {
@@ -174,12 +200,16 @@ const Layout = ({
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="description" content={metaDescription} />
+          <meta name="keywords" content={keywords} />
           <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'} />
           <meta name="geo.region" content="US-CA" />
           <meta name="geo.placename" content="Santa Maria" />
+          <meta name="geo.position" content={`${business.latitude};${business.longitude}`} />
           <meta name="ICBM" content={`${business.latitude}, ${business.longitude}`} />
+          <meta name="Locality" content="Santa Maria" />
+          <meta name="Region" content="CA" />
           <meta property="og:locale" content="en_US" />
-          <meta property="og:type" content={normalizedPath === '/' ? 'website' : 'article'} />
+          <meta property="og:type" content={normalizedPath === '/' ? 'website' : 'website'} />
           <meta property="og:site_name" content={siteMetadata.title} />
           <meta property="og:title" content={title} />
           <meta property="og:description" content={metaDescription} />
@@ -190,6 +220,7 @@ const Layout = ({
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={metaDescription} />
           <meta name="twitter:image" content={imageUrl} />
+          <meta name="twitter:image:alt" content="Columbia Children's Center preschool in Santa Maria, California" />
           <link rel="canonical" href={canonical} />
           <link rel="icon" href={favicon} type="image/x-icon" />
           <link rel="shortcut icon" href={favicon} type="image/x-icon" />
