@@ -27,6 +27,7 @@ const Navi = () => {
               <NavDropdown.Item className={dropdownItem} href="/preschool/">Preschool</NavDropdown.Item>
               <NavDropdown.Item className={dropdownItem} href="/kindergarten-readiness/">Kindergarten Readiness</NavDropdown.Item>
               <NavDropdown.Item className={dropdownItem} href="/preschool-santa-maria/">Santa Maria Preschool</NavDropdown.Item>
+              <NavDropdown.Item className={dropdownItem} href="/childcare-santa-maria/">Santa Maria Child Care</NavDropdown.Item>
           </NavDropdown>
 
 

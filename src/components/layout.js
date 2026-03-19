@@ -88,10 +88,16 @@ const Layout = ({
     'preschool Santa Maria',
     'Santa Maria preschool',
     'preschool in Santa Maria CA',
+    'childcare Santa Maria',
+    'childcare in Santa Maria CA',
     'child care Santa Maria',
     'daycare Santa Maria',
+    'daycare Santa Maria CA',
+    'daycare in Santa Maria CA',
     'best preschool Santa Maria',
+    'best childcare Santa Maria',
     'preschool near me',
+    'childcare near me',
   ].join(', ');
   const title = titleOverride || (pageTitle === siteMetadata.title
     ? siteMetadata.title
@@ -161,9 +167,11 @@ const Layout = ({
         ],
         keywords: [
           'preschool Santa Maria',
+          'childcare Santa Maria',
           'child care Santa Maria',
           'daycare Santa Maria',
           'preschool near me',
+          'childcare near me',
         ],
       },
       {
@@ -215,12 +223,12 @@ const Layout = ({
           <meta property="og:description" content={metaDescription} />
           <meta property="og:url" content={canonical} />
           <meta property="og:image" content={imageUrl} />
-          <meta property="og:image:alt" content="Columbia Children's Center preschool in Santa Maria, California" />
+          <meta property="og:image:alt" content="Columbia Children's Center preschool and child care in Santa Maria, California" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={metaDescription} />
           <meta name="twitter:image" content={imageUrl} />
-          <meta name="twitter:image:alt" content="Columbia Children's Center preschool in Santa Maria, California" />
+          <meta name="twitter:image:alt" content="Columbia Children's Center preschool and child care in Santa Maria, California" />
           <link rel="canonical" href={canonical} />
           <link rel="icon" href={favicon} type="image/x-icon" />
           <link rel="shortcut icon" href={favicon} type="image/x-icon" />

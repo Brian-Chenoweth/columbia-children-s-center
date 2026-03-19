@@ -169,6 +169,10 @@ const PreschoolSantaMariaPage = () => {
               We welcome families from across Santa Maria and nearby communities who want dependable
               early education and child care close to daily routines.
             </p>
+            <p>
+              If you are also comparing <Link to="/childcare-santa-maria/">child care in Santa Maria</Link>,
+              visit our local child care page for daycare-focused details and tour information.
+            </p>
             <ul className={checkList}>
               <li>Santa Maria</li>
               <li>Orcutt</li>

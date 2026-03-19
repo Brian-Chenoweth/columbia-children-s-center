@@ -91,9 +91,10 @@ const IndexPage = () => {
     <ParallaxProvider>
       <Layout
         pageTitle="Columbia Children's Center"
-        titleOverride="Preschool in Santa Maria, CA | Columbia Children's Center"
+        titleOverride="Preschool & Child Care in Santa Maria, CA | Columbia Children's Center"
         pathname="/"
-        metaDesc="Columbia Children's Center is a trusted preschool in Santa Maria, CA serving children ages 18 months to 5 years with play-based learning, caring teachers, and flexible schedules since 1992."
+        metaDesc="Columbia Children's Center is a trusted preschool and child care center in Santa Maria, CA serving children ages 18 months to 5 years with play-based learning, caring teachers, and flexible schedules since 1992."
+        metaKeywords="preschool santa maria, child care santa maria, childcare santa maria, daycare santa maria ca, preschool and child care santa maria, daycare near me santa maria"
         schemaData={[faqSchema]}
       >
         <div className={homepageSliderWrap}>
@@ -135,8 +136,8 @@ const IndexPage = () => {
           <div className={localHero}>
             <div className={localHeroGrid}>
               <div>
-                <span className={eyebrow}>Santa Maria Preschool</span>
-                <h2 className={heroTitle}>A local preschool families have trusted for more than 30 years</h2>
+                <span className={eyebrow}>Santa Maria Preschool & Child Care</span>
+                <h2 className={heroTitle}>A local preschool and child care center families have trusted for more than 30 years</h2>
                 <p className={heroLead}>
                   Columbia Children&apos;s Center is a Santa Maria preschool and child care center built
                   for families who want caring teachers, clear communication, safe classrooms, and a
@@ -171,6 +172,7 @@ const IndexPage = () => {
                   </a>
                   <Link to="/preschool/" className={`${ctaButton} ${ctaButtonAlt}`}>See Our Preschool Program</Link>
                   <Link to="/preschool-santa-maria/" className={`${ctaButton} ${ctaButtonAlt}`}>Santa Maria Preschool Info</Link>
+                  <Link to="/childcare-santa-maria/" className={`${ctaButton} ${ctaButtonAlt}`}>Santa Maria Child Care Info</Link>
                 </div>
               </div>
 
@@ -199,7 +201,7 @@ const IndexPage = () => {
         <section className={localSeoSection}>
           <div className={localSeoGrid}>
             <div className={localSeoCard}>
-              <h2>Why Santa Maria families choose our preschool</h2>
+              <h2>Why Santa Maria families choose our preschool and child care center</h2>
               <p>
                 Columbia Children&apos;s Center is a locally owned preschool and child care center in
                 Santa Maria, California. Families choose us for consistent care, small-group learning,
@@ -216,6 +218,10 @@ const IndexPage = () => {
               <p>
                 Looking specifically for a <Link to="/preschool-santa-maria/">preschool in Santa Maria</Link>?
                 Visit our local overview page for program details, FAQs, and tour information.
+              </p>
+              <p>
+                Need <Link to="/childcare-santa-maria/">child care in Santa Maria</Link>? We also have
+                a dedicated local page focused on daycare, schedules, and age-based care options.
               </p>
             </div>
 
