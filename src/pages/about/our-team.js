@@ -18,7 +18,6 @@ const OurTeamPage = () => {
     { name: "Nicolle Rogers", title: "Kindergarten Readiness Lead Teacher", img: "Nicolle" },
     { name: "Tiffany Schofield", title: "Kindergarten Readiness Teacher", img: "Tiffany" },
     { name: "Christina Tremper", title: "Floater", img: "Christina" },
-    { name: "Bree Steadman", title: "Floater", img: "Bree" },
   ]
 
   return (
