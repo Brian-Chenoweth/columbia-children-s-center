@@ -39,6 +39,7 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} Columbia Children's Center. All Rights Reserved.</p>
         </div>
       </div>
+      <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69d5190f84d8774e987bcdf1"></script>
     </footer>
   )
 }
