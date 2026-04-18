@@ -34,7 +34,7 @@ const ParentsPage = () => {
       <p>
         Start with our{' '}
         <a
-          href="https://schools.procareconnect.com/form/fa223adc-c95c-436e-b0bc-b2f252f5f9d9"
+          href="/contact/"
           target="_blank"
           rel="noreferrer"
         >

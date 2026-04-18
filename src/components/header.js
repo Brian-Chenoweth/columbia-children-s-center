@@ -8,7 +8,7 @@ const Header = () => {
     <>
       <div className={enrollmentBanner}>
         <span>Now enrolling 18 months through 4 years old</span>
-        <a href="https://schools.procareconnect.com/form/fa223adc-c95c-436e-b0bc-b2f252f5f9d9" target="_blank" rel="noreferrer">
+        <a href="/contact/" rel="noreferrer">
           Contact Us
         </a>
       </div>

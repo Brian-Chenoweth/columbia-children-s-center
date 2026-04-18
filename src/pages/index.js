@@ -163,7 +163,7 @@ const IndexPage = () => {
                 </div>
                 <div className={ctaRow}>
                   <a
-                    href="https://schools.procareconnect.com/form/fa223adc-c95c-436e-b0bc-b2f252f5f9d9"
+                    href="/contact/"
                     className={ctaButton}
                     target="_blank"
                     rel="noreferrer"
@@ -306,7 +306,7 @@ const IndexPage = () => {
             </p>
             <div className={ctaRow}>
               <a
-                href="https://schools.procareconnect.com/form/fa223adc-c95c-436e-b0bc-b2f252f5f9d9"
+                href="/contact/"
                 className={ctaButton}
                 target="_blank"
                 rel="noreferrer"
