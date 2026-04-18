@@ -157,11 +157,15 @@ const KRPage = () => {
         <p>Children take part in hands-on and interactive activities that support emotional, social, and academic growth, along with opportunities to explore, communicate, and create.</p>
         
         <div className={employeesWrap}>
-          <Employee employeeName="Nicolle Rogers" employeeTitle="Kindergarten Readiness Lead Teacher" employeeImg="Nicolle"/>
           <Employee 
             employeeName="Amanda D'hoedt" 
-            employeeTitle="Kindergarten Readiness Teacher" 
+            employeeTitle="Kindergarten Readiness Lead Teacher" 
             employeeImg="Amanda"
+          />
+          <Employee
+            employeeName="Tiffany Schofield"
+            employeeTitle="Kindergarten Readiness Teacher"
+            employeeImg="Tiffany"
           />
         </div>
       </Layout>

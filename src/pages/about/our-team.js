@@ -6,16 +6,17 @@ import { teamWrap } from './our-team.module.scss'
 const OurTeamPage = () => {
   const employeeData = [
     { name: "Scott Chenoweth", title: "Director", img: "Scott" },
+    { name: "Nicolle Rogers", title: "Program Manager", img: "Nicolle" },
     { name: "Cynthia Hernandez", title: "Young Toddler Teacher", img: "Cynthia" },
     { name: "Shirley Adelhelm", title: "Young Toddler Teacher / Breaker", img: "Shirley" },
     { name: "Vanessa Cabatan", title: "Early Year's Lead Teacher", img: "Vanessa" },
     { name: "Jackie Rubalcava", title: "Early Year's Teacher", img: "Jackie" },
-    { name: "Amanda D'hoedt", title: "Preschool Lead Teacher", img: "Amanda" },
+    { name: "Lisette Cervantes", title: "Preschool Lead Teacher", img: "Lisette" },
     { name: "Elizabeth Pantoja", title: "Preschool Teacher", img: "Elizabeth" },
     { name: "Katherine Chenoweth", title: "Preschool Teacher", img: "Katherine" },
     { name: "Hailey Fakoury", title: "Preschool Assistant", img: "Hailey" },
     { name: "Brigitte Ortiz-Tello", title: "Outdoor Lead Teacher", img: "Brigitte" },
-    { name: "Nicolle Rogers", title: "Kindergarten Readiness Lead Teacher", img: "Nicolle" },
+    { name: "Amanda D'hoedt", title: "Kindergarten Readiness Lead Teacher", img: "Amanda" },
     { name: "Tiffany Schofield", title: "Kindergarten Readiness Teacher", img: "Tiffany" },
     { name: "Christina Tremper", title: "Floater", img: "Christina" },
   ]

@@ -180,6 +180,11 @@ const PPage = () => {
         <p>Yes. Our preschool program offers both half-day and full-day schedule options, and extra days may also be arranged with the director.</p>
         <div className={employeesWrap}>
             <Employee 
+                employeeName="Lisette Cervantes" 
+                employeeTitle="Preschool Lead Teacher" 
+                employeeImg="Lisette"
+            />
+            <Employee 
                 employeeName="Elizabeth Pantoja" 
                 employeeTitle="Preschool Teacher" 
                 employeeImg="Elizabeth"
