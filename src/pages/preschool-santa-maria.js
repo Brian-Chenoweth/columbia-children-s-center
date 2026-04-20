@@ -106,7 +106,6 @@ const PreschoolSantaMariaPage = () => {
                 <a
                   href="/contact/"
                   className={ctaButton}
-                  target="_blank"
                   rel="noreferrer"
                 >
                   Schedule a Tour
