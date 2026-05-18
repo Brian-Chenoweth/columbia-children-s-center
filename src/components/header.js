@@ -4,6 +4,42 @@ import { Link } from 'gatsby'
 import { cityPhone, enrollmentBanner } from './styles/header.module.scss'
 
 const Header = () => {
+  React.useEffect(() => {
+    if (typeof window === 'undefined') {
+      return undefined;
+    }
+
+    const banner = document.querySelector('[class*="enrollment-banner"]');
+    if (!banner) {
+      return undefined;
+    }
+
+    const setBannerOffset = () => {
+      const height = Math.round(banner.getBoundingClientRect().height || 0);
+      if (height > 0) {
+        document.documentElement.style.setProperty('--enrollment-banner-offset', `${height}px`);
+      }
+    };
+
+    setBannerOffset();
+    window.addEventListener('resize', setBannerOffset);
+
+    const observer = typeof ResizeObserver !== 'undefined'
+      ? new ResizeObserver(() => setBannerOffset())
+      : null;
+
+    if (observer) {
+      observer.observe(banner);
+    }
+
+    return () => {
+      window.removeEventListener('resize', setBannerOffset);
+      if (observer) {
+        observer.disconnect();
+      }
+    };
+  }, []);
+
   return (
     <>
       <div className={enrollmentBanner}>

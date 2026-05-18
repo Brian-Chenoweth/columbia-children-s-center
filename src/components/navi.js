@@ -32,8 +32,9 @@ const Navi = () => {
 
 
           <NavDropdown title="Parents">
-              <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/1lHmOCMmep3syn0HJR3P69kk7cSwGme1HGHe8MjYr7H4/edit?usp=sharing" target="_blank">Parent Handbook</NavDropdown.Item>
-              {/* <NavDropdown.Item className={dropdownItem} href={IllnessPolicy} target="_blank">Illness Policy</NavDropdown.Item> */}
+                {/* <NavDropdown.Item className={dropdownItem} href="https://docs.google.com/document/d/1lHmOCMmep3syn0HJR3P69kk7cSwGme1HGHe8MjYr7H4/edit?usp=sharing" target="_blank">Parent Handbook (PDF)</NavDropdown.Item> */}
+                <NavDropdown.Item className={dropdownItem} href="/parents/parent-handbook/">Parent Handbook</NavDropdown.Item>
+                {/* <NavDropdown.Item className={dropdownItem} href={IllnessPolicy} target="_blank">Illness Policy</NavDropdown.Item> */}
           </NavDropdown>
 
           <Nav.Link href="/careers/">Careers</Nav.Link>
