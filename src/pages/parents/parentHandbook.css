@@ -35,19 +35,42 @@
   text-align: left;
 }
 .kb-toc-toggle {
-  border: 1px solid #bfd0dd;
-  background: #f8fbff;
-  color: #20435c;
-  border-radius: 999px;
-  padding: 0.5rem 0.95rem;
-  font-size: 0.95rem;
-  font-weight: 700;
+  border: 2px solid #1f4d6b;
+  background: linear-gradient(180deg, #2f6284 0%, #1f4d6b 100%);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 0.68rem 1.12rem;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  box-shadow: 0 6px 18px rgba(31, 77, 107, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.kb-toc-toggle::after {
+  content: ">";
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.kb-toc-toggle[aria-expanded="true"]::after {
+  content: "v";
 }
 .kb-toc-toggle:hover,
 .kb-toc-toggle:focus {
-  background: #e6f1fb;
-  border-color: #2a4d69;
+  background: linear-gradient(180deg, #387095 0%, #235775 100%);
+  border-color: #173d58;
+  box-shadow: 0 10px 22px rgba(31, 77, 107, 0.34);
+  transform: translateY(-1px);
+}
+
+.kb-toc-toggle:focus-visible {
+  outline: 3px solid #9fcbec;
+  outline-offset: 2px;
 }
 .kb-toc-panel {
   margin-top: 0.7rem;

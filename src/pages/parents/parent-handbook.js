@@ -103,19 +103,6 @@ export default function ParentHandbook() {
     return handbookData.filter((item) => item.category === selectedCategory);
   }, [selectedCategory]);
 
-  const tocGroups = useMemo(() => {
-    const groups = visibleItems.reduce((acc, item) => {
-      const category = item.category || "Other";
-      if (!acc[category]) {
-        acc[category] = [];
-      }
-      acc[category].push(item);
-      return acc;
-    }, {});
-
-    return Object.entries(groups);
-  }, [visibleItems]);
-
   const featuredBlurbs = useMemo(() => {
     const featuredItems = visibleItems.filter((item) => item.featured);
     const trimmedQuery = query.trim().toLowerCase();
@@ -333,6 +320,11 @@ export default function ParentHandbook() {
       maybeInterestedResults: Array.from(maybeById.values()),
     };
   }, [query, visibleItems, sharedTags]);
+
+  const tocItems = useMemo(
+    () => [...exactResults, ...maybeInterestedResults.map(({ item }) => item)],
+    [exactResults, maybeInterestedResults]
+  );
 
   const queryTerms = useMemo(() => tokenizeSearch(query), [query]);
 
@@ -664,18 +656,6 @@ export default function ParentHandbook() {
               }
             }}
           />
-          <div className="kb-filter-row" role="group" aria-label="Filter handbook by category">
-            {categories.map((category) => (
-              <button
-                key={category}
-                type="button"
-                className={`kb-filter-chip${selectedCategory === category ? " is-active" : ""}`}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
         </div>
         <div className="kb-hero">
           {/* <h1 className="kb-title">Parent Handbook</h1> */}
@@ -688,43 +668,24 @@ export default function ParentHandbook() {
               aria-controls="kb-toc-panel"
               onClick={() => setIsTocOpen((prev) => !prev)}
             >
-              {isTocOpen ? "Hide table of contents" : "Table of Contents"}
+              {isTocOpen ? "Hide Table of Contents" : "Open Table of Contents"}
             </button>
             {isTocOpen && (
               <div id="kb-toc-panel" className="kb-toc-panel">
-                {tocGroups.map(([category, items]) => (
-                  <div key={category} className="kb-toc-group">
-                    <h3 className="kb-toc-heading">{category}</h3>
-                    <div className="kb-toc-links">
-                      {items.map((item) => (
-                        <button
-                          key={`toc-${item.id}`}
-                          type="button"
-                          className="kb-toc-link"
-                          onClick={() => handleTocJump(item.id)}
-                        >
-                          {item.title}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+                <div className="kb-toc-links">
+                  {tocItems.map((item) => (
+                    <button
+                      key={`toc-${item.id}`}
+                      type="button"
+                      className="kb-toc-link"
+                      onClick={() => handleTocJump(item.id)}
+                    >
+                      {item.title}
+                    </button>
+                  ))}
+                </div>
               </div>
             )}
-          </div>
-          <div className="kb-blurb-list">
-            {featuredBlurbs.map((item) => (
-              <div
-                key={item.id}
-                className={`kb-blurb-card${selectedTopic === item.id ? " is-active" : ""}`}
-                onClick={() => handleBlurbClick(item.id)}
-                tabIndex={0}
-                role="button"
-                onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && handleBlurbClick(item.id)}
-              >
-                <h2 className="kb-blurb-title">{renderHighlightedText(item.title)}</h2>
-              </div>
-            ))}
           </div>
         </div>
         <div className="kb-list">
@@ -744,27 +705,6 @@ export default function ParentHandbook() {
             >
               <h2 className="kb-item-title">{renderHighlightedText(item.title)}</h2>
               {renderStructuredContent(item.content, item.title)}
-              <div className="kb-item-tags">
-                {item.category && (
-                  <button
-                    type="button"
-                    className={`kb-item-tag kb-item-tag--category${selectedCategory === item.category ? " is-active" : ""}`}
-                    onClick={() => setSelectedCategory(item.category)}
-                  >
-                    {item.category}
-                  </button>
-                )}
-                {!query.trim() && getDisplayTags(item).map((tag) => (
-                  <button
-                    key={tag}
-                    type="button"
-                    className="kb-item-tag"
-                    onClick={() => setQuery(tag)}
-                  >
-                    {tag}
-                  </button>
-                ))}
-              </div>
             </div>
           ))}
 
@@ -783,27 +723,6 @@ export default function ParentHandbook() {
               <h2 className="kb-item-title">{renderHighlightedText(item.title)}</h2>
               <p className="kb-item-reason">{reason}</p>
               {renderStructuredContent(item.content, item.title)}
-              <div className="kb-item-tags">
-                {item.category && (
-                  <button
-                    type="button"
-                    className={`kb-item-tag kb-item-tag--category${selectedCategory === item.category ? " is-active" : ""}`}
-                    onClick={() => setSelectedCategory(item.category)}
-                  >
-                    {item.category}
-                  </button>
-                )}
-                {getDisplayTags(item).map((tag) => (
-                  <button
-                    key={tag}
-                    type="button"
-                    className="kb-item-tag"
-                    onClick={() => setQuery(tag)}
-                  >
-                    {tag}
-                  </button>
-                ))}
-              </div>
             </div>
           ))}
         </div>
