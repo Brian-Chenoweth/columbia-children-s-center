@@ -60,7 +60,7 @@ const ceremonyProgram = [
   ['Wiggle Song', 'Children'],
   ['Time to Graduate', 'Children'],
   ['Dynamite', 'Children'],
-  ['Graduate Presentation (Medals)', 'Children'],
+  ['Graduate Presentation (Medals)', 'Director Scott'],
 ];
 
 const graduatingClass = [
@@ -282,6 +282,8 @@ const GraduationPage = () => {
                   Graduates are invited to dress up for this special day.
                   <br />
                   Families are welcome to bring lawn chairs or blankets for seating on the grass.
+                  <br />
+                  Nicolle will be taking pictures of the graduates as they get their medals and sending them to you.
                   <br />
                   After the ceremony, please stay for pictures, mingling, and dessert by <a href="https://hanohanoice.com/" target="_blank" rel="noreferrer">Hanohano Shave Ice</a>.
                 </p>
