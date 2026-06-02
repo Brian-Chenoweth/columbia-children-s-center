@@ -43,7 +43,7 @@ import gradKids from '../images/icons/kids-grad-right-half.svg';
 
 const siteOrigin = 'https://columbiachildrenscenter.com';
 const canonicalUrl = `${siteOrigin}/graduation/`;
-const graduationOgImageUrl = `${siteOrigin}${gradKids}`;
+const graduationOgImageUrl = `${siteOrigin}/kids-grad-right-half.svg.png`;
 const graduationDate = new Date('2026-06-10T14:00:00-07:00');
 const graduationEndDate = new Date('2026-06-10T15:30:00-07:00');
 const eventTitle = 'Columbia Children\'s Center Transitional Kindergarten Graduation 2026';
@@ -193,6 +193,7 @@ const GraduationPage = () => {
           content="Join us for the Thirty-Fourth Commencement Ceremony on June 10, 2026 at Rotary Centennial Park."
         />
         <meta property="og:image" content={graduationOgImageUrl} />
+        <meta property="og:image:secure_url" content={graduationOgImageUrl} />
         <meta property="og:image:type" content="image/png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="TK Graduation 2026 | Columbia Children's Center" />
