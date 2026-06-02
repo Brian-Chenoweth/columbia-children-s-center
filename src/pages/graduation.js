@@ -38,8 +38,12 @@ import {
 
 import logo from '../images/logo.png';
 import orangeGuyBalloons from '../images/icons/balloon-shaved-ice-guy.png';
+import orangeGuyBalloonIcon from '../images/icons/orangeguyballoon.svg';
 import gradKids from '../images/icons/kids-grad-right-half.svg';
 
+const siteOrigin = 'https://columbiachildrenscenter.com';
+const canonicalUrl = `${siteOrigin}/graduation/`;
+const graduationOgImageUrl = `${siteOrigin}${orangeGuyBalloons}`;
 const graduationDate = new Date('2026-06-10T14:00:00-07:00');
 const graduationEndDate = new Date('2026-06-10T15:30:00-07:00');
 const eventTitle = 'Columbia Children\'s Center Transitional Kindergarten Graduation 2026';
@@ -175,20 +179,29 @@ const GraduationPage = () => {
         <html lang="en" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>TK Graduation 2026 | Columbia Children's Center</title>
+        <link rel="icon" href={orangeGuyBalloonIcon} type="image/svg+xml" />
+        <link rel="shortcut icon" href={orangeGuyBalloonIcon} type="image/svg+xml" />
         <meta
           name="description"
           content="Columbia Children's Center Transitional Kindergarten Graduation landing page for June 10, 2026 with ceremony details, schedule, and program."
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content="TK Graduation 2026 | Columbia Children's Center" />
         <meta
           property="og:description"
           content="Join us for the Thirty-Fourth Commencement Ceremony on June 10, 2026 at Rotary Centennial Park."
         />
+        <meta property="og:image" content={graduationOgImageUrl} />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="TK Graduation 2026 | Columbia Children's Center" />
         <meta
-          property="og:image"
-          content="http://localhost:8000/static/kids-grad-right-half-f8f1c2424a938e6b3d409de3eda96a07.svg"
+          name="twitter:description"
+          content="Join us for the Thirty-Fourth Commencement Ceremony on June 10, 2026 at Rotary Centennial Park."
         />
-        <link rel="canonical" href="https://columbiachildrenscenter.com/graduation/" />
+        <meta name="twitter:image" content={graduationOgImageUrl} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
 
       <div className={flyerStage}>
