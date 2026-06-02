@@ -109,6 +109,17 @@
   text-shadow: 0 2px 0 #fff, 0 9px 20px rgba(36, 93, 184, 0.18);
 }
 
+.ceremonySubhead {
+  margin: 0 0 0.55rem;
+  text-align: center;
+  color: #4a5f88;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.18rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .subhead {
   margin: 0 0 0.85rem;
   text-align: center;
@@ -124,6 +135,9 @@
   display: flex;
   gap: 0.9rem;
   align-items: flex-start;
+  strong {
+    font-weight: 700;
+  }
 }
 
 .detailsCol {
@@ -289,6 +303,7 @@
   font-weight: 800;
   letter-spacing: 0.02em;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .calendarButton {
@@ -299,6 +314,10 @@
 }
 
 .callButton {
+  flex: 0 0 auto;
+  width: max-content;
+  white-space: nowrap;
+  padding: 0.78rem 1.9rem;
   background: #1d5eb8;
   color: #fff;
   box-shadow: 0 7px 15px rgba(29, 94, 184, 0.25);
@@ -365,6 +384,11 @@
   transform: translateY(-1px);
 }
 
+.callButton:hover {
+  background: #174d98;
+  color: #fff;
+}
+
 @media screen and (max-width: 768px) {
   .flyerGrid {
     flex-direction: column;
@@ -376,6 +400,18 @@
 
   .graduateGrid {
     columns: 1;
+  }
+
+  .callButton {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .callButton {
+    flex-basis: 100%;
+    width: 100%;
   }
 }
 

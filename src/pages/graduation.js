@@ -15,6 +15,7 @@ import {
   detailsCol,
   detailBox,
   detailTitle,
+  ceremonySubhead,
   infoSection,
   infoBlock,
   infoHeading,
@@ -36,7 +37,7 @@ import {
 } from './styles/graduation.module.scss';
 
 import logo from '../images/logo.png';
-import orangeGuyBalloons from '../images/icons/orangeguyballoon.svg';
+import orangeGuyBalloons from '../images/icons/balloon-shaved-ice-guy.png';
 import gradKids from '../images/icons/kids-grad-right-half.svg';
 
 const graduationDate = new Date('2026-06-10T14:00:00-07:00');
@@ -183,7 +184,10 @@ const GraduationPage = () => {
           property="og:description"
           content="Join us for the Thirty-Fourth Commencement Ceremony on June 10, 2026 at Rotary Centennial Park."
         />
-        <meta property="og:image" content="https://columbiachildrenscenter.com/columbia-childrens-center-front.png" />
+        <meta
+          property="og:image"
+          content="http://localhost:8000/static/kids-grad-right-half-f8f1c2424a938e6b3d409de3eda96a07.svg"
+        />
         <link rel="canonical" href="https://columbiachildrenscenter.com/graduation/" />
       </Helmet>
 
@@ -233,12 +237,15 @@ const GraduationPage = () => {
                   </div>
                 )}
               </div>
+
+              <a href="tel:1-805-922-5437" className={callButton}>Call 805-922-KIDS</a>
             </div>
           </header>
 
           <h1 className={headline}>TRANSITIONAL KINDERGARTEN GRADUATION</h1>
+          <div className={ceremonySubhead}>Thirty-Fourth Commencement Ceremony</div>
           <p className={subhead}>
-            Thirty-Fourth Commencement Ceremony. We are excited to celebrate our graduating TK class as they prepare for kindergarten.
+            We are excited to celebrate the accomplishments of our graduating TK class at our Thirty-Fourth Commencement Ceremony. This special day marks an important milestone as our graduates prepare for kindergarten and the adventures ahead.
           </p>
 
           <section className={flyerGrid}>
@@ -246,11 +253,11 @@ const GraduationPage = () => {
               <article className={detailBox}>
                 <h2 className={detailTitle}>Ceremony Details</h2>
                 <p>
-                  Date: Wednesday, June 10, 2026
+                  <strong>Date:</strong> Wednesday, June 10, 2026
                   <br />
-                  Time: 2:00 p.m.
+                  <strong>Time:</strong> 2:00 p.m.
                   <br />
-                  Location: Rotary Centennial Park Gazebo
+                  <strong>Location:</strong> Rotary Centennial Park Gazebo
                   <br />
                   2625 S. College Dr., Santa Maria, CA 93455
                   <br />
@@ -261,11 +268,11 @@ const GraduationPage = () => {
               <article className={detailBox}>
                 <h2 className={detailTitle}>Graduation Day Schedule</h2>
                 <p>
-                  Child pick-up from CCC: 12:15 p.m.
+                  <strong>12:15 p.m.:</strong> Child pick-up from CCC
                   <br />
-                  Family arrival at park: 1:45 p.m.
+                  <strong>1:45 p.m.:</strong> Family arrival at park
                   <br />
-                  1:55 p.m.: Bring your child behind the gazebo and check in with their teacher.
+                  <strong>1:55 p.m.:</strong> Bring your child behind the gazebo and check in with their teacher.
                 </p>
               </article>
 
@@ -283,17 +290,6 @@ const GraduationPage = () => {
 
             <div className={featureCol}>
               <article className={detailBox}>
-                <h2 className={detailTitle}>Ceremony At A Glance</h2>
-                <p>
-                  Event: Thirty-Fourth Commencement Ceremony
-                  <br />
-                  Hosted by: Columbia Children&apos;s Center
-                  <br />
-                  Class: Transitional Kindergarten Graduates of 2026
-                </p>
-              </article>
-
-              <article className={detailBox}>
                 <h2 className={detailTitle}>Family Setup</h2>
                 <p>
                   Please establish your seating area on the grass facing the gazebo.
@@ -301,6 +297,15 @@ const GraduationPage = () => {
                   Bring lawn chairs or blankets for comfort.
                   <br />
                   Families are warmly invited to attend and cheer on our graduates.
+                </p>
+              </article>
+
+              <article className={detailBox}>
+                <h2 className={detailTitle}>After Ceremony</h2>
+                <p>
+                  Please stay for photos and celebration after the ceremony.
+                  <br />
+                  Dessert will be provided by <a href="https://hanohanoice.com/" target="_blank" rel="noreferrer">Hanohano Shave Ice</a>.
                 </p>
               </article>
 
@@ -312,14 +317,6 @@ const GraduationPage = () => {
                 />
               </div>
 
-              <article className={detailBox}>
-                <h2 className={detailTitle}>After Ceremony</h2>
-                <p>
-                  Please stay for photos and celebration after the ceremony.
-                  <br />
-                  Dessert will be provided by <a href="https://hanohanoice.com/" target="_blank" rel="noreferrer">Hanohano Shave Ice</a>.
-                </p>
-              </article>
             </div>
           </section>
 
@@ -358,10 +355,6 @@ const GraduationPage = () => {
               </p>
             </article>
           </section>
-
-          <div className={actionRow}>
-            <a href="tel:1-805-922-5437" className={callButton}>Call 805-922-KIDS</a>
-          </div>
 
           <img
             src={gradKids}
