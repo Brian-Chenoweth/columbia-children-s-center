@@ -43,7 +43,7 @@ import gradKids from '../images/icons/kids-grad-right-half.svg';
 
 const siteOrigin = 'https://columbiachildrenscenter.com';
 const canonicalUrl = `${siteOrigin}/graduation/`;
-const graduationOgImageUrl = `${siteOrigin}${orangeGuyBalloons}`;
+const graduationOgImageUrl = `${siteOrigin}${gradKids}`;
 const graduationDate = new Date('2026-06-10T14:00:00-07:00');
 const graduationEndDate = new Date('2026-06-10T15:30:00-07:00');
 const eventTitle = 'Columbia Children\'s Center Transitional Kindergarten Graduation 2026';
