@@ -51,7 +51,6 @@
 .headline,
 .subhead,
 .flyerGrid,
-.bottomBand,
 .actionRow {
   position: relative;
 }
@@ -61,6 +60,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
   padding-top: 1.7rem;
 }
@@ -70,11 +70,15 @@
   z-index: 20;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 0.55rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  margin-left: auto;
+  flex: 1 1 440px;
 }
 
 .logoMark {
+  flex: 0 1 470px;
   width: min(470px, 100%);
   max-height: 78px;
   object-fit: contain;
@@ -82,6 +86,7 @@
 }
 
 .dateTag {
+  max-width: 100%;
   white-space: nowrap;
   border-radius: 999px;
   padding: 0.5rem 0.95rem;
@@ -122,7 +127,7 @@
 }
 
 .detailsCol {
-  flex: 0 1 42%;
+  flex: 0 1 50%;
   display: grid;
   gap: 0.7rem;
   align-content: start;
@@ -156,36 +161,96 @@
 }
 
 .featureCol {
-  flex: 1 1 58%;
-  position: relative;
+  flex: 0 1 50%;
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
 }
 
-.heroArt {
+.illustrationCard {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.illustrationImage {
   width: 100%;
-  min-height: 330px;
-  max-height: 420px;
-  object-fit: cover;
-  border-radius: 0.95rem;
-  border: 2px solid rgba(0, 0, 0, 0.18);
-  box-shadow: 0 12px 20px rgba(20, 31, 62, 0.18);
+  max-height: 240px;
+  object-fit: contain;
+  object-position: center;
 }
 
-.bottomBand {
+.infoSection {
   margin-top: 0.9rem;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
   gap: 0.7rem;
+}
 
-  img {
-    width: 100%;
-    height: clamp(220px, 26vw, 310px);
-    object-fit: contain;
-    object-position: center center;
-    border-radius: 0.9rem;
-    border: 2px solid rgba(0, 0, 0, 0.18);
-    background: #fff;
-    padding: 0.35rem;
+.infoBlock {
+  border-radius: 0.9rem;
+  border: 2px dashed rgba(0, 0, 0, 0.24);
+  background: #fff;
+  padding: 0.9rem;
+  box-shadow: 0 8px 16px rgba(17, 29, 58, 0.1);
+}
+
+.infoHeading {
+  margin: 0 0 0.6rem;
+  color: #265ba8;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.programTableWrap {
+  overflow-x: auto;
+}
+
+.programTable {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    text-align: left;
+    padding: 0.5rem 0.45rem;
+    border-bottom: 1px solid rgba(17, 29, 58, 0.12);
+    color: #1f2f4d;
+    font-size: 0.96rem;
+    line-height: 1.35;
   }
+
+  th {
+    color: #1a58ae;
+    font-weight: 800;
+  }
+}
+
+.graduateGrid {
+  margin: 0;
+  padding-left: 1.1rem;
+  columns: 2;
+  column-gap: 1.2rem;
+
+  li {
+    margin: 0 0 0.35rem;
+    color: #1f2f4d;
+    break-inside: avoid;
+  }
+}
+
+.bottomSoloImage {
+  display: block;
+  width: min(520px, 100%);
+  margin: 1rem auto 0;
+  padding: 0.4rem;
+  border-radius: 0.9rem;
+  background: #fff;
+}
+
+.closingNote {
+  margin: 0.7rem 0 0;
+  color: #1f2f4d;
+  font-weight: 700;
 }
 
 .countdownPill {
@@ -305,16 +370,12 @@
     flex-direction: column;
   }
 
-  .heroArt {
-    min-height: 250px;
+  .illustrationImage {
+    max-height: 200px;
   }
 
-  .bottomBand {
-    grid-template-columns: 1fr;
-
-    img {
-      height: clamp(180px, 42vw, 260px);
-    }
+  .graduateGrid {
+    columns: 1;
   }
 }
 
@@ -330,11 +391,15 @@
   .masthead {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.7rem;
+    padding-top: 0.8rem;
   }
 
   .mastheadControls {
+    flex: 0 1 auto;
     width: 100%;
-    flex-wrap: wrap;
+    margin-left: 0;
+    justify-content: flex-start;
   }
 
   .dateTag {
