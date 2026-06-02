@@ -16,6 +16,7 @@ const Navi = () => {
     <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className={nav}>
           <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/graduation/">Graduation</Nav.Link>
           <NavDropdown title="About">
               <NavDropdown.Item className={dropdownItem} href="/about/">About</NavDropdown.Item>
               <NavDropdown.Item className={dropdownItem} href="/about/our-team/">Our Team</NavDropdown.Item>
