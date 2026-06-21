@@ -109,6 +109,7 @@ const EYPage = () => {
     </Helmet>
         <StaticImage src=".././images/home/early-years.jpg" width={500} className={introImage} alt="Early Years classroom at Columbia Children's Center in Santa Maria" />
         <h2 id="age"  style={{marginTop: "0"}}>{ageRange}</h2>
+        <a href="https://app.tryplayground.com/X7tvoDUHwazFjm1hgbal/book/j2qKHKe4akbD4Cv9DED7" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginBottom: '1rem', padding: '0.75rem 1.5rem', backgroundColor: '#007bff', color: '#fff', textDecoration: 'none', borderRadius: '0.375rem', fontWeight: 'bold' }}>Book a Tour</a>
 
         <p>Our Early Years program in Santa Maria serves children between the ages of 2 and 3 years. Our teacher to child ratio is 1:9 to ensure that each child receives individual attention and support in a safe, nurturing classroom. </p>
         <p>To ensure that each child receives the attention they need, we keep our group size at a maximum of 18 children. Our structured, yet flexible approach, allows children to thrive and reach their full potential.</p>

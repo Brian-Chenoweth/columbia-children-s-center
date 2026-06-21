@@ -13,6 +13,7 @@ const PhilosophyGoalsPage = () => {
       pathname="/about/philosophy-goals/"
       schemaType="AboutPage"
     >
+        <a href="https://app.tryplayground.com/X7tvoDUHwazFjm1hgbal/book/j2qKHKe4akbD4Cv9DED7" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginBottom: '1rem', padding: '0.75rem 1.5rem', backgroundColor: '#007bff', color: '#fff', textDecoration: 'none', borderRadius: '0.375rem', fontWeight: 'bold' }}>Book a Tour</a>
         <StaticImage src="../../images/building-flag.png" width={300} className={introImage} alt="Columbia Children's Center flag graphic" />
         <p>We believe that children have the right to a nurturing, safe environment where they can feel comfortable and secure. We believe that children have a right to develop to their maximum abilities and that teachers have the responsibility to provide opportunities for this development to occur.</p>
         <p>We recognize that each child is an individual and that each child must be allowed to develop at his or her own pace. We accept and respect differences between children including developmental and physical differences and differences in racial and ethnic heritages. Every child regardless of sex, race, religion or ethnic origin must have the same opportunities and advantages as every other child.</p>

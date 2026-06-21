@@ -117,6 +117,7 @@ const YTPage = () => {
           alt="Young toddler program at Columbia Children's Center in Santa Maria"
         />
         <h2 id="age"  style={{marginTop: "0"}}>{ageRange}</h2>
+        <a href="https://app.tryplayground.com/X7tvoDUHwazFjm1hgbal/book/j2qKHKe4akbD4Cv9DED7" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginBottom: '1rem', padding: '0.75rem 1.5rem', backgroundColor: '#007bff', color: '#fff', textDecoration: 'none', borderRadius: '0.375rem', fontWeight: 'bold' }}>Book a Tour</a>
         
         <p>Our young toddler program in Santa Maria serves children between the ages of 18 months and 30 months. Our teacher to child ratio is 1:6 so each child receives individual attention and support in a safe, nurturing setting.</p>
         

@@ -80,6 +80,7 @@ const PreschoolSantaMariaPage = () => {
             <div>
               <span className={eyebrow}>Preschool Santa Maria, CA</span>
               <h2 className={heroTitle}>A trusted Santa Maria preschool for local families</h2>
+              <a href="https://app.tryplayground.com/X7tvoDUHwazFjm1hgbal/book/j2qKHKe4akbD4Cv9DED7" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginBottom: '1rem', padding: '0.75rem 1.5rem', backgroundColor: '#007bff', color: '#fff', textDecoration: 'none', borderRadius: '0.375rem', fontWeight: 'bold' }}>Book a Tour</a>
               <p className={heroLead}>
                 Columbia Children&apos;s Center helps children build confidence, early academic skills,
                 and strong social development in a safe, caring preschool environment in Santa Maria.

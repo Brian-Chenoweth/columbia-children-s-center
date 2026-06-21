@@ -45,6 +45,7 @@ const ContactPage = () => {
       schemaData={[faqSchema]}
     >
       <h2>Contact Columbia Children&apos;s Center</h2>
+      <a href="https://app.tryplayground.com/X7tvoDUHwazFjm1hgbal/book/j2qKHKe4akbD4Cv9DED7" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginBottom: '1rem', padding: '0.75rem 1.5rem', backgroundColor: '#007bff', color: '#fff', textDecoration: 'none', borderRadius: '0.375rem', fontWeight: 'bold' }}>Book a Tour</a>
       <p>
         Looking for a trusted preschool and child care center in Santa Maria? We are here to help.
         Use the form below to ask questions, request enrollment information, or schedule a tour.

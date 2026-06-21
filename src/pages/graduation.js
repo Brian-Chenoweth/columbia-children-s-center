@@ -257,6 +257,7 @@ const GraduationPage = () => {
           </header>
 
           <h1 className={headline}>TRANSITIONAL KINDERGARTEN GRADUATION</h1>
+          <a href="https://app.tryplayground.com/X7tvoDUHwazFjm1hgbal/book/j2qKHKe4akbD4Cv9DED7" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginBottom: '1rem', marginTop: '1rem', padding: '0.75rem 1.5rem', backgroundColor: '#007bff', color: '#fff', textDecoration: 'none', borderRadius: '0.375rem', fontWeight: 'bold' }}>Book a Tour</a>
           <div className={ceremonySubhead}>Thirty-Fourth Commencement Ceremony</div>
           <p className={subhead}>
             We are excited to celebrate the accomplishments of our graduating TK class at our Thirty-Fourth Commencement Ceremony. This special day marks an important milestone as our graduates prepare for kindergarten and the adventures ahead.

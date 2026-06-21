@@ -18,6 +18,7 @@ const AboutPage = () => {
         pathname="/about/"
         schemaType="AboutPage"
       >
+        <a href="https://app.tryplayground.com/X7tvoDUHwazFjm1hgbal/book/j2qKHKe4akbD4Cv9DED7" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginBottom: '1rem', padding: '0.75rem 1.5rem', backgroundColor: '#007bff', color: '#fff', textDecoration: 'none', borderRadius: '0.375rem', fontWeight: 'bold' }}>Book a Tour</a>
         <StaticImage src="../../images/kids-building.png" width={300} className={introImage} alt="Columbia Children's Center building illustration" />
         <p>We are a state-licensed early childhood program offering child care and preschool in Santa Maria for children ages 18 months through 5 years. We are conveniently located on Stowell Road near Highway 101 and Allan Hancock College. Our building was designed specifically for child care and includes secure entry, bright classrooms, child-sized facilities, fire sprinklers throughout, and convenient parking for drop-off and pick-up.</p>
         <h2>Celebrating {yearsOpen} Years</h2>
