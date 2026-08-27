@@ -138,7 +138,7 @@ The repo does not contain `.env` files, and a search of the source did not find 
 - `src/pages/`: file-based Gatsby routes
   - `index.js`: homepage
   - `preschool-santa-maria.js`: local SEO landing page
-  - `preschool.js`, `young-toddler.js`, `early-years.js`, `kindergarten-readiness.js`: program pages
+  - `preschool.js`, `young-toddler.js`, /* `early-years.js` */ `kindergarten-readiness.js`: program pages
   - `about/`: about pages
   - `parents/index.js`: parent resources
   - `careers.js`: careers page

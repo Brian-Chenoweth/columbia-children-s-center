@@ -179,11 +179,6 @@ const YTPage = () => {
             employeeTitle="Young Toddler Teacher" 
             employeeImg="Cynthia"
           />
-          <Employee 
-            employeeName="Shirley Adelhelm" 
-            employeeTitle="Young Toddler Teacher / Breaker" 
-            employeeImg="Shirley"
-          />
         </div>
     </Layout>
   )

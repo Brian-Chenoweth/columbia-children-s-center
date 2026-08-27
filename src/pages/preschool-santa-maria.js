@@ -43,7 +43,7 @@ const PreschoolSantaMariaPage = () => {
         name: 'What ages do you accept?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We serve children ages 18 months through 5 years old across four age-based programs.',
+          text: 'We serve children ages 18 months through 5 years old across three age-based programs.',
         },
       },
       {
@@ -195,8 +195,8 @@ const PreschoolSantaMariaPage = () => {
             </p>
             <ul className={checkList}>
               <li><Link to="/young-toddler/">Young Toddler: 18 months to 2 1/2 years</Link></li>
-              <li><Link to="/early-years/">Early Years: 2 to 3 years</Link></li>
-              <li><Link to="/preschool/">Preschool: 3 to 4 years</Link></li>
+              {/* <li><Link to="/early-years/">Early Years: 2 to 3 years</Link></li> */}
+              <li><Link to="/preschool/">Preschool: 2 to 4 years</Link></li>
               <li><Link to="/kindergarten-readiness/">Kindergarten Readiness: 4 to 5 years</Link></li>
             </ul>
           </div>
@@ -204,7 +204,7 @@ const PreschoolSantaMariaPage = () => {
           <div className={localSeoCard}>
             <h2>What to expect from our Santa Maria preschool</h2>
             <p>
-              Our preschool program for ages 3 to 4 emphasizes confidence building, early literacy and
+              Our preschool program for ages 2 to 4 emphasizes confidence building, early literacy and
               numeracy, listening skills, cooperation, language development, and hands-on learning.
             </p>
             <p>

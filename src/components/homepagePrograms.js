@@ -29,6 +29,7 @@ const homepagePrograms = ({ children }) => {
         </div>
         </Link>
 
+        {/*
         <Link to="/early-years/">
         <div className={hero}>
           <div className={imgWrap}>
@@ -45,6 +46,7 @@ const homepagePrograms = ({ children }) => {
           </div>
         </div>
         </Link>
+        */}
       
         
         <Link to="/preschool/">
@@ -57,7 +59,7 @@ const homepagePrograms = ({ children }) => {
               <h2>Preschool</h2>
             </div>
             <div className={heroDate}>
-              <p>3 years - 4 years</p>
+              <p>2 years - 4 years</p>
             </div>
             <Link to="/preschool/" className={button}>Learn More</Link>
           </div>

@@ -73,7 +73,7 @@ const IndexPage = () => {
         name: 'What ages do you serve?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We serve children from 18 months through 5 years old across four age-based programs.',
+          text: 'We serve children from 18 months through 5 years old across three age-based programs.',
         },
       },
       {
@@ -269,8 +269,8 @@ const IndexPage = () => {
               </p>
               <ul className={checkList}>
                 <li><Link to="/young-toddler/">Young Toddler: 18 months to 2 1/2 years</Link></li>
-                <li><Link to="/early-years/">Early Years: 2 to 3 years</Link></li>
-                <li><Link to="/preschool/">Preschool: 3 to 4 years</Link></li>
+                {/* <li><Link to="/early-years/">Early Years: 2 to 3 years</Link></li> */}
+                <li><Link to="/preschool/">Preschool: 2 to 4 years</Link></li>
                 <li><Link to="/kindergarten-readiness/">Kindergarten Readiness: 4 to 5 years</Link></li>
               </ul>
             </div>
@@ -284,7 +284,7 @@ const IndexPage = () => {
                 </div>
                 <div className={faqItem}>
                   <h3>What ages do you serve?</h3>
-                  <p>We serve children from 18 months through 5 years old across four age-based programs.</p>
+                  <p>We serve children from 18 months through 5 years old across three age-based programs.</p>
                 </div>
                 <div className={faqItem}>
                   <h3>Do you offer full-day and half-day preschool?</h3>

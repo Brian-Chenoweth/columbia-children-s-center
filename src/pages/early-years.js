@@ -1,29 +1,30 @@
 import * as React from 'react'
-import Layout from '../components/layout'
-import Employee from '../components/employee'
-import AdayIn from '../components/aDayin'
-import TuitionRates from '../components/tuitionRates'
-import ProgramSlider from '../components/programSlider'
-import JSONDat from "../data/adayin/early-years.json"
-import { StaticImage } from 'gatsby-plugin-image'
-import { introImage } from '.././components/styles/page.module.scss'
-import { employeesWrap } from '.././components/styles/employee.module.scss'
-import { sliderImg } from '.././components/styles/layout.module.scss'
-import Slider from "react-slick";
-import { Helmet } from 'react-helmet';
-import earlyYears1 from '.././images/programs/early-years/early-years1.jpg';
-import earlyYears2 from '.././images/programs/early-years/early-years2.jpg';
-import earlyYears3 from '.././images/programs/early-years/early-years3.jpg';
-import earlyYears4 from '.././images/programs/early-years/early-years4.jpg';
-import earlyYears5 from '.././images/programs/early-years/early-years5.jpg';
-import earlyYears6 from '.././images/programs/early-years/early-years6.jpg';
-import earlyYears7 from '.././images/programs/early-years/early-years7.jpg';
-import earlyYears8 from '.././images/programs/early-years/early-years8.jpg';
-import earlyYears9 from '.././images/programs/early-years/early-years9.jpg';
-
 
 const EYPage = () => {
-  
+  // Early Years was intentionally removed from the site.
+  // Keep the original page code in place below so it can be restored later.
+  /*
+  import Layout from '../components/layout'
+  import Employee from '../components/employee'
+  import AdayIn from '../components/aDayin'
+  import TuitionRates from '../components/tuitionRates'
+  import ProgramSlider from '../components/programSlider'
+  import JSONDat from "../data/adayin/early-years.json"
+  import { StaticImage } from 'gatsby-plugin-image'
+  import { introImage } from '.././components/styles/page.module.scss'
+  import { employeesWrap } from '.././components/styles/employee.module.scss'
+  import { sliderImg } from '.././components/styles/layout.module.scss'
+  import Slider from "react-slick";
+  import { Helmet } from 'react-helmet';
+  import earlyYears1 from '.././images/programs/early-years/early-years1.jpg';
+  import earlyYears2 from '.././images/programs/early-years/early-years2.jpg';
+  import earlyYears3 from '.././images/programs/early-years/early-years3.jpg';
+  import earlyYears4 from '.././images/programs/early-years/early-years4.jpg';
+  import earlyYears5 from '.././images/programs/early-years/early-years5.jpg';
+  import earlyYears6 from '.././images/programs/early-years/early-years6.jpg';
+  import earlyYears7 from '.././images/programs/early-years/early-years7.jpg';
+  import earlyYears8 from '.././images/programs/early-years/early-years8.jpg';
+  import earlyYears9 from '.././images/programs/early-years/early-years9.jpg';
 
   const pageTitle = "Early Years";
   const metaDesc = "Early childhood program in Santa Maria for children ages 2 to 3 years. Columbia Children's Center promotes independence, language growth, and social development through play-based learning.";
@@ -118,16 +119,16 @@ const EYPage = () => {
         <p>We believe that play-based learning is the best way for young children to learn and we strive to provide an environment that is both fun and educational. Our experienced staff is dedicated to providing the best care and education for your child.</p>
 
 
-        {/* {JSONDat && <ProgramSlider programImages="early-years"/>} */}
+        {JSONDat && <ProgramSlider programImages="early-years"/>}
 
         <AdayIn pageTitle={pageTitle} >
           <div>
             <ul>
               {JSONDat && JSONDat.days.map((data, index) => {
-                return<li key={index}><strong>{data.time}</strong> {data.day}</li>  
-              })} 
+                return<li key={index}><strong>{data.time}</strong> {data.day}</li>
+              })}
             </ul>
-          </div> 
+          </div>
         </AdayIn>
 
         <Slider {...settings}>
@@ -142,15 +143,15 @@ const EYPage = () => {
           <img className={sliderImg} src={earlyYears9} alt="Early Years" />
         </Slider>
 
-        <TuitionRates 
-          pageTitle={pageTitle} 
-          halfDayFive="$295" 
-          fullDayFive="$385" 
-          halfDayFour="$265" 
-          fullDayFour="$325" 
-          halfDayThree="$225" 
-          fullDayThree="$280" 
-          halfDayTwo="$175" 
+        <TuitionRates
+          pageTitle={pageTitle}
+          halfDayFive="$295"
+          fullDayFive="$385"
+          halfDayFour="$265"
+          fullDayFour="$325"
+          halfDayThree="$225"
+          fullDayThree="$280"
+          halfDayTwo="$175"
           fullDayTwo="$225"
         >
           Single extra days may be arranged with the director at a rate of half day: $95, full day: $115.
@@ -163,11 +164,6 @@ const EYPage = () => {
         <h3>How do you support social development in Early Years?</h3>
         <p>We support social development through play, guided group activities, communication practice, and age-appropriate routines that help children express feelings and interact with others in positive ways.</p>
         <div className={employeesWrap}>
-          <Employee 
-            employeeName="Vanessa Cabatan"
-            employeeTitle="Early Year's Lead Teacher"
-            employeeImg="Vanessa"
-          />
           <Employee
            employeeName="Jackie Rubalcava"
            employeeTitle="Early Year's Teacher"
@@ -175,8 +171,10 @@ const EYPage = () => {
           />
         </div>
     </Layout>
-
   )
+  */
+
+  return null
 }
 
 export default EYPage

@@ -24,7 +24,7 @@ const AboutPage = () => {
         <h2>Celebrating {yearsOpen} Years</h2>
         <p>Locally owned and operated since 1992.</p>
         <h2>Serving Children 18 months thru 6 Years</h2>
-        <p>We offer 4 different programs based on your child's age.</p>
+        <p>We offer 3 different programs based on your child's age.</p>
         <h2>Open Enrollment</h2>
         <p>We are open 12 months a year with limited holiday closures.</p>
         <h2>Flexible Schedules</h2>

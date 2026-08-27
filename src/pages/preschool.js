@@ -27,8 +27,8 @@ import { sliderImg } from '.././components/styles/layout.module.scss'
 const PPage = () => {
     
   const pageTitle = "Preschool";
-  const metaDesc = "Preschool in Santa Maria for children ages 3 to 4 years. Columbia Children's Center helps preschoolers build confidence, early academic skills, and strong social development in a safe, play-based classroom.";
-  const ageRange = "3 years to 4 years";
+  const metaDesc = "Preschool in Santa Maria for children ages 2 to 4 years. Columbia Children's Center helps preschoolers build confidence, early academic skills, and strong social development in a safe, play-based classroom.";
+  const ageRange = "2 years to 4 years";
   const faqSchema = {
     '@type': 'FAQPage',
     '@id': 'https://columbiachildrenscenter.com/preschool/#faq',
@@ -38,7 +38,7 @@ const PPage = () => {
         name: 'What age is your preschool program?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our preschool program is designed for children ages 3 to 4 years.',
+          text: 'Our preschool program is designed for children ages 2 to 4 years.',
         },
       },
       {
@@ -174,7 +174,7 @@ const PPage = () => {
         </TuitionRates>
         <h2>Preschool FAQs</h2>
         <h3>What age is your preschool program?</h3>
-        <p>Our preschool program is designed for children ages 3 to 4 years.</p>
+        <p>Our preschool program is designed for children ages 2 to 4 years.</p>
         <h3>What does your Santa Maria preschool program focus on?</h3>
         <p>We focus on confidence building, self-esteem, listening skills, early cognitive development, language growth, social development, and hands-on learning through centers, circle time, art, music, and movement.</p>
         <h3>Do you offer full-day preschool in Santa Maria?</h3>
