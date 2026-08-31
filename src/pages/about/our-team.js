@@ -8,7 +8,6 @@ const OurTeamPage = () => {
     { name: "Scott Chenoweth", title: "Director", img: "Scott" },
     { name: "Nicolle Rogers", title: "Program Manager", img: "Nicolle" },
     { name: "Cynthia Hernandez", title: "Young Toddler Teacher", img: "Cynthia" },
-    { name: "Lisette Cervantes", title: "Preschool Lead Teacher", img: "Lisette" },
     { name: "Elizabeth Pantoja", title: "Preschool Teacher", img: "Elizabeth" },
     { name: "Katherine Chenoweth", title: "Preschool Teacher", img: "Katherine" },
     { name: "Hailey Fakoury", title: "Preschool Assistant", img: "Hailey" },
