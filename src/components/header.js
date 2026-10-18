@@ -1,7 +1,15 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
-import { cityPhone, enrollmentBanner } from './styles/header.module.scss'
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
+import {
+  cityPhone,
+  enrollmentBanner,
+  enrollmentContent,
+  enrollmentDetails,
+  enrollmentMessage,
+  enrollmentTitle,
+} from './styles/header.module.scss'
 
 const Header = () => {
   React.useEffect(() => {
@@ -43,10 +51,22 @@ const Header = () => {
   return (
     <>
       <div className={enrollmentBanner}>
-        <span>Now enrolling 18 months through 4 years old</span>
+        <div className={enrollmentContent}>
+        <div className={enrollmentMessage}>
+          <strong className={enrollmentTitle}>
+            NOW ENROLLING — OPENINGS IN ALL PROGRAMS!
+          </strong>
+          <span className={enrollmentDetails}>
+            <span>Ages 18 Months – 5 Years</span>
+            <span>Full &amp; Part-Time Options</span>
+            <span>Subsidies &amp; Private Pay Welcome</span>
+          </span>
+        </div>
         <a href="/contact/" rel="noreferrer">
-          Contact Us
+          <CalendarMonthIcon aria-hidden="true" />
+          Schedule a Tour
         </a>
+        </div>
       </div>
       <header>
         <Link to="/">
