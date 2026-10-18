@@ -2,7 +2,6 @@ import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { container, heading, content } from './styles/layout.module.scss';
-import Navi from '../components/navi';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import favicon from '../images/favicon.ico';
@@ -239,8 +238,7 @@ const Layout = ({
           />
           <script type="application/ld+json">{JSON.stringify(baseSchema)}</script>
         </Helmet>
-        <Header />
-        <Navi />
+        <Header pathname={normalizedPath} />
         {pageTitle === siteMetadata.title ? (
           <h1 className={heading} style={{ display: 'none' }}>{pageTitle}</h1>
         ) : (

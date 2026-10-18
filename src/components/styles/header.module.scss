@@ -136,27 +136,61 @@
     }
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 71px 0 15px;
-    transition: all .4s;
+.site-header {
+    display: grid;
+    grid-template-columns: minmax(170px, 220px) minmax(0, 1fr) 160px;
+    align-items: center;
+    gap: 12px;
+    min-height: 74px;
+    margin-right: -25px;
+    margin-left: -25px;
+    margin-top: var(--enrollment-banner-offset, 52px);
+    padding: 8px 20px;
+    background-color: #fff;
 
-    a {
-        max-width: 25%;
-        @media screen and (max-width: 800px) {
-            max-width: 45%;   
-        }
+    @media screen and (max-width: 900px) {
+        grid-template-columns: minmax(145px, 180px) minmax(0, 1fr) 135px;
+        gap: 7px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
-    @media screen and (max-width: 600px) {
-        padding: 94px 0 15px;
+    @media screen and (max-width: 767px) {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 3px 12px;
+        padding: 8px 16px;
     }
 
     @media screen and (max-width: 420px) {
-        padding: 104px 0 15px;
+        gap: 2px 8px;
+        padding: 6px 10px;
+    }
+}
+
+.site-brand {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    line-height: 0;
+
+    :global(.gatsby-image-wrapper) {
+        width: 100%;
+        max-width: 100%;
     }
 
+    @media screen and (max-width: 900px) {
+        max-width: 180px;
+    }
+
+    @media screen and (max-width: 767px) {
+        grid-column: 1;
+        grid-row: 1;
+        max-width: 190px;
+    }
+
+    @media screen and (max-width: 420px) {
+        max-width: 160px;
+    }
 }
 
 header.sticky {
@@ -169,32 +203,56 @@ header.sticky {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+
     p {
-        font-size: 19px;
+        font-size: 12px;
         margin: 0;
-        margin-bottom: 5px;
-        color: darken(#395193, 25%);
+        margin-bottom: 2px;
+        color: #183e74;
     }
+
     a {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
         max-width: 100%;
         text-decoration: none;
-        color: #3C559A;
-        font-size: 19px;
+        color: #075bb5;
+        font-size: 14px;
+        font-weight: 700;
+        white-space: nowrap;
+
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+
         &:hover {
-            color: darken(#3C559A, 15%);
+            color: #123d78;
         }
     }
+
     @media screen and (max-width: 800px) {
-        a, p {
-            font-size: 16px;
-        }  
+        a {
+            font-size: 12px;
+        }
     }
-    @media screen and (max-width: 600px) {
-        a, p {
-            font-size: 14px;
-        }  
+
+    @media screen and (max-width: 767px) {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        a {
+            font-size: 13px;
+        }
+
         p {
-            margin-bottom: 0;
+            font-size: 11px;
+        }
+     }
+
+    @media screen and (max-width: 420px) {
+        a {
+            font-size: 12px;
         }
     }
 }
