@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Layout from '../components/layout';
 import HomepageSlider from '../components/homepageSlider';
 import HomepagePrograms from '../components/homepagePrograms';
@@ -38,6 +39,11 @@ import {
   enrollmentHeroActions,
   enrollmentHeroButton,
   enrollmentHeroQuestion,
+  assistanceOffer,
+  assistanceIcon,
+  assistanceCopy,
+  assistanceAction,
+  assistanceButton,
 } from './styles/index.module.scss';
 import {
   homepageSliderWrapTwo,
@@ -143,6 +149,29 @@ const IndexPage = () => {
                 </Link>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className={assistanceOffer} aria-labelledby="assistance-heading">
+          <FavoriteBorderIcon className={assistanceIcon} aria-hidden="true" />
+          <div className={assistanceCopy}>
+            <h2 id="assistance-heading">
+              Approved for Childcare Assistance but Waiting for Funding?
+            </h2>
+            <p>
+              Columbia Children&apos;s Center is offering special temporary tuition discounts to
+              families who have been approved for childcare subsidy assistance but are waiting for
+              funding to become available. <strong>You don&apos;t have to wait to get started!</strong>
+            </p>
+          </div>
+          <div className={assistanceAction}>
+            <Link to="/contact/" className={assistanceButton}>
+              Learn More About This Offer
+            </Link>
+            <p>
+              For qualifying families with approved subsidy eligibility and pending funding.
+              Enrollment subject to availability. Discount terms apply.
+            </p>
           </div>
         </section>
 
