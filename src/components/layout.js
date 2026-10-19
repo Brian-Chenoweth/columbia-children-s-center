@@ -39,6 +39,7 @@ const Layout = ({
   noIndex = false,
   schemaType = 'WebPage',
   schemaData = [],
+  showPageHeading = true,
   children,
 }) => {
   const data = useStaticQuery(graphql`
@@ -239,11 +240,11 @@ const Layout = ({
           <script type="application/ld+json">{JSON.stringify(baseSchema)}</script>
         </Helmet>
         <Header pathname={normalizedPath} />
-        {pageTitle === siteMetadata.title ? (
+        {showPageHeading && (pageTitle === siteMetadata.title ? (
           <h1 className={heading} style={{ display: 'none' }}>{pageTitle}</h1>
         ) : (
           <h1 className={heading}>{pageTitle}</h1>
-        )}
+        ))}
         <div className={content}>{children}</div>
         <Footer />
       </main>

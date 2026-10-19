@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import Layout from '../components/layout';
 import HomepageSlider from '../components/homepageSlider';
 import HomepagePrograms from '../components/homepagePrograms';
@@ -28,19 +31,22 @@ import {
   ctaRow,
   ctaButton,
   ctaButtonAlt,
+  enrollmentHero,
+  enrollmentHeroImage,
+  enrollmentHeroContent,
+  enrollmentHeroCard,
+  enrollmentHeroActions,
+  enrollmentHeroButton,
+  enrollmentHeroQuestion,
 } from './styles/index.module.scss';
 import {
-  homepageSliderWrap,
   homepageSliderWrapTwo,
   homepageSliderWrapThree,
 } from '../components/styles/homepageSlider.module.scss';
-import home1WebP from '../images/home/home1.webp';
-import home1Fallback from '../images/home/home1.jpg';
 import home2WebP from '../images/home/home2.webp';
 import home2Fallback from '../images/home/home2.jpg';
 import cccFrontWebP from '../images/home/outside.webp';
 import cccFrontFallback from '../images/home/outside.jpg';
-import logo from '../images/logo-small.png';
 
 function supportsWebP() {
   if (typeof window !== 'undefined') {
@@ -96,24 +102,49 @@ const IndexPage = () => {
         metaDesc="Columbia Children's Center is a trusted preschool and child care center in Santa Maria, CA serving children ages 18 months to 5 years with play-based learning, caring teachers, and flexible schedules since 1992."
         metaKeywords="preschool santa maria, child care santa maria, childcare santa maria, daycare santa maria ca, preschool and child care santa maria, daycare near me santa maria"
         schemaData={[faqSchema]}
+        showPageHeading={false}
       >
-        <div className={homepageSliderWrap}>
-          <ParallaxBanner
-            layers={[
-              {
-                image: useWebP ? home1WebP : home1Fallback,
-                speed: -60,
-                style: { backgroundSize: 'contain' },
-              },
-              {
-                image: logo,
-                speed: -20,
-                style: { backgroundRepeat: 'no-repeat', backgroundSize: '200px, auto' },
-              },
-            ]}
-            className="aspect-[2/1]"
+        <section className={enrollmentHero} aria-labelledby="enrollment-heading">
+          <StaticImage
+            src="../images/home/home1.jpg"
+            alt="Bright Columbia Children's Center classroom with play areas, books, and child-sized furniture"
+            className={enrollmentHeroImage}
+            layout="fullWidth"
+            loading="eager"
+            placeholder="blurred"
+            objectPosition="center 65%"
           />
-        </div>
+          <div className={enrollmentHeroContent}>
+            <div className={enrollmentHeroCard}>
+              <h1 id="enrollment-heading">
+                Now Enrolling at<br /> Columbia Children&apos;s Center!
+              </h1>
+              <p>
+                Quality childcare, preschool, and kindergarten readiness programs for children
+                ages 18 months through 5 years.
+              </p>
+              <p>Proudly serving Santa Maria families since 1992.</p>
+              <div className={enrollmentHeroActions}>
+                <a
+                  href="https://app.tryplayground.com/X7tvoDUHwazFjm1hgbal/book/j2qKHKe4akbD4Cv9DED7"
+                  className={enrollmentHeroButton}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <CalendarMonthIcon aria-hidden="true" />
+                  Schedule a Tour
+                </a>
+                <Link
+                  to="/contact/"
+                  className={`${enrollmentHeroButton} ${enrollmentHeroQuestion}`}
+                >
+                  <ChatBubbleOutlineIcon aria-hidden="true" />
+                  Ask a Question
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <HomepageAboutOne />
 
