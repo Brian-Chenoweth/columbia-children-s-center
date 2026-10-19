@@ -1,122 +1,170 @@
-.homepage-program-wrap-wrap {
-  transition: all 0.4s;
-  padding: 50px 0;
+.programsSection {
+  padding: 0 0 28px;
+}
 
-  a {
-    text-decoration: none;
+.programsIntro {
+  max-width: 650px;
+  margin: 0 auto 20px;
+  text-align: center;
+
+  h2 {
+    margin: 0 0 6px;
+    color: #103f87;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(28px, 3.5vw, 36px);
+    font-weight: 700;
+    line-height: 1.15;
   }
-  h1 {
-    display: none;
-  }
-  span {
-    display: block;
-    font-size: 3rem;
-    text-align: center;
-    color: #2f60a8;
-    margin: 0 0 50px;
-    font-weight: 600;
-    @media screen and (max-width: 767px) {
-      font-size: 2rem;
-    }
-  }
-  h2, p, a {
-    color: white;
+
+  p {
+    margin: 0;
+    color: #183e74;
+    font-size: 17px;
+    line-height: 1.4;
   }
 }
 
-.programs {
-  .homepage-program-wrap-wrap {
-    .span-programs {
-      display: none !important;
-    }
-  }
+.programGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
-.hero {
+.programCard {
   display: flex;
   flex-direction: column;
-  height: 400px;
-  border-radius: 30px;
-  overflow:hidden;
-  transition: all .4s;
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
-    .img-wrap {
-      overflow: hidden;
-      height: 325px;
-      transition: all .4s;
-    }
-    img {
-      width: 100%;
-      height: auto;
-      transition: all .4s !important;
-    }
-    &:hover {
-      img {
-        transform: scale(120%);
-        transition: all .4s;
-      }
-      cursor: pointer;
-      a {
-        background-color: #273763;
-      }
-    }
+  align-items: center;
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #eff2f6;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 3px 16px rgba(24, 62, 116, 0.09);
+  text-align: center;
+
+  h3 {
+    margin: 12px 0 4px;
+    color: #103f87;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(19px, 2.2vw, 24px);
+    font-weight: 700;
+    line-height: 1.15;
+    overflow-wrap: break-word;
   }
 
-  
-  .hero-description-bk {
-    background-image: linear-gradient(0deg , #2f60a8, #2f60a8);
-    border-radius: 0px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    text-align: center;
+  p {
+    color: #183e74;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
 
-    .button {
-      display: inline-block;
-      background-color: lighten(#3C559A, 15%);
-      padding: .75em 3em;
-      margin: .5em 0;
-      color: white;
-      text-decoration: none;
-      font-size: 19px;
-      border-radius: 5px;
-      &:hover {
-          background-color: darken(#3C559A, 10%);
-      }
-  }
-  }
+.programIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
 
-  .hero-description-bk h2 {
-    margin: 0;
+  svg {
+    width: 52px;
+    height: 52px;
   }
-  
+}
 
-  .hero-logo img {
-    height: 100%;
-  }
-  
-  .hero-description {
+.toddlerIcon {
+  background: #ffdadc;
+  color: #ff4c52;
+}
+
+.preschoolIcon {
+  background: #fff2c3;
+  color: #f5a000;
+}
+
+.readinessIcon {
+  background: #d1eaff;
+  color: #0085e5;
+}
+
+.programAge {
+  margin: 0 0 16px;
+}
+
+.programDescription {
+  margin: 0 0 20px;
+}
+
+.programButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  margin-top: auto;
+  padding: 10px 16px;
+  border-radius: 11px;
+  background: #0067ce;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+
+  &:hover {
+    background: #0753a1;
     color: #fff;
-    // font-weight: 900;
-    left: 30px;
-    bottom: 20%;
-    h2 {
+  }
+
+  &:focus-visible {
+    outline: 3px solid #103f87;
+    outline-offset: 3px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .programGrid {
+    gap: 12px;
+  }
+
+  .programCard {
+    padding: 16px 12px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .programGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .programCard {
+    padding: 20px;
+
+    h3 {
       font-size: 24px;
     }
   }
 
-  
-  .hero-date {
-    color: #fff;
-    left: 30px;
-    bottom: 10%;
+  .programIcon {
+    width: 76px;
+    height: 76px;
+
+    svg {
+      width: 46px;
+      height: 46px;
+    }
   }
 
-  .homepage-program-wrap {
-    display: grid;
-    grid-gap: 25px;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  .programAge {
+    margin-bottom: 12px;
   }
+
+  .programDescription {
+    margin-bottom: 16px;
+  }
+}

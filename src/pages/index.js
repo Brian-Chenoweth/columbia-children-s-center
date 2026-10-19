@@ -175,6 +175,8 @@ const IndexPage = () => {
           </div>
         </section>
 
+        <HomepagePrograms />
+
         <HomepageAboutOne />
 
         <div className={homepageSliderWrapTwo}>
@@ -316,8 +318,6 @@ const IndexPage = () => {
             className="aspect-[2/1]"
           />
         </div>
-
-        <HomepagePrograms />
 
         <section className={localSeoSection}>
           <div className={localSeoGrid}>

@@ -1,93 +1,74 @@
 import * as React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from "gatsby"
-import {hero, imgWrap, heroDescriptionBk, heroDescription, heroDate, homepageProgramWrap, homepageProgramWrapWrap, button, spanPrograms  } from './styles/homepagePrograms.module.scss'
-// import { button } from '../components/styles/layout.module.scss'
+import { Link } from 'gatsby'
+import ChildCareOutlinedIcon from '@mui/icons-material/ChildCareOutlined'
+import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined'
+import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined'
+import {
+  programsSection,
+  programsIntro,
+  programGrid,
+  programCard,
+  programIcon,
+  toddlerIcon,
+  preschoolIcon,
+  readinessIcon,
+  programAge,
+  programDescription,
+  programButton,
+} from './styles/homepagePrograms.module.scss'
 
-const homepagePrograms = ({ children }) => {
-    
+const programs = [
+  {
+    title: 'Young Toddler',
+    age: '18–36 months',
+    description: 'A nurturing environment where young children explore, play, and build early learning skills.',
+    to: '/young-toddler/',
+    Icon: ChildCareOutlinedIcon,
+    iconClass: toddlerIcon,
+  },
+  {
+    title: 'Preschool',
+    age: '3–4 years',
+    description: 'Play-based learning that promotes social, emotional, cognitive, and physical development.',
+    to: '/preschool/',
+    Icon: ExtensionOutlinedIcon,
+    iconClass: preschoolIcon,
+  },
+  {
+    title: 'Transitional Kindergarten & Kindergarten Readiness',
+    age: '4–5 years',
+    description: 'A learning environment that builds confidence and prepares children for a successful transition to kindergarten.',
+    to: '/kindergarten-readiness/',
+    Icon: MenuBookOutlinedIcon,
+    iconClass: readinessIcon,
+  },
+]
 
-  return (
-    <div className={homepageProgramWrapWrap}>
-      <h2>Columbia Children&apos;s Center</h2><span className={spanPrograms}>Programs</span>
-      <div className={homepageProgramWrap}>
-
-      <Link to="/young-toddler/">
-        <div className={hero}>
-          <div className={imgWrap}>
-            <StaticImage src="../images/home/young-toddler.jpg" alt="Young Toddler" />
+const HomepagePrograms = () => (
+  <section className={programsSection} aria-labelledby="programs-heading">
+    <div className={programsIntro}>
+      <h2 id="programs-heading">Our Programs</h2>
+      <p>
+        Age-appropriate programs with caring teachers, engaging curriculum,
+        and a safe, nurturing environment.
+      </p>
+    </div>
+    <div className={programGrid}>
+      {programs.map(({ title, age, description, to, Icon, iconClass }) => (
+        <article key={to} className={programCard}>
+          <div className={`${programIcon} ${iconClass}`}>
+            <Icon aria-hidden="true" />
           </div>
-          <div className={heroDescriptionBk}>
-            <div className={heroDescription}>
-              <h2>Young Toddler</h2>
-            </div>
-            <div className={heroDate}>
-              <p>18 months - 2½ years</p>
-            </div>
-            <Link to="/young-toddler/" className={button}>Learn More</Link>
-          </div>
-        </div>
-        </Link>
+          <h3>{title}</h3>
+          <p className={programAge}>{age}</p>
+          <p className={programDescription}>{description}</p>
+          <Link to={to} className={programButton} aria-label={`Learn more about ${title}`}>
+            Learn More
+          </Link>
+        </article>
+      ))}
+    </div>
+  </section>
+)
 
-        {/*
-        <Link to="/early-years/">
-        <div className={hero}>
-          <div className={imgWrap}>
-            <StaticImage src="../images/home/early-years.jpg" alt="Early Years" />
-          </div>
-          <div className={heroDescriptionBk}>
-            <div className={heroDescription}>
-              <h2>Early Years</h2>
-            </div>
-            <div className={heroDate}>
-              <p>2 years - 3 years</p>
-            </div>
-            <Link to="/early-years/" className={button}>Learn More</Link>
-          </div>
-        </div>
-        </Link>
-        */}
-      
-        
-        <Link to="/preschool/">
-        <div className={hero}>
-          <div className={imgWrap}>
-            <StaticImage src="../images/home/preschool.jpg" alt="Preschool" />
-          </div>
-          <div className={heroDescriptionBk}>
-            <div className={heroDescription}>
-              <h2>Preschool</h2>
-            </div>
-            <div className={heroDate}>
-              <p>2 years - 4 years</p>
-            </div>
-            <Link to="/preschool/" className={button}>Learn More</Link>
-          </div>
-        </div>
-        </Link>
-
-
-        <Link to="/kindergarten-readiness/">
-        <div className={hero}>
-          <div className={imgWrap}>
-            <StaticImage src="../images/home/kindergartenReadiness.jpg" alt="Kindergarten Readiness<" />
-          </div>
-          <div className={heroDescriptionBk}>
-            <div className={heroDescription}>
-              <h2>Kindergarten Readiness</h2>
-            </div>
-            <div className={heroDate}>
-              <p>4 years - 5 years</p>
-            </div>
-            <Link to="/kindergarten-readiness/" className={button}>Learn More</Link>
-          </div>
-        </div>
-        </Link>
-
-  </div>
-</div>
-
-  )
-}
-
-export default homepagePrograms
+export default HomepagePrograms
