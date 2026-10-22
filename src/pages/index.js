@@ -125,9 +125,8 @@ const IndexPage = () => {
           />
           <div className={enrollmentHeroContent}>
             <div className={enrollmentHeroCard}>
-              <h1 id="enrollment-heading">
-                Now Enrolling at<br /> Columbia Children&apos;s Center!
-              </h1>
+              <h1 id="enrollment-heading">Preschool &amp; Child Care in Santa Maria, CA</h1>
+              <h2>Now Enrolling!</h2>
               <p>
                 Quality childcare, preschool, and kindergarten readiness programs for children
                 ages 18 months through 5 years.
